@@ -36,3 +36,18 @@
     font-family: Montesserat;
     src: url("../fonts/MontserratAlternates-ExtraBold.otf") format("opentype");
 }
+
+@font-face {
+    font-family: Brooklyn-Bold;
+    src: url("../fonts/Brooklyn Bold 1.otf") format("opentype");
+}
+
+@font-face {
+    font-family: Brooklyn-Heavy;
+    src: url("../fonts/Brooklyn Heavy 1.otf") format("opentype");
+}
+
+@font-face {
+    font-family: Montesserat;
+    src: url("../fonts/Brooklyn SemiBold.otf") format("opentype");
+}
