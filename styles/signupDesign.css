@@ -1,2 +1,24 @@
 /*Design for Sign Up page*/
 
+#signup h1{
+    color: #CCCCCC;
+    font-family: Brooklyn-Heavy;
+}
+
+#signup-content{
+    color: #CCCCCC;
+    font-family: Brooklyn-Semibold;
+}
+
+input[type=text] {
+    border: none;
+    border-bottom: 2px solid #CCCCCC;
+    background-color: transparent;
+    font-family: Brooklyn-Semibold;
+    color: #CCCCCC;
+}
+
+#signup h2{
+    align-items: flex-start;
+    
+}
