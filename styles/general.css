@@ -10,6 +10,8 @@
 
 .top-header{
     display: flex;
+    position: sticky;
+    top: 0px;
     margin-bottom: 25px;
     justify-content: space-between;
     align-items: center;
