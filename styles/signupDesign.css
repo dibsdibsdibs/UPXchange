@@ -3,22 +3,42 @@
 #signup h1{
     color: #CCCCCC;
     font-family: Brooklyn-Heavy;
+    text-align: center;
 }
 
 #signup-content{
+    display: flex;
+    flex-direction: column;
     color: #CCCCCC;
     font-family: Brooklyn-Semibold;
+    justify-content: center;
+    align-items: center;
 }
 
 input[type=text] {
     border: none;
     border-bottom: 2px solid #CCCCCC;
+    width: 275px;
     background-color: transparent;
     font-family: Brooklyn-Semibold;
+    font-size: smaller;
     color: #CCCCCC;
 }
 
-#signup h2{
-    align-items: flex-start;
-    
+#create{
+    padding: 5px 75px;
+    border-radius: 50px;
+    font-family: Brooklyn-Bold;
+    background: #CCCCCC;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border: none;
 }
+
+#login{
+    font-family: Brooklyn-Bold;
+    color: #CCCCCC;
+    background-color: transparent;
+    border: none;
+    font-size: 20px;
+}
+
