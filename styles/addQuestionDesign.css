@@ -1,0 +1,34 @@
+/*Add a Question Design*/
+
+.bg-addQuestion{
+    background-color: #50203A;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    margin: 0px;
+    padding: 0px;
+}
+
+#bg-question{
+    background-color: rgba(16, 41, 46, 0.25);
+    border-radius: 10px;
+    margin-left: 5%;
+    margin-right: 5%;
+    padding: 1%;
+}
+
+#bg-question h2{
+    color: #CCCCCC;
+    font-family: Montesserat-Bold;
+    margin: 15px;
+}
+
+input[type=text] {
+    background-color: transparent;
+    font-family: Montesserat-MediumItalic;
+    font-size: smaller;
+    color: #CCCCCC;
+}
+
+#title{
+    color: #CCCCCC;
+}
