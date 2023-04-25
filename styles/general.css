@@ -72,6 +72,11 @@
 }
 
 @font-face {
+    font-family: Montesserat-MediumItalic;
+    src: url("../fonts/Montserrat-MediumItalic.otf") format("opentype");
+}
+
+@font-face {
     font-family: Montesserat-Bold;
     src: url("../fonts/MontserratAlternates-ExtraBold.otf") format("opentype");
 }
