@@ -28,14 +28,8 @@ session_start();
     </div>
     <div id="bg-question">
         <h2>Post a Question</h2>
-        <div>
-            <input type=text id="title" placeholder = "Title">
-        </div>
-        <br>
-        <div>
-            <input type=text id="add" placeholder = "Add your question here.">
-        </div>
-        <br>
+        <input type=text id="title" placeholder = "Title">
+        <input type=text id="add" placeholder = "Add your question here.">
         <hr>
         <button type="submit" id="post">POST</button>
     </div>
