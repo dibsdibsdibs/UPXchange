@@ -45,6 +45,8 @@
     color: #CCCCCC;
     background-color: #10292E;
     width: 100%;
+    position: fixed;
+    bottom: 0;
 }
 
 #footer-left{
