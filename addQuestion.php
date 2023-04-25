@@ -5,7 +5,7 @@ session_start();
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Sign Up</title>
+    <title>Post a Question</title>
     <link rel="icon" href="pics/logo_white.png">
     <link href="styles/addQuestionDesign.css" type="text/css" rel="stylesheet"/>
     <link href="styles/general.css" type="text/css" rel="stylesheet">
@@ -28,7 +28,16 @@ session_start();
     </div>
     <div id="bg-question">
         <h2>Post a Question</h2>
-        <input type=text id="title" placeholder = "Title">
+        <div>
+            <input type=text id="title" placeholder = "Title">
+        </div>
+        <br>
+        <div>
+            <input type=text id="add" placeholder = "Add your question here.">
+        </div>
+        <br>
+        <hr>
+        <button type="submit" id="post">POST</button>
     </div>
     <!-- Footer bar section -->
     <div class="bottom-footer">
