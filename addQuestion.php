@@ -29,8 +29,15 @@ session_start();
     <div id="bg-question">
         <h2>Post a Question</h2>
         <input type=text id="title" placeholder = "Title">
-        <input type=text id="add" placeholder = "Add your question here.">
+        <textarea id="question" placeholder= "Add your question here."></textarea>
         <hr>
+        <div class = "tag-input">
+            <input type=text id="add-tag" placeholder="Tag">
+            <button id="add-tag">+Tag</button>
+        </div>
+        <div class = "tag-container">
+            <span class="tag">tag1</span>
+        </div>
         <button type="submit" id="post">POST</button>
     </div>
     <!-- Footer bar section -->
