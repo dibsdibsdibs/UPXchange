@@ -12,7 +12,6 @@
     display: flex;
     position: sticky;
     top: 0px;
-    margin-bottom: 25px;
     justify-content: space-between;
     align-items: center;
     font-family: Montesserat-Bold;
@@ -37,7 +36,6 @@
 }
 
 .bottom-footer{
-    margin-top: 25px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -45,6 +43,8 @@
     color: #CCCCCC;
     background-color: #10292E;
     width: 100%;
+    position: absolute;
+    bottom: 0;
 }
 
 #footer-left{
@@ -53,6 +53,7 @@
     align-items: center;
     padding-left: 10px;
     width: 300px;
+    margin-bottom: 0;
 }
 
 #footer-right{

@@ -1,0 +1,66 @@
+/*Add a Question Design*/
+
+.bg-addQuestion{
+    background-color: #50203A;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    margin: 0px;
+    padding: 0px;
+}
+
+#bg-question{
+    background-color: rgba(16, 41, 46, 0.25);
+    border-radius: 10px;
+    margin-left: 5%;
+    margin-right: 5%;
+    padding: 1%;
+}
+
+#bg-question h2{
+    color: #CCCCCC;
+    font-family: Montesserat-Bold;
+    margin: 15px;
+}
+
+input[type=text] {
+    background-color: transparent;
+    font-family: Montesserat-MediumItalic;
+    font-size: 15px;
+    border-color: #149F98;
+    border-style: solid;
+    border-radius: 10px;
+    border-width: 3px;
+    color: #CCCCCC;
+    margin: 1%;
+    padding-left: 1%;
+    padding-right: 1%;
+    width: 95.5%;
+}
+
+#title{
+    height: 40px;
+}
+
+#add{
+    height: 300px;
+    border-color: #149F98;
+    border-radius: 10px;
+    overflow: auto;
+}
+
+hr{
+    border: solid;
+    border-radius: 10px;
+    color: #149F98;
+    margin: 1%;
+}
+
+#post{
+    padding: 5px 20px;
+    border-radius: 50px;
+    font-family: Montesserat-Bold;
+    background: #CCCCCC;
+    color: #50203A;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border: none;
+}
