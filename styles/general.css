@@ -17,7 +17,9 @@
     font-family: Montesserat-Bold;
     color: #CCCCCC;
     background-color: #10292E;
+    margin-bottom: 25px;
     width: 100%;
+
 }
 
 #header-left{
@@ -43,7 +45,7 @@
     color: #CCCCCC;
     background-color: #10292E;
     width: 100%;
-    position: absolute;
+    margin-top: 25px;
     bottom: 0;
 }
 

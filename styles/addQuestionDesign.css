@@ -24,7 +24,7 @@
 
 input[type=text] {
     background-color: transparent;
-    font-family: Montesserat-MediumItalic;
+    font-family: Montesserat;
     font-size: 15px;
     border-color: #149F98;
     border-style: solid;
@@ -41,11 +41,19 @@ input[type=text] {
     height: 40px;
 }
 
-#add{
+textarea{
+    background-color: transparent;
+    resize: none;
+    font-family: Montesserat;
+    font-size: 15px;
     height: 300px;
     border-color: #149F98;
     border-radius: 10px;
-    overflow: auto;
+    border-width: 3px;
+    color: #CCCCCC;
+    margin: 1%;
+    padding: 1% 1% 1% 1%;
+    width: 95.5%;
 }
 
 hr{
