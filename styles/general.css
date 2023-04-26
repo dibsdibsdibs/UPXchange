@@ -10,9 +10,8 @@
 
 .top-header{
     display: flex;
-    position: fixed;
+    position: sticky;
     top: 0px;
-    margin-bottom: 25px;
     justify-content: space-between;
     align-items: center;
     font-family: Montesserat-Bold;
@@ -37,7 +36,6 @@
 }
 
 .bottom-footer{
-    margin-top: 25px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -45,7 +43,7 @@
     color: #CCCCCC;
     background-color: #10292E;
     width: 100%;
-    position: fixed;
+    position: absolute;
     bottom: 0;
 }
 
@@ -55,6 +53,7 @@
     align-items: center;
     padding-left: 10px;
     width: 300px;
+    margin-bottom: 0;
 }
 
 #footer-right{
@@ -69,11 +68,6 @@
 @font-face {
     font-family: Montesserat;
     src: url("../fonts/Montserrat-Regular.otf") format("opentype");
-}
-
-@font-face {
-    font-family: Montesserat-MediumItalic;
-    src: url("../fonts/Montserrat-MediumItalic.otf") format("opentype");
 }
 
 @font-face {

@@ -1,5 +1,9 @@
 /*Design for Sign Up page*/
 
+.container {
+  height: 100%;
+}
+
 #signup h1{
     color: #CCCCCC;
     font-family: Brooklyn-Heavy;
