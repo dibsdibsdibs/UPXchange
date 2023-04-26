@@ -17,8 +17,10 @@
 <body class="bg">
     <div class="top-header">
         <div class="header-left">
+            <a href="login.php">
             <img src="pics\logo_white.png" height="50">
             <h1>UP XChange</h1>
+            </a>
         </div>
         <div class="header-right">
             <a><img src="pics\magnifying glass.png" height="25"></a>
