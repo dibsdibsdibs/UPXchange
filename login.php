@@ -35,10 +35,10 @@
         <form action="">
             <div class="mainContainer">
                 <div class="email-input">
-                    <label for="email">Email</label>
+                    <label for="email">UP Email</label>
                     <br>
                     <img src="pics\user 1.png">
-                    <input type="email" placeholder="Enter your email" name="email" required>
+                    <input type="email" placeholder="Enter your UP email" name="email" required>
                 </div>
                 <br><br>
                 <div class="password-input">
