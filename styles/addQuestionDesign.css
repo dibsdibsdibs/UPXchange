@@ -38,19 +38,22 @@ input[type=text] {
 }
 
 #title{
-    height: 40px;
+    height: 20px;
+}
+
+#question{
+    height: 300px;
 }
 
 textarea{
+    font-size: 15px;
     background-color: transparent;
     resize: none;
     font-family: Montesserat;
-    font-size: 15px;
-    height: 300px;
+    color: #CCCCCC;
     border-color: #149F98;
     border-radius: 10px;
     border-width: 3px;
-    color: #CCCCCC;
     margin: 1%;
     padding: 1% 1% 1% 1%;
     width: 95.5%;
@@ -61,6 +64,20 @@ hr{
     border-radius: 10px;
     color: #149F98;
     margin: 1%;
+}
+
+.tag-container ul{
+    display: flex;
+    padding: 7px;
+    border: 3px solid #149F98;
+    border-radius: 10px;
+    color: #CCCCCC;
+    font-family: Montesserat-Bold;
+}
+
+.tag-container ul li{
+    list-style: none;
+    background-color: rgba(20, 159, 152, 0.3);
 }
 
 #post{

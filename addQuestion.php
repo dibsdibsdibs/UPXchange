@@ -9,6 +9,7 @@ session_start();
     <link rel="icon" href="pics/logo_white.png">
     <link href="styles/addQuestionDesign.css" type="text/css" rel="stylesheet"/>
     <link href="styles/general.css" type="text/css" rel="stylesheet">
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/thinline.css">
 </head>
 
 <body class="bg-addQuestion">
@@ -28,15 +29,15 @@ session_start();
     </div>
     <div id="bg-question">
         <h2>Post a Question</h2>
-        <input type=text id="title" placeholder = "Title">
+        <textarea id="title" placeholder= "Title"></textarea>
         <textarea id="question" placeholder= "Add your question here."></textarea>
         <hr>
-        <div class = "tag-input">
-            <input type=text id="add-tag" placeholder="Tag">
-            <button id="add-tag">+Tag</button>
-        </div>
-        <div class = "tag-container">
-            <span class="tag">tag1</span>
+        <div class="tag-container">
+            <ul>
+                <li>html<i class="uit uit-multiply"></i></li>
+                <li>css<i class="uit uit-multiply"></i></li>
+                <input type="text" spell check="false">
+            </ul>
         </div>
         <button type="submit" id="post">POST</button>
     </div>
@@ -51,6 +52,7 @@ session_start();
         </div>
     </div>
     <script src="scripts/genJS.js" type="text/javascript"></script>
+    <script src="addQuestionJS/genJS.js" type="text/javascript"></script>
 </body>
 </html>
 
