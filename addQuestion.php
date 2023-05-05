@@ -32,12 +32,13 @@ session_start();
         <textarea id="title" placeholder= "Title"></textarea>
         <textarea id="question" placeholder= "Add your question here."></textarea>
         <hr>
-        <div class="tag-container">
-            <ul>
-                <li>html<i class="uit uit-multiply"></i></li>
-                <li>css<i class="uit uit-multiply"></i></li>
-                <input type="text" spell check="false">
-            </ul>
+        <div id="tags">
+            <div class="tag-container">
+                <ul><input type="text" spell check="false"></ul>
+            </div>
+            <div class="tag-count">
+                <p><span> </span> tags remaining</p>
+            </div>
         </div>
         <button type="submit" id="post">POST</button>
     </div>
@@ -51,8 +52,7 @@ session_start();
             <p>© 2023 UP Xchange. Up Xchange is a trademark brand owned by UP Xchange. A Philippine-registered company. All other trademarks are owned by their respective owners.</p>
         </div>
     </div>
-    <script src="scripts/genJS.js" type="text/javascript"></script>
-    <script src="addQuestionJS/genJS.js" type="text/javascript"></script>
+    <script src="scripts/addQuestionJS.js" type="text/javascript"></script>
 </body>
 </html>
 
