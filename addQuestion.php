@@ -40,8 +40,8 @@ session_start();
                 <p><span> </span> tags remaining</p>
             </div>
         </div>
-        <button type="submit" id="post">POST</button>
     </div>
+    <button type="submit" id="post">POST</button>
     <!-- Footer bar section -->
     <div class="bottom-footer">
         <div id="footer-left">
