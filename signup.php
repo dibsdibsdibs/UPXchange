@@ -32,18 +32,27 @@ session_start();
         <div id="signup">   
             <br>
             <h1>SIGN UP</h1>
+            <form action="register.php" method="post">
+                <div id="error">
+                <?php
+                    if(isset($_SESSION["error"])){
+                        $error = $_SESSION["error"];
+                        echo "<span>$error</span>";
+                    }
+                ?>
+                </div>
             <div id="signup-content">
                 <div>
                     <h3>Email</h3>
-                    <input type=text placeholder = "Type your email">
+                    <input type=text id="email" name="email" placeholder = "Type your email">
                     <h3>Password</h3>
                     <div class = "password-container">
-                        <input type=password id = "password" placeholder = "Type your password">
+                        <input type=password id = "password" name="password" placeholder = "Type your password">
                         <i class="fa-solid fa-eye" id="eye"></i>
                     </div>
                     <h3>Confirm Password</h3>
                     <div class = "password-container">
-                        <input type=password id = "repassword" placeholder = "Confirm your password">
+                        <input type=password id = "repassword" name="repassword" placeholder = "Confirm your password">
                         <i class="fa-solid fa-eye" id="reeye"></i>
                     </div>
                 </div>
