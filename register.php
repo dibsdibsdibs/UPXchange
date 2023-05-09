@@ -3,7 +3,7 @@
     session_start();
     $error = "";
 
-    if(isset($_POST['email']) && isset($_POST['repassword']) && isset($_POST['password'])){
+    if(isset($_POST['upmail']) && isset($_POST['repassword']) && isset($_POST['password'])){
         function validate($data){
             $data = trim($data);
             $data = stripslashes($data);
@@ -11,7 +11,7 @@
         }
     }
 
-    $email = validate($_POST['email']);
+    $upmail = validate($_POST['upmail']);
     $password = validate($_POST['password']);
     $repassword = validate($_POST['repassword']);
 
@@ -32,12 +32,12 @@
                 break;
             }
         default:
-            $check_email  = $conn -> query("SELECT * FROM users WHERE email = '$email'");
-            if(mysqli_num_rows($check_email) >= 1){
+            $check_upmail  = $conn -> query("SELECT * FROM users WHERE upmail = '$upmail'");
+            if(mysqli_num_rows($check_upmail) >= 1){
                 $error = "Email is already used!";
             }else{
                 $password = md5($password);
-                $sql = "INSERT INTO users (email, password) VALUES ('$email', '$password')";
+                $sql = "INSERT INTO users (upmail, password) VALUES ('$upmail', '$password')";
                 if($conn -> query($sql) == TRUE){
                     $error = "Log in into your new account.";
                     $_SESSION["error"] = $error;
