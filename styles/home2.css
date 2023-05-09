@@ -3,12 +3,14 @@
     height: 550px;
     width: 100%;
     padding-top: 150px;
+    font-family: Brooklyn-Heavy;
     background-color: #10292E;
     justify-content: center;
     align-items: center;
 }
 
 #top h2 {
+    font-size: 70px;
     background-image: linear-gradient(90deg, #CCCC, #CC2D6F);
     background-size: 100%;
     -webkit-background-clip: text;
@@ -62,6 +64,7 @@
     height: 550px;
     width: 100%;
     padding: 150px 0;
+    font-family: Montesserat;
     text-align: center;
     background-color: #CCCC;
 }
@@ -93,10 +96,12 @@ article h4 {
     height: 550px;
     width: 100%;
     padding-top: 150px;
+    font-family: Brooklyn-Heavy;
     background-color: #10292E;
 }
 
 #bottom h2 {
+    font-size: 65px;
     text-align: left;
 }
 

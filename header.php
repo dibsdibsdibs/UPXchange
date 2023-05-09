@@ -2,7 +2,7 @@
     <div class="wrapper">
         <a href="#">
             <img src="pics/logo_white.png" height="50">
-            <h1>UP Xchange</h1>
+            <h1>UP XChange</h1>
         </a>
         <nav>
             <ul>

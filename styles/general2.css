@@ -1,3 +1,4 @@
+
 body {
     background-image: linear-gradient(135deg, #50203A, #10292E);
     background-repeat: no-repeat;
@@ -12,7 +13,7 @@ p {
 }
 
 h1 {
-    font-family: 'Crete Round', serif;
+    font-family: Brooklyn-Heavy;
     font-size: 45px;
     font-weight: bold;
     color: #CCCCCC;
@@ -58,6 +59,7 @@ header {
     position: sticky;
     top: 0;
     height: 100px;
+    font-family: Brooklyn-Heavy;
     background-color: #10292E;
 }
 
@@ -83,6 +85,7 @@ footer {
     display: flex;
     height: 110px;
     background-color: #10292E;
+    font-family: Montesserat-Bold;
     align-items: center;
     justify-content: center;
 }
@@ -96,6 +99,7 @@ footer {
 #footer-right {
     width: 520px;
     float: right;
+    font-family: Montesserat;
     color: #CCCCCC;
     padding-top: 15px;
         
@@ -113,4 +117,34 @@ footer h1 {
 
 footer img {
     padding-right: 10px;
+}
+
+@font-face {
+    font-family: Montesserat;
+    src: url("../fonts/Montserrat-Regular.otf") format("opentype");
+}
+
+@font-face {
+    font-family: Montesserat-Medium;
+    src: url("../fonts/Montserrat-Medium.otf") format("opentype");
+}
+
+@font-face {
+    font-family: Montesserat-Bold;
+    src: url("../fonts/MontserratAlternates-ExtraBold.otf") format("opentype");
+}
+
+@font-face {
+    font-family: Brooklyn-Bold;
+    src: url("../fonts/Brooklyn Bold 1.otf") format("opentype");
+}
+
+@font-face {
+    font-family: Brooklyn-Heavy;
+    src: url("../fonts/Brooklyn Heavy 1.otf") format("opentype");
+}
+
+@font-face {
+    font-family: Brooklyn-Semibold;
+    src: url("../fonts/Brooklyn SemiBold.otf") format("opentype");
 }
