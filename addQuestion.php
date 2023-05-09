@@ -9,6 +9,7 @@ session_start();
     <link rel="icon" href="pics/logo_white.png">
     <link href="styles/addQuestionDesign.css" type="text/css" rel="stylesheet"/>
     <link href="styles/general.css" type="text/css" rel="stylesheet">
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/thinline.css">
 </head>
 
 <body class="bg-addQuestion">
@@ -26,20 +27,32 @@ session_start();
             <a><img src = "pics/user.png" height="25"></a>
         </div>
     </div>
-    <div id="bg-question">
-        <h2>Post a Question</h2>
-        <input type=text id="title" placeholder = "Title">
-        <textarea id="question" placeholder= "Add your question here."></textarea>
-        <hr>
-        <div class = "tag-input">
-            <input type=text id="add-tag" placeholder="Tag">
-            <button id="add-tag">+Tag</button>
+    <div id="error-display">
+        <div id="error">
+            <?php
+                if(isset($_SESSION["error"])){
+                    $error = $_SESSION["error"];
+                    echo "<span>$error</span>";
+                }
+            ?>
         </div>
-        <div class = "tag-container">
-            <span class="tag">tag1</span>
-        </div>
-        <button type="submit" id="post">POST</button>
     </div>
+    <div id="bg-question">
+        <form action="storeQuestion.php" method="post">
+        <h2>Post a Question</h2>
+        <textarea id="question" name="question" maxlength="150" placeholder= "Add your question here."></textarea>
+        <textarea id="details" name="details" maxlength="250" placeholder= "Add your question details here."></textarea>
+        <hr>
+        <div id="tags">
+            <div class="tag-container">
+                <ul><input type="text" spell check="false"></ul>
+            </div>
+            <div class="tag-count">
+                <p><span> </span> tags remaining</p>
+            </div>
+        </div>
+    </div>
+    <button type="submit" id="post">POST</button>
     <!-- Footer bar section -->
     <div class="bottom-footer">
         <div id="footer-left">
@@ -50,7 +63,7 @@ session_start();
             <p>© 2023 UP Xchange. Up Xchange is a trademark brand owned by UP Xchange. A Philippine-registered company. All other trademarks are owned by their respective owners.</p>
         </div>
     </div>
-    <script src="scripts/genJS.js" type="text/javascript"></script>
+    <script src="scripts/addQuestionJS.js" type="text/javascript"></script>
 </body>
 </html>
 

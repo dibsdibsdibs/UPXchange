@@ -12,11 +12,11 @@
 
 #signup-content{
     display: flex;
+    justify-content: center;
+    align-items: center;
     flex-direction: column;
     color: #CCCCCC;
     font-family: Brooklyn-Semibold;
-    justify-content: center;
-    align-items: center;
 }
 
 input[type=password],
@@ -71,3 +71,9 @@ input[type=text] {
     color: #149F98;
 }
 
+#error{
+    font-family: Brooklyn-Bold;
+    font-size: 15px;
+    color: #CCCCCC;
+    text-align: center;
+}
