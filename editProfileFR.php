@@ -1,3 +1,7 @@
+<?php
+    session_start();
+?>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -58,3 +62,7 @@
     </div>  
     <button class="btn btn-primary profile-button" type="button">Save Profile</button>
 </html>
+
+<?php
+    unset($_SESSION["error"]);
+?>

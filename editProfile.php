@@ -1,3 +1,7 @@
+<?php
+    session_start();
+?>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -21,7 +25,7 @@
         </div>
     </div>
     <div class = "profile">
-        <a><img src = "profile.jpg" height="300" width = "300" class="img"></a>
+        <a><img src = "C:\xampp\htdocs\UPXchange\pics\profile.jpg" height="300" width = "300" class="img"></a>
         <h2>Name of User</h2>
         <a href = "editProfileFR.html"><button class="edit">Edit Profile</button></a>
     </div>
@@ -87,3 +91,7 @@
     </script>
 </body>
 </html>
+
+<?php
+    unset($_SESSION["error"]);
+?>
