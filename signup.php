@@ -44,10 +44,10 @@ session_start();
             <div id="signup-content">
                 <div>
                     <h3>UPmail</h3>
-                    <input type=text id="upmail" name="upmail" placeholder = "Type your UPmail">
+                    <input type=text id="upmail" name="upmail" placeholder = "Type your UPmail" pattern=".+@up\.edu\.ph" title="example@up.edu.ph">
                     <h3>Password</h3>
                     <div class = "password-container">
-                        <input type=password id = "password" name="password" placeholder = "Type your password">
+                        <input type=password id = "password" name="password" placeholder = "Type your password" pattern = "(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*?[0-9])(?=.*?[~`!@#$%\^&*()\-_=+[\]{};:\x27.,\x22\\|/?><]).{8,}" title="Must contain at least one number, one symbol, one uppercase and lowercase letter, and at least 8 or more characters" >
                         <i class="fa-solid fa-eye" id="eye"></i>
                     </div>
                     <h3>Confirm Password</h3>
