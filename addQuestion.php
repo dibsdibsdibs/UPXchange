@@ -27,10 +27,21 @@ session_start();
             <a><img src = "pics/user.png" height="25"></a>
         </div>
     </div>
+    <div id="error-display">
+        <div id="error">
+            <?php
+                if(isset($_SESSION["error"])){
+                    $error = $_SESSION["error"];
+                    echo "<span>$error</span>";
+                }
+            ?>
+        </div>
+    </div>
     <div id="bg-question">
+        <form action="storeQuestion.php" method="post">
         <h2>Post a Question</h2>
-        <textarea id="title" placeholder= "Title"></textarea>
-        <textarea id="question" placeholder= "Add your question here."></textarea>
+        <textarea id="question" name="question" maxlength="150" placeholder= "Add your question here."></textarea>
+        <textarea id="details" name="details" maxlength="250" placeholder= "Add your question details here."></textarea>
         <hr>
         <div id="tags">
             <div class="tag-container">
