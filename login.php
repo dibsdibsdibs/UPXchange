@@ -32,13 +32,21 @@
     </div>
     <div class="login">
         <h1>LOGIN</h1>
-        <form action="">
+        <form action="log_in.php" method="post">
+            <div id="error">
+            <?php
+                if(isset($_SESSION["error"])){
+                    $error = $_SESSION["error"];
+                    echo "<span>$error</span>";
+                }
+            ?>
+            </div>
             <div class="mainContainer">
                 <div class="email-input">
                     <label for="email">UP Email</label>
                     <br>
                     <img src="pics\user 1.png">
-                    <input type="email" placeholder="Enter your UP email" name="email" required>
+                    <input type="email" placeholder="Enter your UPmail" name="upmail" required>
                 </div>
                 <br><br>
                 <div class="password-input">
@@ -50,8 +58,8 @@
                 <div class="subContainer">
                     <p class="forgotpassword"><a href="#">Forgot Password?</a></p>
                 </div>
-                <button type="submit">LOGIN</button>
-                <p class="register">Don't have an account?<br><a href="#">SIGN UP</a></p>
+                <button type="submit" name="submit">LOGIN</button>
+                <p class="register">Don't have an account?<br><a href="signup.php">SIGN UP</a></p>
             </div>
         </form>
     </div>
