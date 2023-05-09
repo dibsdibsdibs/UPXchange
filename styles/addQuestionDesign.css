@@ -1,0 +1,128 @@
+/*Add a Question Design*/
+
+.bg-addQuestion{
+    background-color: #50203A;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    margin: 0px;
+    padding: 0px;
+}
+
+#bg-question{
+    background-color: rgba(16, 41, 46, 0.25);
+    border-radius: 10px;
+    margin-left: 5%;
+    margin-right: 5%;
+    padding: 1%;
+}
+
+#bg-question h2{
+    color: #CCCCCC;
+    font-family: Montesserat-Bold;
+    margin: 15px;
+}
+
+input[type=text] {
+    background-color: transparent;
+    font-family: Montesserat;
+    font-size: 15px;
+    border-color: #149F98;
+    border-style: solid;
+    border-radius: 10px;
+    border-width: 3px;
+    color: #CCCCCC;
+}
+
+#title{
+    height: 20px;
+}
+
+#question{
+    height: 300px;
+}
+
+textarea{
+    font-size: 15px;
+    background-color: transparent;
+    resize: none;
+    font-family: Montesserat;
+    color: #CCCCCC;
+    border-color: #149F98;
+    border-radius: 10px;
+    border-width: 3px;
+    margin: 1%;
+    padding: 1% 1% 1% 1%;
+    width: 95.5%;
+}
+
+hr{
+    border: solid;
+    border-radius: 10px;
+    color: #149F98;
+    margin: 1%;
+}
+
+#tags{
+    margin: 1%;
+}
+
+.tag-container ul{
+    display: flex;
+    flex-wrap: wrap;
+    border: 3px solid #149F98;
+    border-radius: 10px;
+    color: #CCCCCC;
+    font-family: Montesserat-Medium;
+    border-radius: 5px;
+    padding: 7px;
+}
+
+.tag-container ul li{
+    display: flex;
+    list-style: none;
+    background-color: rgba(20, 159, 152, 0.3);
+    font-family: Montesserat-Medium;
+    padding: 5px 8px 5px 10px;
+    border: 1px solid #149F98;
+    margin: 4px 3px;
+}
+
+.tag-container ul li i{
+    display: flex;
+    align-items: center;
+    height: 20px;
+    width: 20px;
+    margin-left: 4px;
+    font-size: 12px; 
+    background-color: rgba(20, 159, 152, 0.5);
+    border-radius: 5px;
+    justify-content: center;
+}
+
+.tag-container ul input{
+    flex: 1;
+    border: none;
+    outline: none;
+    padding: 5px;
+}
+
+.tag-count{
+    color: #CCCCCC;
+    font-family: Montesserat-Medium;
+}
+
+.tag-count span{
+    font-family: Montesserat-Bold;
+}
+
+button{
+    margin: 1% 5% 3% 0px;
+    float: right;
+    padding: 5px 20px;  
+    border-radius: 50px;
+    font-family: Montesserat-Bold;
+    background: #CCCCCC;
+    color: #50203A;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border: none;
+}

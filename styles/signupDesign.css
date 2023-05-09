@@ -1,5 +1,9 @@
 /*Design for Sign Up page*/
 
+.container {
+  height: 100%;
+}
+
 #signup h1{
     color: #CCCCCC;
     font-family: Brooklyn-Heavy;
@@ -8,11 +12,11 @@
 
 #signup-content{
     display: flex;
+    justify-content: center;
+    align-items: center;
     flex-direction: column;
     color: #CCCCCC;
     font-family: Brooklyn-Semibold;
-    justify-content: center;
-    align-items: center;
 }
 
 input[type=password],
@@ -20,6 +24,9 @@ input[type=text] {
     border: none;
     border-bottom: 2px solid #CCCCCC;
     width: 275px;
+    padding-left: 8px;
+    margin-left: 8px;
+    margin-right: 8px;
     background-color: transparent;
     font-family: Brooklyn-Semibold;
     font-size: smaller;
@@ -32,7 +39,7 @@ input[type=text] {
 
 .fa-eye{
     position: absolute;
-    right: 2%;
+    right: 5%;
     cursor: pointer;
     color: #CCCCCC;
 }
@@ -60,3 +67,13 @@ input[type=text] {
     border: none;
 }
 
+#login:hover{
+    color: #149F98;
+}
+
+#error{
+    font-family: Brooklyn-Bold;
+    font-size: 15px;
+    color: #CCCCCC;
+    text-align: center;
+}

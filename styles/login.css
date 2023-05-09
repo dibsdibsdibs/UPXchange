@@ -1,0 +1,93 @@
+.top-header a:link {
+    text-decoration: none;
+}
+
+input[type=email], input[type=password]{
+    position: relative;
+    background: transparent;
+    color: #CCCCCC;
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    outline: none;
+    box-sizing: border-box;
+    border:none;
+    border-radius: 5px;
+    border-bottom: 5px solid #CCCCCC;
+}
+
+.email-input img, .password-input img{
+    position:absolute;
+    padding-top: 20px;
+}
+
+h1{
+    text-align: center;
+    color: #CCCCCC;
+}
+
+.mainContainer{
+    padding: 16px;
+    position: relative;
+}
+
+form{
+    width: 35rem;
+    margin: auto;
+    color: #CCCCCC;
+}
+
+.subContainer{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    float: right;
+}
+
+.subContainer a:link{
+    color: #CCCCCC;
+    text-decoration: none;
+}
+
+.subContainer a:visited{
+    color: #CCCCCC;
+}
+
+.subContainer a:hover{
+    color: #149F98;
+}
+
+button{
+    background-color: #CCCCCC;
+    color: #1E1E1E;
+    padding: 14px 20px;
+    border-radius: 25px;
+    margin: 7px 0;
+    width: 100%;
+    font-size: 18px;
+}
+
+button:hover{
+    opacity: 0.6;
+    cursor: pointer;
+}
+
+.register{
+    padding-top: 40px;
+    text-align: center;
+    font-size: large;
+}
+
+.register a:link{
+    color: #CCCCCC;
+    text-decoration: none;
+}
+
+.register a:visited{
+    color: #CCCCCC;
+}
+
+.register a:hover{
+    color: #149F98;
+}

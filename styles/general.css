@@ -12,13 +12,14 @@
     display: flex;
     position: sticky;
     top: 0px;
-    margin-bottom: 25px;
     justify-content: space-between;
     align-items: center;
     font-family: Montesserat-Bold;
     color: #CCCCCC;
     background-color: #10292E;
+    margin-bottom: 25px;
     width: 100%;
+
 }
 
 #header-left{
@@ -37,7 +38,6 @@
 }
 
 .bottom-footer{
-    margin-top: 25px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -45,6 +45,8 @@
     color: #CCCCCC;
     background-color: #10292E;
     width: 100%;
+    margin-top: 25px;
+    bottom: 0;
 }
 
 #footer-left{
@@ -53,6 +55,7 @@
     align-items: center;
     padding-left: 10px;
     width: 300px;
+    margin-bottom: 0;
 }
 
 #footer-right{
@@ -67,6 +70,11 @@
 @font-face {
     font-family: Montesserat;
     src: url("../fonts/Montserrat-Regular.otf") format("opentype");
+}
+
+@font-face {
+    font-family: Montesserat-Medium;
+    src: url("../fonts/Montserrat-Medium.otf") format("opentype");
 }
 
 @font-face {

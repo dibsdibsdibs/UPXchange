@@ -27,32 +27,43 @@ session_start();
             <a><img src = "pics/user.png" height="25"></a>
         </div>
     </div>
-    <!-- Sign Up section-->
-    <div id="signup">   
-        <br>
-        <h1>SIGN UP</h1>
-        <div id="signup-content">
-            <div>
-                <h3>Email</h3>
-                <input type=text placeholder = "Type your email">
-                <h3>Password</h3>
-                <div class = "password-container">
-                    <input type=password id = "password" placeholder = "Type your password">
-                    <i class="fa-solid fa-eye" id="eye"></i>
-                </div>
-                <h3>Confirm Password</h3>
-                <div class = "password-container">
-                    <input type=password id = "repassword" placeholder = "Confirm your password">
-                    <i class="fa-solid fa-eye" id="reeye"></i>
-                </div>
-            </div>
-            <br><br>
-            <button type="submit" id="create">CREATE ACCOUNT</button>
+    <!-- Sign Up section-->\
+    <div class="container">
+        <div id="signup">   
             <br>
-            <div id="login-option">
-                <p>Already have an account?</p>
+            <h1>SIGN UP</h1>
+            <form action="register.php" method="post">
+                <div id="error">
+                <?php
+                    if(isset($_SESSION["error"])){
+                        $error = $_SESSION["error"];
+                        echo "<span>$error</span>";
+                    }
+                ?>
+                </div>
+            <div id="signup-content">
+                <div>
+                    <h3>Email</h3>
+                    <input type=text id="email" name="email" placeholder = "Type your email">
+                    <h3>Password</h3>
+                    <div class = "password-container">
+                        <input type=password id = "password" name="password" placeholder = "Type your password">
+                        <i class="fa-solid fa-eye" id="eye"></i>
+                    </div>
+                    <h3>Confirm Password</h3>
+                    <div class = "password-container">
+                        <input type=password id = "repassword" name="repassword" placeholder = "Confirm your password">
+                        <i class="fa-solid fa-eye" id="reeye"></i>
+                    </div>
+                </div>
+                <br><br>
+                <button type="submit" id="create">CREATE ACCOUNT</button>
+                <br>
+                <div id="login-option">
+                    <p>Already have an account?</p>
+                </div>
+                <button type="submit" id="login">LOGIN</button>
             </div>
-            <button type="submit" id="login">LOGIN</button>
         </div>
     </div>
     <!-- Footer bar section -->
