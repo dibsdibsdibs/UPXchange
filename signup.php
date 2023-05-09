@@ -43,8 +43,8 @@ session_start();
                 </div>
             <div id="signup-content">
                 <div>
-                    <h3>Email</h3>
-                    <input type=text id="email" name="email" placeholder = "Type your email">
+                    <h3>UPmail</h3>
+                    <input type=text id="upmail" name="upmail" placeholder = "Type your UPmail">
                     <h3>Password</h3>
                     <div class = "password-container">
                         <input type=password id = "password" name="password" placeholder = "Type your password">
