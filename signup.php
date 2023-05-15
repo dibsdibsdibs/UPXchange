@@ -43,16 +43,22 @@ session_start();
                 </div>
             <div id="signup-content">
                 <div>
+<<<<<<< Updated upstream
                     <h3 style="font-size:22px;">UPmail</h3>
                     <input type=text id="upmail" name="upmail" placeholder = "Type your UPmail" pattern=".+@up\.edu\.ph" title="example@up.edu.ph">
                     <h3 style="font-size:22px;">Password</h3>
+=======
+                    <h3>UPmail</h3>
+                    <input type=text id="upmail" name="upmail" placeholder = "Type your UPmail" pattern=".+@up\.edu\.ph" title="example@up.edu.ph" maxlength="20">
+                    <h3>Password</h3>
+>>>>>>> Stashed changes
                     <div class = "password-container">
-                        <input type=password id = "password" name="password" placeholder = "Type your password" pattern = "(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*?[0-9])(?=.*?[~`!@#$%\^&*()\-_=+[\]{};:\x27.,\x22\\|/?><]).{8,}" title="Must contain at least one number, one symbol, one uppercase and lowercase letter, and at least 8 or more characters" >
+                        <input type=password id = "password" name="password" placeholder = "Type your password" maxlength="20" pattern = "(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*?[0-9])(?=.*?[~`!@#$%\^&*()\-_=+[\]{};:\x27.,\x22\\|/?><]).{8,}" title="Must contain at least one number, one symbol, one uppercase and lowercase letter, and at least 8 or more characters" >
                         <i class="fa-solid fa-eye" id="eye"></i>
                     </div>
                     <h3 style="font-size:22px;">Confirm Password</h3>
                     <div class = "password-container">
-                        <input type=password id = "repassword" name="repassword" placeholder = "Confirm your password">
+                        <input type=password id = "repassword" name="repassword" placeholder = "Confirm your password" maxlength="20">
                         <i class="fa-solid fa-eye" id="reeye"></i>
                     </div>
                 </div>

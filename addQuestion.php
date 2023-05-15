@@ -42,10 +42,11 @@ session_start();
         <h2>Post a Question</h2>
         <textarea id="question" name="question" maxlength="150" placeholder= "Add your question here."></textarea>
         <textarea id="details" name="details" maxlength="250" placeholder= "Add your question details here."></textarea>
+        </form>
         <hr>
         <div id="tags">
             <div class="tag-container">
-                <ul><input type="text" spell check="false"></ul>
+                <ul><input name="list-tags" type="text" spell check="false"></ul>
             </div>
             <div class="tag-count">
                 <p><span> </span> tags remaining</p>
