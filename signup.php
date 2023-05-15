@@ -16,15 +16,15 @@ session_start();
     <!--Header bar section-->
     <div class="top-header">
         <div id = "header-left">
-            <img src = "pics/logo_white.png" height="50">
-            <h1>UP Xchange</h1>
+            <img src = "pics/logo_white.png" height="65" style="margin: 0px 20px 0px 0px;">
+            <h1 style="font-size:35px;">UP Xchange</h1>
         </div>
         <div id = "header-right">
-            <a><img src = "pics/magnifying glass.png" height="25"></a>
-            <a><img src = "pics/plus.png" height="25"></a>
-            <a><img src = "pics/categories.png" height="25"></a>
-            <a><img src = "pics/bell.png" height="25"></a>
-            <a><img src = "pics/user.png" height="25"></a>
+            <a><img src = "pics/magnifying glass.png" height="35" style="margin: 0px 20px 0px 0px;"></a>
+            <a><img src = "pics/plus.png" height="35" style="margin: 0px 20px 0px 0px;"></a>
+            <a><img src = "pics/categories.png" height="35"style="margin: 0px 20px 0px 0px;"></a>
+            <a><img src = "pics/bell.png" height="35"style="margin: 0px 20px 0px 0px;"></a>
+            <a><img src = "pics/user.png" height="35"style="margin: 0px 20px 0px 0px;"></a>
         </div>
     </div>
     <!-- Sign Up section-->\
@@ -69,10 +69,9 @@ session_start();
     <!-- Footer bar section -->
     <div class="bottom-footer">
         <div id="footer-left">
-            <img src = "pics/logo_white.png" height="50">
-            <h1>UP Xchange</h1>
-        </div>
-        <div id="footer-right">
+            <img src = "pics/logo_white.png" height="55">
+            <h1 style="font-size:30px;">UP Xchange</h1>
+        </div>        <div id="footer-right">
             <p>© 2023 UP Xchange. Up Xchange is a trademark brand owned by UP Xchange. A Philippine-registered company. All other trademarks are owned by their respective owners.</p>
         </div>
     </div>

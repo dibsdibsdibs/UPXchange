@@ -16,20 +16,19 @@
 </head>
 <body class="bg">
     <div class="top-header">
-        <div class="header-left">
-            <a href="login.php">
-            <img src="pics\logo_white.png" height="50">
-            <h1>UP XChange</h1>
-            </a>
+        <div id = "header-left">
+            <img src = "pics/logo_white.png" height="50">
+            <h1>UP Xchange</h1>
         </div>
-        <div class="header-right">
-            <a><img src="pics\magnifying glass.png" height="25"></a>
-            <a><img src="pics\plus.png" height="25"></a>
-            <a><img src="pics\categories.png" height="25"></a>
-            <a><img src="pics\bell.png" height="25"></a>
-            <a><img src="pics\user.png" height="25"></a>
+        <div id = "header-right">
+            <a><img src = "pics/magnifying glass.png" height="25"></a>
+            <a><img src = "pics/plus.png" height="25"></a>
+            <a><img src = "pics/categories.png" height="25"></a>
+            <a><img src = "pics/bell.png" height="25"></a>
+            <a><img src = "pics/user.png" height="25"></a>
         </div>
     </div>
+
     <div class="login">
         <h1>LOGIN</h1>
         <form action="log_in.php" method="post">

@@ -17,23 +17,23 @@
     font-family: Montesserat-Bold;
     color: #CCCCCC;
     background-color: #10292E;
-    margin-bottom: 25px;
+    margin-bottom: 85px;
     width: 100%;
-
+    height: 100px;
 }
 
 #header-left{
     display: flex;
     justify-content: space-evenly;
     align-items: center;
-    padding-left: 10px;
+    padding-left: 50px;
     width: 300px;
 }
 
 #header-right{
     display: flex;
     justify-content: space-evenly;
-    padding-right: 20px;
+    padding-right: 50px;
     width: 200px;
 }
 
@@ -48,23 +48,24 @@
     margin-top: 25px;
     position: fixed;
     bottom: 0;
+    height: 80px;
 }
 
 #footer-left{
     display: flex;
     justify-content: space-evenly;
     align-items: center;
-    padding-left: 10px;
+    padding-left: 30px;
     width: 300px;
     margin-bottom: 0;
 }
 
 #footer-right{
-    font-size: 10px;
+    font-size: x-small;
     font-family: Montesserat;
     display: flex;
     justify-content: space-evenly;
-    padding-right: 20px;
+    padding-right: 50px;
     width: 400px;
 }
 

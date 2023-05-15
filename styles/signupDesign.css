@@ -8,6 +8,7 @@
     color: #CCCCCC;
     font-family: Brooklyn-Heavy;
     text-align: center;
+    font-size: xx-large;
 }
 
 #signup-content{
@@ -29,7 +30,7 @@ input[type=text] {
     margin-right: 8px;
     background-color: transparent;
     font-family: Brooklyn-Semibold;
-    font-size: smaller;
+    font-size: large;
     color: #CCCCCC;
 }
 
