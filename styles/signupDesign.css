@@ -24,7 +24,7 @@ input[type=password],
 input[type=text] {
     border: none;
     border-bottom: 2px solid #CCCCCC;
-    width: 275px;
+    width: 300px;
     padding-left: 8px;
     margin-left: 8px;
     margin-right: 8px;
@@ -56,7 +56,7 @@ input[type=text] {
 
 #create:hover{
     color: #CCCCCC;
-    background: #10292E;
+    background: #CB2D6F;
 }
 
 #login-option{
