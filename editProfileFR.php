@@ -1,23 +1,29 @@
+<?php
+    session_start();
+    $error = isset($_SESSION["error"]) ? $_SESSION["error"] : "";
+
+?>
+
 <!DOCTYPE html>
 <html>
 <head>
     <title>User Profile</title>
-    <link rel="icon" href="logo_white.png">
-    <link href="general.css" type="text/css" rel="stylesheet">
+    <link rel="icon" href="C:\xampp\htdocs\UPXchange\pics\logo_white.png">
+    <link href="C:\xampp\htdocs\UPXchange\styles\editProfileStyle.css" type="text/css" rel="stylesheet">
 </head>
 
 <body class="bg">
     <div class="top-header">
         <div class = "header-left">
-            <img src = "logo_white.png" height="75">
+            <img src = "C:\xampp\htdocs\UPXchange\pics\logo_white.png" height="75">
             <h1>UP Xchange</h1>
         </div>
         <div class = "header-right">
-            <a><img src = "magnifying glass.png" height="25"></a>
-            <a><img src = "plus.png" height="25"></a>
-            <a><img src = "categories.png" height="25"></a>
-            <a><img src = "bell.png" height="25"></a>
-            <a><img src = "user.png" height="25"></a>
+            <a><img src = "C:\xampp\htdocs\UPXchange\pics\magnifying glass.png" height="25"></a>
+            <a><img src = "C:\xampp\htdocs\UPXchange\pics\plus.png" height="25"></a>
+            <a><img src = "C:\xampp\htdocs\UPXchange\pics\categories.png" height="25"></a>
+            <a><img src = "C:\xampp\htdocs\UPXchange\pics\bell.png" height="25"></a>
+            <a><img src = "C:\xampp\htdocs\UPXchange\pics\user 1.png" height="25"></a>
         </div>
     </div>
     <div class="center">
@@ -56,5 +62,9 @@
             </div>
         </div>
     </div>  
-    <button class="btn btn-primary profile-button" type="button">Save Profile</button>
+    <button class="btn btn-primary profile-button" type="submit">Save Profile</button>
 </html>
+
+<?php
+    unset($_SESSION["error"]);
+?>
