@@ -135,11 +135,10 @@ button{
 }
 
 #error{
-    width: 500px;
+    width: fit-content;
     font-family: Brooklyn-Bold;
     font-size: 25px;
     color: #CCCCCC;
-    background-color: rgba(16, 41, 46, 0.5);
     text-align: center;
     border-radius: 5px;
 }

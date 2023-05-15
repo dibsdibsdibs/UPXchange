@@ -33,6 +33,7 @@ function addTag(e){
         }
         e.target.value = "";
     }
+    console.log(tags);
 }
 
 function remove(element, tag){
@@ -42,4 +43,10 @@ function remove(element, tag){
     countTag();
 }
 
-input.addEventListener("keyup", addTag);
+document.getElementById("list-tags").addEventListener("keyup", function(event) {
+    if (event.code === "Enter")
+    {
+        event.preventDefault();
+        document.querySelector("form").submit();
+    }
+});
