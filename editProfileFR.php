@@ -1,5 +1,7 @@
 <?php
     session_start();
+    $error = isset($_SESSION["error"]) ? $_SESSION["error"] : "";
+
 ?>
 
 <!DOCTYPE html>
@@ -60,7 +62,7 @@
             </div>
         </div>
     </div>  
-    <button class="btn btn-primary profile-button" type="button">Save Profile</button>
+    <button class="btn btn-primary profile-button" type="submit">Save Profile</button>
 </html>
 
 <?php
