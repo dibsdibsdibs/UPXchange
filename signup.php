@@ -31,7 +31,7 @@ session_start();
     <div class="container">
         <div id="signup">   
             <br>
-            <h1>SIGN UP</h1>
+            <h1 style="font-size:40px;">SIGN UP</h1>
             <form action="register.php" method="post">
                 <div id="error">
                 <?php
@@ -43,26 +43,26 @@ session_start();
                 </div>
             <div id="signup-content">
                 <div>
-                    <h3>UPmail</h3>
+                    <h3 style="font-size:22px;">UPmail</h3>
                     <input type=text id="upmail" name="upmail" placeholder = "Type your UPmail" pattern=".+@up\.edu\.ph" title="example@up.edu.ph">
-                    <h3>Password</h3>
+                    <h3 style="font-size:22px;">Password</h3>
                     <div class = "password-container">
                         <input type=password id = "password" name="password" placeholder = "Type your password" pattern = "(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*?[0-9])(?=.*?[~`!@#$%\^&*()\-_=+[\]{};:\x27.,\x22\\|/?><]).{8,}" title="Must contain at least one number, one symbol, one uppercase and lowercase letter, and at least 8 or more characters" >
                         <i class="fa-solid fa-eye" id="eye"></i>
                     </div>
-                    <h3>Confirm Password</h3>
+                    <h3 style="font-size:22px;">Confirm Password</h3>
                     <div class = "password-container">
                         <input type=password id = "repassword" name="repassword" placeholder = "Confirm your password">
                         <i class="fa-solid fa-eye" id="reeye"></i>
                     </div>
                 </div>
                 <br><br>
-                <button type="submit" id="create">CREATE ACCOUNT</button>
+                <button type="submit" id="create" style="font-size:18px;">CREATE ACCOUNT</button>
                 <br>
                 <div id="login-option">
-                    <p>Already have an account?</p>
+                    <p style="font-size:18px;">Already have an account?</p>
                 </div>
-                <button type="submit" id="login">LOGIN</button>
+                <button type="submit" id="login" style="font-size:20px;">LOGIN</button>
             </div>
         </div>
     </div>

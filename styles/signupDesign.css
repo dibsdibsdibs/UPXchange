@@ -54,6 +54,11 @@ input[type=text] {
     border: none;
 }
 
+#create:hover{
+    color: #CCCCCC;
+    background: #10292E;
+}
+
 #login-option{
     font-family: Brooklyn-Bold;
     font-size: 15px;
@@ -69,7 +74,7 @@ input[type=text] {
 }
 
 #login:hover{
-    color: #149F98;
+    color: #CB2D6F;
 }
 
 #error{
