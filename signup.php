@@ -62,7 +62,7 @@ session_start();
                 <div id="login-option">
                     <p style="font-size:18px;">Already have an account?</p>
                 </div>
-                <button type="submit" id="login" style="font-size:20px;">LOGIN</button>
+                <button type="submit" id="login" formaction="login.php" style="font-size:20px;">LOGIN</button>
             </div>
         </div>
     </div>
