@@ -25,7 +25,7 @@
         </div>
     </div>
     <div class = "profile">
-        <a><img src = "pics\profile.jpg" height="300" width = "300" class="img"></a>
+        <a><img src = "pics\profile.png" height="300" width = "300" class="img"></a>
         <h2>Name of User</h2>
         <a href = "editProfileFR.php"><button class="edit">Edit Profile</button></a>
     </div>
