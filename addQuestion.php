@@ -10,6 +10,7 @@ session_start();
     <link href="styles/addQuestionDesign.css" type="text/css" rel="stylesheet"/>
     <link href="styles/general.css" type="text/css" rel="stylesheet">
     <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/thinline.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
 </head>
 
 <body class="bg-addQuestion">
@@ -37,12 +38,11 @@ session_start();
             ?>
         </div>
     </div>
+    <form id="storeQuestion" action="storeQuestion.php" method="post">
     <div id="bg-question">
-        <form action="storeQuestion.php" method="post">
         <h2>Post a Question</h2>
         <textarea id="question" name="question" maxlength="150" placeholder= "Add your question here."></textarea>
         <textarea id="details" name="details" maxlength="250" placeholder= "Add your question details here."></textarea>
-        </form>
         <hr>
         <div id="tags">
             <div class="tag-container">
@@ -54,6 +54,7 @@ session_start();
         </div>
     </div>
     <button type="submit" id="post">POST</button>
+    </form>
     <!-- Footer bar section -->
     <div class="bottom-footer">
         <div id="footer-left">

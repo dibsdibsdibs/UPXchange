@@ -4,8 +4,17 @@ tagcount = document.querySelector(".tag-count span");
 
 let maxTags = 5;
 let tags = [];
-
 countTag();
+
+function formatData(){
+    sentTags = JSON.stringify(tags);
+
+    $.ajax({
+        type: "POST",
+        url: "storeTags.php",
+        data: {listtags: sentTags},
+    });
+}
 
 function countTag(){
     tagcount.innerText = maxTags - tags.length;
@@ -22,6 +31,8 @@ function createTag(){
 
 function addTag(e){
     if(e.key == "Enter"){
+        e.preventDefault();
+        
         let tag = e.target.value.replace(/\s+/g, ' ');
         if(tag.length > 1 && !tags.includes(tag)){
             if(tags.length < 5){
@@ -32,8 +43,8 @@ function addTag(e){
             }
         }
         e.target.value = "";
+        console.log(tags);
     }
-    console.log(tags);
 }
 
 function remove(element, tag){
@@ -43,10 +54,9 @@ function remove(element, tag){
     countTag();
 }
 
-document.getElementById("list-tags").addEventListener("keyup", function(event) {
-    if (event.code === "Enter")
-    {
-        event.preventDefault();
-        document.querySelector("form").submit();
-    }
+input.addEventListener("keydown", addTag);
+
+$('#storeQuestion').on('submit', function() {
+    formatData();
+    return true;
 });

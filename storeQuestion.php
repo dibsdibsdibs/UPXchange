@@ -3,7 +3,7 @@
     session_start();
     $error = "";
 
-    if(isset($_POST['question']) && isset($_POST['details'])){
+    if(isset($_POST['question']) && isset($_POST['details']) && isset($_POST['password'])){
         function validate($data){
             $data = trim($data);
             $data = stripslashes($data);
@@ -11,10 +11,10 @@
         }
     }
 
-    $question = validate($_POST['question']);
-    $details = validate($_POST['details']);
+    $question = $_POST['question'];
+    $details = $_POST['details'];
 
-    $sql = "INSERT INTO questions (question, question_deets) VALUES ('$question', '$details')";
+    $sql = "INSERT INTO questions (title, details) VALUES ('$question', '$details')";
 
     if($conn -> query($sql) == TRUE){
         $error = "Successfully uploaded question!";
