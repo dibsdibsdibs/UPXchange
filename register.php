@@ -18,9 +18,18 @@
     $error = '';
 
     switch(true){
+        case empty($_POST["upmail"]) || empty($_POST["password"]) || empty($_POST["repassword"]):
+            $error = 'Please fill up the necessary field';
+                break;
+
         case $password != $repassword:
             $error = "Passwords don't match!";
             break;
+
+        case empty($_POST["upmail"]):
+            $error = 'Please fill up the necessary field';
+                break;
+
         case $password == $repassword:
              $uppercase = preg_match('@[A-Z]@', $password);
              $lowercase = preg_match('@[a-z]@', $password);
@@ -31,7 +40,8 @@
                 $error = 'Password should be at least 8 characters in length and should include at least: 1 uppercase letter, 1 number, and 1 special character.';
                 break;
             }
-            
+        
+
         default:
             $check_upmail  = $conn -> query("SELECT * FROM users WHERE upmail = '$upmail'");
             if(mysqli_num_rows($check_upmail) >= 1){
