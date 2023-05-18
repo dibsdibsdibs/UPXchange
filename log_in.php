@@ -4,7 +4,7 @@ include 'dbconnector.php';
     session_start();
     $error = "";
 
-if(isset($_POST['submit'])){
+if(isset($_POST['upmail']) && isset($_POST['password'])){
     
    $upmail = mysqli_real_escape_string($conn, $_POST['upmail']);
    $password = md5($_POST['password']);
@@ -23,7 +23,7 @@ if(isset($_POST['submit'])){
       header("Location: login.php");
    }
    else{
-      $error = 'Login failed. Invalid upmail or password';
+      $error = 'Login failed. Invalid UPmail or password';
       $_SESSION["error"] = $error;
       header("Location: login.php");
    }

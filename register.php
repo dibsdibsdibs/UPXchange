@@ -26,10 +26,6 @@
             $error = "Passwords don't match!";
             break;
 
-        case empty($_POST["upmail"]):
-            $error = 'Please fill up the necessary field';
-                break;
-
         case $password == $repassword:
              $uppercase = preg_match('@[A-Z]@', $password);
              $lowercase = preg_match('@[a-z]@', $password);

@@ -58,7 +58,7 @@
                     <p class="forgotpassword"><a href="#" style="font-size:17px;">Forgot Password?</a></p>
                 </div>
                 <br><br>
-                <button type="submit" id="create" formaction="home.html" style="font-size:18px;">LOG IN</button>
+                <button type="submit" id="create" style="font-size:18px;">LOG IN</button>
                 <br>
                 <div id="signup-option">
                     <p style="font-size:18px;">Don't have an account?</p>
