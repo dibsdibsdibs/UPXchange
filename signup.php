@@ -27,7 +27,7 @@ session_start();
             <a><img src = "pics/user.png" height="35"style="margin: 0px 20px 0px 0px;"></a>
         </div>
     </div>
-    <!-- Sign Up section-->\
+    <!-- Sign Up section-->
     <div class="container">
         <div id="signup">   
             <br>
@@ -62,7 +62,7 @@ session_start();
                 <div id="login-option">
                     <p style="font-size:18px;">Already have an account?</p>
                 </div>
-                <button type="submit" id="login" formaction="login.php" style="font-size:20px;">LOGIN</button>
+                <button type="submit" id="login" formaction="login.php" style="font-size:20px;">LOG IN</button>
             </div>
         </div>
     </div>

@@ -17,7 +17,7 @@ if(isset($_POST['submit'])){
       $_SESSION['upmail'] = $upmail;
       header('location:home.html');
    }
-   elseif (empty($_POST["upmail"] || empty($_POST["password"]){
+   elseif (empty($_POST["upmail"]) || empty($_POST["password"])){
       $error = 'Please fill up the necessary field';
       $_SESSION["error"] = $error;
       header("Location: login.php");

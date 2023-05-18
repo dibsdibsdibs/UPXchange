@@ -29,39 +29,49 @@
         </div>
     </div>
 
-    <div class="login">
-        <h1 style="font-size:40px;">LOGIN</h1>
-        <form action="log_in.php" method="post">
-            <div id="error">
-            <?php
-                if(isset($_SESSION["error"])){
-                    $error = $_SESSION["error"];
-                    echo "<span>$error</span>";
-                }
-            ?>
-            </div>
-            <div class="mainContainer">
-                <div class="email-input">
-                    <label for="email">UP Email</label>
-                    <br>
-                    <img src="pics\user 1.png">
-                    <input type="email" placeholder="Enter your UPmail" name="upmail" required>
+
+
+    <div class="container">
+        <div id="login">   
+            <br>
+            <h1 style="font-size:40px;">LOG IN</h1>
+            <form action="log_in.php" method="post">
+                <div id="error">
+                <?php
+                    if(isset($_SESSION["error"])){
+                        $error = $_SESSION["error"];
+                        echo "<span>$error</span>";
+                    }
+                ?>
                 </div>
-                <br><br>
-                <div class="password-input">
-                    <label for="password">Password</label>
-                    <br>
-                    <img src="pics\lock 1.png">
-                    <input type="password" placeholder="Enter your password" name="password" required>
+            <div id="login-content">
+                <div>
+                    <h3>UPmail</h3>
+                    <input type=text id="upmail" name="upmail" placeholder = "Type your UPmail" pattern=".+@up\.edu\.ph" title="example@up.edu.ph" maxlength="20">
+                    <h3>Password</h3>
+                    <div class = "password-container">
+                        <input type=password id = "password" name="password" placeholder = "Type your password" maxlength="20" pattern = "(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*?[0-9])(?=.*?[~`!@#$%\^&*()\-_=+[\]{};:\x27.,\x22\\|/?><]).{8,}" title="Must contain at least one number, one symbol, one uppercase and lowercase letter, and at least 8 or more characters" >
+                        <i class="fa-solid fa-eye" id="eye"></i>
+                    </div>
                 </div>
                 <div class="subContainer">
-                    <p class="forgotpassword"><a href="#">Forgot Password?</a></p>
+                    <p class="forgotpassword"><a href="#" style="font-size:17px;">Forgot Password?</a></p>
                 </div>
-                <button type="submit" name="submit">LOGIN</button>
-                <p class="register">Don't have an account?<br><a href="signup.php">SIGN UP</a></p>
+                <br><br>
+                <button type="submit" id="create" formaction="home.html" style="font-size:18px;">LOG IN</button>
+                <br>
+                <div id="signup-option">
+                    <p style="font-size:18px;">Don't have an account?</p>
+                </div>
+                <button type="submit" id="login" formaction="signup.php" style="font-size:20px;">SIGN UP</button>
             </div>
-        </form>
+        </div>
     </div>
+
+
+
+
+
     <div class="bottom-footer">
         <div id="footer-left">
             <img src = "pics/logo_white.png" height="55">
@@ -70,6 +80,7 @@
             <p>© 2023 UP Xchange. Up Xchange is a trademark brand owned by UP Xchange. A Philippine-registered company. All other trademarks are owned by their respective owners.</p>
         </div>
     </div>
+    <script src="scripts/genJS.js" type="text/javascript"></script>
 </body>
 </html>
 
