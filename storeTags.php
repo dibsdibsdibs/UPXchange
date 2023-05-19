@@ -4,7 +4,6 @@
 
     if(isset($_POST['listtags'])){
         function validate($data){
-            $data = trim($data);
             $data = stripslashes($data);
             return $data;
         }
@@ -12,7 +11,7 @@
 
     $tags = $_POST['listtags'];
 
-    $sql = "INSERT INTO taglist (tags) VALUES ('$tags')";
+    $sql = "INSERT INTO tags (tag) VALUES ('$tags')";
 
     if($conn -> query($sql) == TRUE){
         exit();

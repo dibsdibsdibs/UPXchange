@@ -42,11 +42,11 @@ session_start();
     <div id="bg-question">
         <h2>Post a Question</h2>
         <textarea id="question" name="question" maxlength="150" placeholder= "Add your question here."></textarea>
-        <textarea id="details" name="details" maxlength="250" placeholder= "Add your question details here."></textarea>
+        <textarea id="details" name="details" maxlength="500" placeholder= "Add your question details here."></textarea>
         <hr>
         <div id="tags">
             <div class="tag-container">
-                <ul><input name="list-tags" type="text" spell check="false"></ul>
+                <ul><input id="listtags" type="text" spell check="false"></ul>
             </div>
             <div class="tag-count">
                 <p><span> </span> tags remaining</p>
@@ -56,7 +56,7 @@ session_start();
     <button type="submit" id="post">POST</button>
     </form>
     <!-- Footer bar section -->
-    <div class="bottom-footer">
+    <!-- <div class="bottom-footer">
         <div id="footer-left">
             <img src = "pics/logo_white.png" height="50">
             <h1>UP Xchange</h1>
@@ -64,7 +64,7 @@ session_start();
         <div id="footer-right">
             <p>© 2023 UP Xchange. Up Xchange is a trademark brand owned by UP Xchange. A Philippine-registered company. All other trademarks are owned by their respective owners.</p>
         </div>
-    </div>
+    </div> -->
     <script src="scripts/addQuestionJS.js" type="text/javascript"></script>
 </body>
 </html>

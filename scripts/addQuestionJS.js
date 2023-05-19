@@ -6,7 +6,7 @@ let maxTags = 5;
 let tags = [];
 countTag();
 
-function formatData(){
+function sendTags(){
     sentTags = JSON.stringify(tags);
 
     $.ajax({
@@ -43,7 +43,6 @@ function addTag(e){
             }
         }
         e.target.value = "";
-        console.log(tags);
     }
 }
 
@@ -57,6 +56,12 @@ function remove(element, tag){
 input.addEventListener("keydown", addTag);
 
 $('#storeQuestion').on('submit', function() {
-    formatData();
-    return true;
+    var inputQuestion = document.getElementById("question").value;
+    if(inputQuestion == null || inputQuestion == ""){
+        alert("Please enter a question.");
+        return false;
+    }else{
+        sendTags();
+        return true;
+    }
 });

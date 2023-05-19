@@ -14,7 +14,9 @@
     $question = $_POST['question'];
     $details = $_POST['details'];
 
-    $sql = "INSERT INTO questions (title, details) VALUES ('$question', '$details')";
+    $sql = "INSERT INTO questions (question, details) VALUES ('$question', '$details')";
+
+    $error = '';
 
     if($conn -> query($sql) == TRUE){
         $error = "Successfully uploaded question!";
