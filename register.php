@@ -19,8 +19,8 @@
 
     switch(true){
         case empty($_POST["upmail"]) || empty($_POST["password"]) || empty($_POST["repassword"]):
-            $error = 'Please fill up the necessary field';
-                break;
+            $error = 'Please fill up the necessary fields';
+            break;
 
         case $password != $repassword:
             $error = "Passwords don't match!";
@@ -37,22 +37,30 @@
                 break;
             }
         
+            // Hash the password using password_hash()
+            $hashedPassword = password_hash($password, PASSWORD_DEFAULT);
 
-        default:
-            $check_upmail  = $conn -> query("SELECT * FROM users WHERE upmail = '$upmail'");
-            if(mysqli_num_rows($check_upmail) >= 1){
+            $stmt = $conn->prepare("SELECT * FROM users WHERE upmail = ?");
+            $stmt->bind_param("s", $upmail);
+            $stmt->execute();
+            $result = $stmt->get_result();
+
+            if($result->num_rows >= 1){
                 $error = "Email is already used!";
-            }else{
-                $password = md5($password);
-                $sql = "INSERT INTO users (upmail, password) VALUES ('$upmail', '$password')";
-                if($conn -> query($sql) == TRUE){
-                    $error = "Log in into your new account.";
+            } else {
+                $stmt = $conn->prepare("INSERT INTO users (upmail, password) VALUES (?, ?)");
+                $stmt->bind_param("ss", $upmail, $hashedPassword);
+                if ($stmt->execute()) {
+                    $error = "Log in to your new account.";
                     $_SESSION["error"] = $error;
                     header("Location: login.php");
                     exit();
+                } else {
+                    $error = "Registration failed. Please try again.";
                 }
             }
     }
     $_SESSION["error"] = $error;
     header("Location: signup.php");
+    exit();
 ?>

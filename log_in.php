@@ -1,32 +1,47 @@
 <?php
-
-include 'dbconnector.php';
+    include 'dbconnector.php';
     session_start();
     $error = "";
 
-if(isset($_POST['upmail']) && isset($_POST['password'])){
-    
-   $upmail = mysqli_real_escape_string($conn, $_POST['upmail']);
-   $password = md5($_POST['password']);
+    if(isset($_POST['upmail']) && isset($_POST['password'])){
+        function validate($data){
+            $data = trim($data);
+            $data = stripslashes($data);
+            return $data;
+        }
 
-   $select = " SELECT * FROM users WHERE upmail = '$upmail' && password = '$password'";
+        $upmail = validate($_POST['upmail']);
+        $password = validate($_POST['password']);
 
-   $result = mysqli_query($conn, $select);
+        $error = '';
 
-   if(mysqli_num_rows($result) > 0){
-      $_SESSION['upmail'] = $upmail;
-      header('location:home.html');
-   }
-   elseif (empty($_POST["upmail"]) || empty($_POST["password"])){
-      $error = 'Please fill up the necessary field';
-      $_SESSION["error"] = $error;
-      header("Location: login.php");
-   }
-   else{
-      $error = 'Login failed. Invalid UPmail or password';
-      $_SESSION["error"] = $error;
-      header("Location: login.php");
-   }
+        if(empty($upmail) || empty($password)){
+            $error = 'Please fill up the necessary fields';
+        } else {
+            $stmt = $conn->prepare("SELECT * FROM users WHERE upmail = ?");
+            $stmt->bind_param("s", $upmail);
+            $stmt->execute();
+            $result = $stmt->get_result();
 
-}
+            if($result->num_rows === 1){
+                $row = $result->fetch_assoc();
+                $hashedPassword = $row['password'];
+
+                if(password_verify($password, $hashedPassword)){
+                    header("Location: home.html");
+                    exit();
+                } else {
+                    $error = "Login failed. Incorrect password.";
+                }
+            } else {
+                $error = "Oops! The email you provided doesn't match any existing accounts. Sign up today and join the UPxchange community!";
+            }
+        }
+    } else {
+        $error = "Please fill up the necessary fields";
+    }
+
+    $_SESSION["error"] = $error;
+    header("Location: login.php");
+    exit();
 ?>
