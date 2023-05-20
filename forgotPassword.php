@@ -35,7 +35,7 @@
         <div id="login">   
             <br>
             <h1 style="font-size:40px;">Forgot Password</h1>
-            <form action="log_in.php" method="post">
+            <form action="forgotMeNot.php" method="post">
                 <div id="error">
                 <?php
                     if(isset($_SESSION["error"])){
