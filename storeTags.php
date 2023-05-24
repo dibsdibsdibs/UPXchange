@@ -11,7 +11,7 @@
 
     $tags = $_POST['listtags'];
 
-    $sql = "INSERT INTO tags (tag) VALUES ('$tags')";
+    $sql = "INSERT INTO tags (tags) VALUES ('$tags')";
 
     if($conn -> query($sql) == TRUE){
         exit();
