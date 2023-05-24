@@ -32,6 +32,9 @@ CREATE TABLE replies(
     reply_id INT NOT NULL AUTO_INCREMENT,
     reply TEXT,
     question_id INT,
+    user_id INT,
+    time_posted TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
     PRIMARY KEY (reply_id),
-    FOREIGN KEY (question_id) REFERENCES questions(question_id)
+    FOREIGN KEY (question_id) REFERENCES questions(question_id),
+    FOREIGN KEY (user_id) REFERENCES user(user_id)
 );

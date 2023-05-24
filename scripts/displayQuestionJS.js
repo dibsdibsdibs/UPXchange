@@ -1,9 +1,12 @@
-console.log(tags);
+displayTags();
 
-const ul = document.querySelector("ul");
+function displayTags(){
+    const t = document.getElementById("question-tags");
 
-ul.querySelectorAll("li").forEach(li => li.remove());
-tags.slice().reverse().forEach(tag =>{
-    let liTag = `<li>${tag} <i class="uit uit-multiply" onclick="remove(this, '${tag}')"></i></li>`;
-    ul.insertAdjacentHTML("afterbegin", liTag);
-});
+    t.querySelectorAll("#question-tags li").forEach(li => li.remove());
+    tags.slice().reverse().forEach(tag =>{
+        let liTag = `<li>${tag} <i class="uit uit-multiply" onclick="remove(this, '${tag}')"></i></li>`;
+        t.insertAdjacentHTML("afterbegin", liTag);
+    });
+}
+

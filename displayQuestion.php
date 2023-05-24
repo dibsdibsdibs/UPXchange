@@ -4,6 +4,7 @@
     session_start();
 
     $id = '3';
+    $_SESSION['question_id'] = $id;
 
     $question = $conn -> query("SELECT question, details, DATE_FORMAT(time_posted, '%M %d, %Y') AS post_date, DATE_FORMAT(time_posted, '%h:%i %p') AS post_time FROM questions WHERE question_id = '$id'");
     while ($row = $question -> fetch_assoc()) 
@@ -19,6 +20,9 @@
     {
         $_SESSION['tags'] = $row['tags'];
     }
+
+    $replycount = $conn -> query("SELECT reply_id FROM replies WHERE question_id = '$id'");
+    $_SESSION['replycount'] = mysqli_num_rows($replycount);
 ?>
 
 <!DOCTYPE html>
@@ -46,6 +50,16 @@
             <a><img src = "pics/user.png" height="25"></a>
         </div>
     </div>
+    <div id="error-display">
+        <div id="error">
+            <?php
+                if(isset($_SESSION["error"])){
+                    $error = $_SESSION["error"];
+                    echo "<span>$error</span>";
+                }
+            ?>
+        </div>
+    </div>
     <div id="bg-question">
         <div id="question-title">
             <?php
@@ -68,9 +82,28 @@
             ?>
         </div>
         <br>
-        <div class="question-tags"><ul></ul></div>
+        <div class="question-tags"><ul id="question-tags"></ul></div>
+        <br>
+        <div class="replies">
+            <form id="storeReply" action="storeReply.php" method="post">
+            <div id="add-reply">
+                <textarea id="compose-reply" name="reply" maxlength="500" placeholder= "Add your reply here."></textarea>
+            </div>
+            <button type="submit" id="post">POST</button>
+            </form>
+            <p id="separate"></p>
+            <div id="answer-count">
+                <?php
+                    $replycount = $_SESSION['replycount'];
+                    echo "<span>$replycount ANSWERS</p>";
+                ?>
+            </div>
+            <div>
+                <?php include 'displayReplies.php'; ?>
+            </div>
+        </div>
     </div>
-    <div class="bottom-footer">
+    <!-- <div class="bottom-footer">
         <div id="footer-left">
             <img src = "pics/logo_white.png" height="50">
             <h1>UP Xchange</h1>
@@ -78,7 +111,7 @@
         <div id="footer-right">
             <p>© 2023 UP Xchange. Up Xchange is a trademark brand owned by UP Xchange. A Philippine-registered company. All other trademarks are owned by their respective owners.</p>
         </div>
-    </div>
+    </div> -->
     <script type="text/javascript"> let tags=<?= $_SESSION['tags']?></script>
     <script src="scripts/displayQuestionJS.js" type="text/javascript"></script>
 </body>
