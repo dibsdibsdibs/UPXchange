@@ -1,37 +1,55 @@
 <?php
-    session_start();
     include 'dbconnector.php';
+    session_start();
+    $error = "";
 
-    if (isset($_POST['upmail'])) {
-        $upmail = $_POST['upmail'];
+    try {
+        $pdo = new PDO("mysql:host=$servername;dbname=$dbname;charset=utf8", $username, $password);
+        $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+    } catch (PDOException $e) {
+        echo "Database connection failed: " . $e->getMessage();
+        exit;
+    }
 
-        // Check if the email exists in the database
-        $stmt = $conn->prepare("SELECT * FROM users WHERE upmail = ?");
-        $stmt->bind_param("s", $upmail);
+    if ($_SERVER["REQUEST_METHOD"] == "POST") {
+        // Retrieve the submitted email
+        $upmail = $_POST["upmail"];
+
+        // Validate the email address
+        if (!filter_var($upmail, FILTER_VALIDATE_EMAIL)) {
+            $_SESSION["error"] = "Invalid upmail format";
+            header("Location: forgotPassword.php");
+            exit;
+        }
+
+        // Generate a unique token or reset key (you can modify this part as needed)
+        $token = bin2hex(random_bytes(32));
+
+        // Store the token and email in the database
+        $sql = "INSERT INTO password_reset (upmail, token) VALUES (:upmail, :token)";
+        $stmt = $pdo->prepare($sql);
+        $stmt->bindParam(':upmail', $upmail);
+        $stmt->bindParam(':token', $token);
         $stmt->execute();
-        $result = $stmt->get_result();
 
-        if ($result->num_rows === 1) {
-            // Generate a random password reset token
-            $resetToken = bin2hex(random_bytes(32));
+        if ($stmt->rowCount() > 0) {
+            // Send the reset email
+            // Replace the following lines with your code for sending the email
+            $to = $upmail;
+            $subject = "Password Reset";
+            $message = "Dear user, please click the following link to reset your password: example.com/reset-password.php?token=$token";
+            $headers = "From: your_email@example.com";
 
-            // Store the reset token and its expiry time in the database
-            $stmt = $conn->prepare("UPDATE users SET reset_token = ?, reset_token_expiry = DATE_ADD(NOW(), INTERVAL 1 HOUR) WHERE upmail = ?");
-            $stmt->bind_param("sss", $resetToken, $upmail);
-            $stmt->execute();
+            // Uncomment the following line to send the email
+            mail($to, $subject, $message, $headers);
 
-            // Send an email to the user with the reset link
-            $resetLink = "http://example.com/reset_password.php?token=" . $resetToken; // Change example.com to your domain
-            $resetMessage = "Click the following link to reset your password: <a href='$resetLink'>Reset Password</a>";
-            // Send the email using your preferred email sending method (e.g., PHPMailer, mail() function, etc.)
-
-            // Display a success message
-            $_SESSION["success"] = "Please check your email for further instructions.";
-            header("Location: forgot_password.php");
-            exit();
+            // Redirect to a success page or display a success message
+            header("Location: forgotPassword.php");
+            exit;
         } else {
-            // Email doesn't exist in the database
-            $_SESSION["error"] = "Email not found. Please enter a valid email.";
+            $_SESSION["error"] = "Failed to send the reset email. Please try again later.";
+            header("Location: forgotPassword.php");
+            exit;
         }
     }
 ?>

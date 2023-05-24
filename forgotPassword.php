@@ -35,6 +35,9 @@
         <div id="login">   
             <br>
             <h1 style="font-size:40px;">Forgot Password</h1>
+            <div id="signup-option">
+            <p style="font-size:18px;">Please enter your registered UPmail. We will send a link to reset your password.</p>
+            </div>
             <form action="forgotMeNot.php" method="post">
                 <div id="error">
                 <?php
@@ -44,9 +47,6 @@
                     }
                 ?>
                 </div>
-            <div id="signup-option">
-            <p style="font-size:18px;">Please enter your registered UPmail. We will send a link to reset your password.</p>
-            </div>
             <div id="login-content">
                 <div>
                     <h3>UPmail</h3>
