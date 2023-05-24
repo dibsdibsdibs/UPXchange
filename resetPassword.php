@@ -1,20 +1,19 @@
 <?php
-    session_start();
+session_start();
 ?>
 
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up</title>
+    <link rel="icon" href="pics/logo_white.png">
+    <link href="styles/signupDesign.css" type="text/css" rel="stylesheet"/>
     <link href="styles/general.css" type="text/css" rel="stylesheet">
-    <link href="styles/login.css" type="text/css" rel="stylesheet">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" rel="stylesheet" >
-    <link href="pics/logo_white.png" rel="icon">
-    <title>Login</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
 </head>
+
 <body class="bg">
+    <!--Header bar section-->
     <div class="top-header">
         <div id = "header-left">
             <img src = "pics/logo_white.png" height="65" style="margin: 0px 20px 0px 0px;">
@@ -28,14 +27,12 @@
             <a><img src = "pics/user.png" height="35"style="margin: 0px 20px 0px 0px;"></a>
         </div>
     </div>
-
-
-
+    <!-- Sign Up section-->
     <div class="container">
-        <div id="login">   
+        <div id="signup">   
             <br>
-            <h1 style="font-size:40px;">LOG IN</h1>
-            <form action="log_in.php" method="post">
+            <h1 style="font-size:40px;">Reset Password</h1>
+            <form action="register.php" method="post">
                 <div id="error">
                 <?php
                     if(isset($_SESSION["error"])){
@@ -44,34 +41,26 @@
                     }
                 ?>
                 </div>
-            <div id="login-content">
+            <div id="signup-content">
                 <div>
-                    <h3>UPmail</h3>
-                    <input type=text id="upmail" name="upmail" placeholder = "Type your UPmail" pattern=".+@up\.edu\.ph" title="example@up.edu.ph" maxlength="20">
-                    <h3>Password</h3>
+                    <h3>New Password</h3>
                     <div class = "password-container">
                         <input type=password id = "password" name="password" placeholder = "Type your password" maxlength="20" pattern = "(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*?[0-9])(?=.*?[~`!@#$%\^&*()\-_=+[\]{};:\x27.,\x22\\|/?><]).{8,}" title="Must contain at least one number, one symbol, one uppercase and lowercase letter, and at least 8 or more characters" >
                         <i class="fa-solid fa-eye" id="eye"></i>
                     </div>
-                </div>
-                <div class="subContainer">
-                    <p class="forgotpassword"><a href="forgotPassword.php" style="font-size:17px;">Forgot Password?</a></p>
+                    <h3 style="font-size:22px;">Confirm New Password</h3>
+                    <div class = "password-container">
+                        <input type=password id = "repassword" name="repassword" placeholder = "Confirm your password" maxlength="20">
+                        <i class="fa-solid fa-eye" id="reeye"></i>
+                    </div>
                 </div>
                 <br><br>
-                <button type="submit" id="create" style="font-size:18px;">LOG IN</button>
+                <button type="submit" id="create" style="font-size:18px;">Change Password</button>
                 <br>
-                <div id="signup-option">
-                    <p style="font-size:18px;">Don't have an account?</p>
-                </div>
-                <button type="submit" id="login" formaction="signup.php" style="font-size:20px;">SIGN UP</button>
             </div>
         </div>
     </div>
-
-
-
-
-
+    <!-- Footer bar section -->
     <div class="bottom-footer">
         <div id="footer-left">
             <img src = "pics/logo_white.png" height="55">
