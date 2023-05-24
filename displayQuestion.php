@@ -3,7 +3,7 @@
     
     session_start();
 
-    $id = '3';
+    $id = '1';
     $_SESSION['question_id'] = $id;
 
     $question = $conn -> query("SELECT question, details, DATE_FORMAT(time_posted, '%M %d, %Y') AS post_date, DATE_FORMAT(time_posted, '%h:%i %p') AS post_time FROM questions WHERE question_id = '$id'");
