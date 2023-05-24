@@ -13,7 +13,7 @@
     border-radius: 10px;
     margin-left: 5%;
     margin-right: 5%;
-    padding: 1%;
+    padding: 3%;
     color: #CCCCCC;
 }
 
@@ -23,6 +23,7 @@
 }
 
 #question-time{
+    margin-top: 1%;
     font-family: Montesserat;
     font-size: 10px;
 }
@@ -39,32 +40,19 @@
 .question-tags ul{
     display: flex;
     flex-wrap: wrap;
-    border: 3px solid #149F98;
-    border-radius: 10px;
     color: #CCCCCC;
     font-family: Montesserat-Medium;
-    border-radius: 5px;
-    padding: 7px;
+    padding: 0px;
+    margin: 0px;
 }
 
-.question_tags ul li{
+.question-tags ul li{
     display: flex;
     list-style: none;
     background-color: rgba(20, 159, 152, 0.3);
     font-family: Montesserat-Medium;
     padding: 5px 8px 5px 10px;
     border: 1px solid #149F98;
-    margin: 4px 3px;
-}
-
-.question-tags ul li i{
-    display: flex;
-    align-items: center;
-    height: 20px;
-    width: 20px;
-    margin-left: 4px;
-    font-size: 12px; 
-    background-color: rgba(20, 159, 152, 0.5);
     border-radius: 5px;
-    justify-content: center;
+    margin: 4px 3px;
 }

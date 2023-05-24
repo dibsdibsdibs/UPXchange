@@ -1,6 +1,9 @@
-let tags = [];
+console.log(tags);
 
-let taglist = document.getElementsByClassName("question-tags");
-tags = $.parseJSON(taglist);
+const ul = document.querySelector("ul");
 
-console.log(taglist);
+ul.querySelectorAll("li").forEach(li => li.remove());
+tags.slice().reverse().forEach(tag =>{
+    let liTag = `<li>${tag} <i class="uit uit-multiply" onclick="remove(this, '${tag}')"></i></li>`;
+    ul.insertAdjacentHTML("afterbegin", liTag);
+});

@@ -68,12 +68,7 @@
             ?>
         </div>
         <br>
-        <div class="question-tags">
-            <?php
-                $tags = $_SESSION['tags'];
-                echo json_encode($tags);
-            ?>
-        </div>
+        <div class="question-tags"><ul></ul></div>
     </div>
     <div class="bottom-footer">
         <div id="footer-left">
@@ -84,6 +79,7 @@
             <p>© 2023 UP Xchange. Up Xchange is a trademark brand owned by UP Xchange. A Philippine-registered company. All other trademarks are owned by their respective owners.</p>
         </div>
     </div>
+    <script type="text/javascript"> let tags=<?= $_SESSION['tags']?></script>
     <script src="scripts/displayQuestionJS.js" type="text/javascript"></script>
 </body>
 </html>
