@@ -58,6 +58,33 @@
     margin: 4px 3px;
 }
 
+#options{
+    display: flex;
+    font-family: Montesserat;
+    font-size: 15px;
+    padding-top: 1%;
+    padding-bottom: 1%;
+}
+
+.question-options{
+    display: flex;
+    align-items: center;
+    margin-right: 1%;
+    padding: 1%;
+    max-height: 20px;
+    height: 100%;
+}
+
+.question-options img{
+    margin-right: 5px;
+}
+
+div.question-options:hover{
+    background-color: #149F98;
+    border-radius: 5px;
+    max-height: 20px;
+}
+
 #compose-reply{
     font-size: 15px;
     background-color: transparent;

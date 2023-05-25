@@ -83,8 +83,25 @@
         </div>
         <br>
         <div class="question-tags"><ul id="question-tags"></ul></div>
-        <br>
-        <div class="replies">
+        <div id="options">
+            <div class="question-options"  onclick="showComments()">
+                <img src = "pics/comment.png" height="15">
+                <p>Comments</p>
+            </div>
+            <div class="question-options">
+                <img src = "pics/share.png" height="15">
+                <p>Share</p>
+            </div>
+            <div class="question-options">
+                <img src = "pics/bookmark.png" height="15">
+                <p>Bookmark</p>
+            </div>
+            <div class="question-options">
+                <img src = "pics/report.png" height="15">
+                <p>Report</p>
+            </div>
+        </div>
+        <div class="replies" id="showreplies">
             <form id="storeReply" action="storeReply.php" method="post">
             <div id="add-reply">
                 <textarea id="compose-reply" name="reply" maxlength="500" placeholder= "Add your reply here."></textarea>

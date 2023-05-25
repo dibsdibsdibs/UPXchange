@@ -1,4 +1,10 @@
 displayTags();
+hideComments();
+
+function hideComments(){
+    let comments = document.getElementById("showreplies");
+    comments.style.display = "none";
+}
 
 function displayTags(){
     const t = document.getElementById("question-tags");
@@ -10,3 +16,11 @@ function displayTags(){
     });
 }
 
+function showComments(){
+    let comments = document.getElementById("showreplies");
+    if(comments.style.display === "none"){
+        comments.style.display = "block";
+    }else{
+        comments.style.display = "none";
+    }
+}
