@@ -7,10 +7,10 @@
         <nav>
             <ul>
                 <li><a href="#"><img src="pics/magnifying glass.png" height="30"></a></li>
-                <li><a href="#"><img src="pics/plus.png" height="30"></a></li>
+                <li><a href="addQuestion.php"><img src="pics/plus.png" height="30"></a></li>
                 <li><a href="#"><img src="pics/categories.png" height="30"></a></li>
                 <li><a href="#"><img src="pics/bell.png" height="30"></a></li>
-                <li><a href="#"><img src="pics/user.png" height="30"></a></li>
+                <li><a href="editProfile.php"><img src="pics/user.png" height="30"></a></li>
             </ul>
         </nav>
     </div>

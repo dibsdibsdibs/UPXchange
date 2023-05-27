@@ -54,10 +54,7 @@
                         <i class="fa-solid fa-eye" id="eye"></i>
                     </div>
                 </div>
-                <div class="subContainer">
-                    <p class="forgotpassword"><a href="forgotPassword.php" style="font-size:17px;">Forgot Password?</a></p>
-                </div>
-                <br><br>
+                <br>
                 <button type="submit" id="create" style="font-size:18px;">LOG IN</button>
                 <br>
                 <div id="signup-option">
