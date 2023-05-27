@@ -1,5 +1,17 @@
 <?php
-    session_start();
+
+@include 'dbconnector.php';
+
+session_start();
+
+if(!isset($_SESSION['upmail'])){
+   header('location:login.php');
+}
+
+if(!empty($_GET['login'])){
+    echo "<p align='center'>You have successfully logged in!</p>";
+   }
+
 ?>
 
 <!DOCTYPE html>
