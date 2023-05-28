@@ -21,6 +21,8 @@ if(!empty($_GET['login'])){
     <link href="styles/home.css" type="text/css" rel="stylesheet"/>
     <link href="styles/general.css" type="text/css" rel="stylesheet">
     <link href="pics/logo_white.png" rel="icon">
+    <meta charset="utf-8">
+    <meta http-equiv="refresh" content="100; url = session.php" stats = "out">
 </head>
 
 <body class="bg">
