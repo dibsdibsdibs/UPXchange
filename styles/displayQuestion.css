@@ -180,7 +180,7 @@ div.question-options:hover{
 /*Add a Report Design*/
 
 #bg-report{
-    background-color: #50203A;;
+    background-color: rgba(36, 25, 31);
     padding: 2%;
     position: absolute;
     position: fixed;

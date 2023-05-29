@@ -1,5 +1,6 @@
 displayTags();
 hideElements();
+checkBookmark();
 
 function hideElements(){
     let comments = document.getElementById("showreplies");
@@ -55,6 +56,31 @@ function downVote(){
     }
 }
 
+function checkBookmark(){
+    let icon=document.getElementById("bookmark-icon");
+    let label=document.getElementById("bookmark-label");
+
+    if(bookmarked == 0){
+        icon.src = "pics/bookmarked.png";
+        label.innerHTML = "Bookmarked";
+    }
+}
+
+function bookmarkQuestion(){
+    let icon=document.getElementById("bookmark-icon");
+    let label=document.getElementById("bookmark-label");
+    
+    if(icon.src.match("pics/bookmark.png")){
+        icon.src = "pics/bookmarked.png";
+        label.innerHTML = "Bookmarked";
+        location.href = "bookmarkQuestion.php";
+    }else{
+        icon.src = "pics/bookmark.png";
+        label.innerHTML = "Bookmark";
+        location.href = "removeBookmark.php";
+    }
+}
+
 function submitReport(){
     let report = document.getElementById("bg-report");
     if(report.style.display === "none"){
@@ -72,5 +98,11 @@ function exitReport(){
 }
 
 $('#storeReport').on('submit', function() {
-    return true;
+    var inputReport = document.getElementById("title").value;
+    if(inputReport == null || inputReport == ""){
+        alert("Please enter concern.");
+        return false;
+    }else{
+        return true;
+    }
 });

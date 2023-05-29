@@ -1,31 +1,4 @@
-<?php
-    include 'dbconnector.php';
-    
-    session_start();
-
-    $id = '1';
-    $_SESSION['question_id'] = $id;
-
-    $question = $conn -> query("SELECT question, details, DATE_FORMAT(time_posted, '%M %d, %Y') AS post_date, DATE_FORMAT(time_posted, '%h:%i %p') AS post_time FROM questions WHERE question_id = '$id'");
-    while ($row = $question -> fetch_assoc()) 
-    {
-        $_SESSION['question'] = $row['question'];
-        $_SESSION['details'] = $row['details'];
-        $_SESSION['post_date'] = $row['post_date'];
-        $_SESSION['post_time'] = $row['post_time'];
-    }
-
-    $tags = $conn -> query("SELECT tags FROM tags WHERE tag_id = '$id'");
-    while ($row = $tags -> fetch_assoc()) 
-    {
-        $_SESSION['tags'] = $row['tags'];
-    }
-
-    $replycount = $conn -> query("SELECT reply_id FROM replies WHERE question_id = '$id'");
-    $_SESSION['replycount'] = mysqli_num_rows($replycount);
-
-    $replies = $conn -> query("SELECT reply, DATE_FORMAT(time_posted, '%M %d, %Y') AS reply_date, DATE_FORMAT(time_posted, '%h:%i %p') AS reply_time, vote FROM replies WHERE question_id = '$id'");
-?>
+<?php include 'retrieveQuestion.php' ?>
 
 <!DOCTYPE html>
 <html>
@@ -107,9 +80,10 @@
                 <img src = "pics/share.png" height="15">
                 <p>Share</p>
             </div>
-            <div class="question-options">
-                <img src = "pics/bookmark.png" height="15">
-                <p>Bookmark</p>
+            <div class="question-options" onclick="bookmarkQuestion()">
+                <img src = "pics/bookmark.png" id='bookmark-icon' height="15">
+                <p id='bookmark-label'>Bookmark</p>
+                <script type="text/javascript"> let bookmarked=<?php echo $_SESSION['bookmarked']?></script>
             </div>
             <div class="question-options" onclick="submitReport()">
                 <img src = "pics/report.png" height="15">

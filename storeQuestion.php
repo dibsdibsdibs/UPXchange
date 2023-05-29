@@ -16,7 +16,6 @@
 
     $sql = "INSERT INTO questions (question, details) VALUES ('$question', '$details')";
 
-
     if($conn -> query($sql) == TRUE){
         $error = "Successfully uploaded question!";
         $_SESSION["error"] = $error;

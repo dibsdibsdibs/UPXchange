@@ -17,14 +17,10 @@
 
     $sql = "INSERT INTO reports (title, username, details) VALUES ('$title','$username','$details')";
 
-
     if($conn -> query($sql) == TRUE){
         $error = "Successfully submitted the report!";
         $_SESSION["error"] = $error;
-        header("Location: addReport.php");
+        header("Location: displayQuestion.php");
         exit();
     }
-
-    $_SESSION["error"] = $error;
-    header("Location: addReport.php");
 ?>
