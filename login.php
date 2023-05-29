@@ -9,7 +9,6 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="styles/general.css" type="text/css" rel="stylesheet">
-    <link href="styles/general2.css" type="text/css" rel="stylesheet">
     <link href="styles/login.css" type="text/css" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" rel="stylesheet" >
     <link href="pics/logo_white.png" rel="icon">
@@ -52,18 +51,7 @@
         </div>
     </div>
 
-
-
-
-
-    <div class="bottom-footer">
-        <div id="footer-left">
-            <img src = "pics/logo_white.png" height="55">
-            <h1 style="font-size:30px;">UP Xchange</h1>
-        </div>        <div id="footer-right">
-            <p>© 2023 UP Xchange. Up Xchange is a trademark brand owned by UP Xchange. A Philippine-registered company. All other trademarks are owned by their respective owners.</p>
-        </div>
-    </div>
+    <?php include "footer.php" ; ?>
     <script src="scripts/genJS.js" type="text/javascript"></script>
 </body>
 </html>

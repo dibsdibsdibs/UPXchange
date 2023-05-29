@@ -1,3 +1,9 @@
+.body {
+    padding-bottom: 65rem;
+    position: relative;
+    min-height: 100vh;
+}
+
 #login h1{
     color: #CCCCCC;
     font-family: Brooklyn-Heavy;
@@ -12,6 +18,7 @@
     flex-direction: column;
     color: #CCCCCC;
     font-family: Brooklyn-Semibold;
+    padding-bottom: 4.4rem;
 }
 
 

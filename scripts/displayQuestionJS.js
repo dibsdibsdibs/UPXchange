@@ -1,6 +1,7 @@
 displayTags();
 hideElements();
 checkBookmark();
+checkQuestionPoster();
 
 function hideElements(){
     let comments = document.getElementById("showreplies");
@@ -28,34 +29,6 @@ function showComments(){
     }
 }
 
-function upVote(){
-    let upvotes = document.getElementsByClassName("upvote");
-
-    for (const upvote of upvotes) {
-        upvote.addEventListener("click", e => {
-            if(upvote.src.match("pics/upvote.png")){
-                upvote.src = "pics/upvoted.png";
-            }else{
-                upvote.src = "pics/upvote.png";
-            }
-        })
-    }
-}
-
-function downVote(){
-    let downvotes = document.getElementsByClassName("downvote");
-
-    for (const downvote of downvotes) {
-        downvote.addEventListener("click", e => {
-            if(downvote.src.match("pics/downvote.png")){
-                downvote.src = "pics/downvoted.png";
-            }else{
-                downvote.src = "pics/downvote.png";
-            }
-        })
-    }
-}
-
 function checkBookmark(){
     let icon=document.getElementById("bookmark-icon");
     let label=document.getElementById("bookmark-label");
@@ -63,6 +36,16 @@ function checkBookmark(){
     if(bookmarked == 0){
         icon.src = "pics/bookmarked.png";
         label.innerHTML = "Bookmarked";
+    }
+}
+
+function checkQuestionPoster(){
+    let edit = document.getElementById("editQuestionOption");
+
+    if(posted == 0){
+        edit.style.display = "compact";
+    }else{
+        edit.style.display = "none";
     }
 }
 
@@ -95,6 +78,10 @@ function submitReport(){
 function exitReport(){
     let report = document.getElementById("bg-report");
     report.style.display = "none";
+}
+
+function editQuestion(){
+    location.href = "editQuestion.php";
 }
 
 $('#storeReport').on('submit', function() {

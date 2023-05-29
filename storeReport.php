@@ -14,8 +14,9 @@
     $title = $_POST['title'];
     $details = $_POST['details'];
     $username = $_POST['username'];
+    $user_id = $_SESSION['user_id'];
 
-    $sql = "INSERT INTO reports (title, username, details) VALUES ('$title','$username','$details')";
+    $sql = "INSERT INTO reports (title, username, details, user_id) VALUES ('$title','$username','$details', '$user_id')";
 
     if($conn -> query($sql) == TRUE){
         $error = "Successfully submitted the report!";

@@ -11,19 +11,7 @@
 </head>
 <body class="bgDisplay">
     <!--Header bar section-->
-    <div class="top-header">
-        <div id = "header-left">
-            <img src = "pics/logo_white.png" height="50">
-            <h1>UP Xchange</h1>
-        </div>
-        <div id = "header-right">
-            <a><img src = "pics/magnifying glass.png" height="25"></a>
-            <a><img src = "pics/plus.png" height="25"></a>
-            <a><img src = "pics/categories.png" height="25"></a>
-            <a><img src = "pics/bell.png" height="25"></a>
-            <a><img src = "pics/user.png" height="25"></a>
-        </div>
-    </div>
+    <?php include "header.php" ; ?>
     <div id="error-display">
         <div id="error">
             <?php
@@ -87,6 +75,11 @@
                 <img src = "pics/report.png" height="15">
                 <p>Report</p>
             </div>
+            <div class="question-options" onclick="editQuestion()" id="editQuestionOption">
+                <img src = "pics/edit.png" height="15">
+                <p>Edit Question</p>
+                
+            </div>
         </div>
         <div class="replies" id="showreplies">
             <form id="storeReply" action="storeReply.php" method="post">
@@ -107,17 +100,12 @@
             </div>
         </div>
     </div>
-    <!-- <div class="bottom-footer">
-        <div id="footer-left">
-            <img src = "pics/logo_white.png" height="50">
-            <h1>UP Xchange</h1>
-        </div>
-        <div id="footer-right">
-            <p>© 2023 UP Xchange. Up Xchange is a trademark brand owned by UP Xchange. A Philippine-registered company. All other trademarks are owned by their respective owners.</p>
-        </div>
-    </div> -->
+    <?php include "footer.php" ; ?>
     <script type="text/javascript">
-        let tags=<?= $_SESSION['tags']?>
+        let tags=<?= $_SESSION['tags']; ?>
+    </script>
+    <script type="text/javascript"> 
+        let posted= <?php echo $_SESSION['posted_by_user']; ?>
     </script>
     <script src="scripts/displayQuestionJS.js" type="text/javascript"></script>
 </body>

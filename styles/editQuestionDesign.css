@@ -1,11 +1,11 @@
-/*Add a Question Design*/
+/*Edit a Question Design*/
 
 .bg-addQuestion{
     background-color: #50203A;
     background-repeat: no-repeat;
     background-attachment: fixed;
-    position: relative;
-    min-height: 100vh;
+    margin: 0px;
+    padding: 0px;
 }
 
 #bg-question{

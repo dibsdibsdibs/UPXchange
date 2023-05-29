@@ -45,9 +45,9 @@
     color: #CCCCCC;
     background-color: #10292E;
     width: 100%;
-    margin-top: 25px;
-    position: absolute;
+    right: 0;
     bottom: 0;
+    left: 0;
     height: 80px;
 }
 
