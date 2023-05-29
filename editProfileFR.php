@@ -35,8 +35,7 @@
     </div>
     <div class="center">
         <h2 style="font-size:40px;">EDIT PROFILE</h2>
-        <form method="POST" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>">
-            <form action="upload.php" method="post" enctype="multipart/form-data">
+        <form method="POST" action="edit.php">
             <h4 style="margin-right: 190px;margin-bottom: 10px;">First Name:</h4>
             <div class="row mt-5">
                 <div class="wrapper">
@@ -49,7 +48,7 @@
             </div>
             <h4 style="margin-right: 190px;margin-bottom: 10px;">Last Name:</h4>
             <div class="row mt-3">
-                <div class="wrapper"><input type="text" maxlength = "30" class="form-control" placeholder="Last Name" action = "
+                <div class="wrapper"><input type="text" maxlength = "30" class="form-control" placeholder="Last Name"  name="lastName" action = "
                     <?php     if(!empty($firstName) && !ctype_alpha($firstName)) {
             return "You typed $firstName: please use only alphanumeric characters";
     } 
@@ -58,7 +57,7 @@
             <h4 style="margin-right: 220px;margin-bottom: 10px;">Course:</h4>
             <div class="row mt-3">
                 <div class="wrapper">                    
-                    <select class = "form-control" name="membership" id="membership">
+                    <select class = "form-control" name="course" id="membership">
                     <option value="select">--select--</option>
                     <option value="BA in Communication and Media Studies">BA in Communication and Media Studies</option>
                     <option value="BA Community Development">BA Community Development</option>
@@ -96,7 +95,7 @@
             <h4 style="margin-right: 195px;margin-bottom: 10px;">Year Level:</h4>
             <div class="row mt-3">
                 <div class="wrapper">
-                    <select class = "form-control" name="membership" id="membership" value="Year">
+                    <select class = "form-control" name="yearLevel" id="membership" value="Year">
                         <option value="select">--select--</option>
                         <option value="1st">First Year</option>
                         <option value="2nd">Second Year</option>
@@ -109,7 +108,7 @@
             <h4 style="margin-right: 230px;margin-bottom: 10px;">About:</h4>
             <div class="row mt-3">
                 <div class="wrapper">
-                    <input type="text" maxlength = "150" class="form-control-about" placeholder="Tell us about yourself...">
+                    <input type="text" maxlength = "150"  name="about" class="form-control-about" placeholder="Tell us about yourself...">
                 </div>
             </div>  
             <div class="row mt-3">
