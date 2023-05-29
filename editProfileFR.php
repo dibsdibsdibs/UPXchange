@@ -1,6 +1,9 @@
 <?php
     session_start();
     $error = isset($_SESSION["error"]) ? $_SESSION["error"] : "";
+    $fields = ['firstName', 'lastName', 'course', 'membership', 'year'];
+    $optionalFields = ['about'];
+    $values = [];
     if ($_SERVER["REQUEST_METHOD"] === "POST") {
 
     header("Location: profile_saved.php");
@@ -34,22 +37,34 @@
         <h2>EDIT PROFILE</h2>
         <form method="POST" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>">
             <form action="upload.php" method="post" enctype="multipart/form-data">
-                Select image to upload:
+                <div class="wrapper">Profile Picture:
                 <input type="file" name="fileToUpload" id="fileToUpload">
-                <br>
+                <br>    
                 <br>
                 <input type="submit" value="Upload Image" name="submit">
-            </form>
+            </div>
             <div class="row mt-5">
                 <div class="wrapper">
-                    <input type="text" maxlength="30" class="form-control" placeholder="First Name" name="firstName">
+                    <input type="text" maxlength="30" class="form-control" placeholder="First Name" name="firstName" action = "
+                    <?php     if(!empty($firstName) && !ctype_alpha($firstName)) {
+            return "You typed $firstName: please use only alphanumeric characters";
+    } 
+                ?>">
                 </div>
             </div>
             <div class="row mt-3">
-                <div class="wrapper"><input type="text" maxlength = "30" class="form-control" placeholder="Last Name"></div>
+                <div class="wrapper"><input type="text" maxlength = "30" class="form-control" placeholder="Last Name" action = "
+                    <?php     if(!empty($firstName) && !ctype_alpha($firstName)) {
+            return "You typed $firstName: please use only alphanumeric characters";
+    } 
+                ?>"></div>
             </div>
             <div class="row mt-3">
-                <div class="wrapper"><input type="text" maxlength = "30" class="form-control" placeholder="Course"></div>
+                <div class="wrapper"><input type="text" maxlength = "30" class="form-control" placeholder="Course" action = "
+                    <?php     if(!empty($firstName) && !ctype_alpha($firstName)) {
+            return "You typed $firstName: please use only alphanumeric characters";
+    } 
+                ?>"></div>
             </div>
             <div class="row mt-3">
                 <div class="wrapper">
