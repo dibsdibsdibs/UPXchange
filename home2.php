@@ -1,5 +1,13 @@
 <?php
     session_start();
+
+    if (isset($_SESSION['last_activity']) && time() - $_SESSION['last_activity'] > 900) {
+        session_unset();
+        session_destroy();
+        header("Location: login.php");
+    }
+
+    $_SESSION['last_activity'] = time();
 ?>
 
 <!DOCTYPE html>
@@ -10,7 +18,6 @@
         <link href="styles/general2.css" type="text/css" rel="stylesheet">
         <link href="styles/home2.css" type="text/css" rel="stylesheet">
         <meta charset="utf-8">
-        <meta http-equiv="refresh" content="10; url = session.php" stats = "out">
     </head>
     
     <body>
