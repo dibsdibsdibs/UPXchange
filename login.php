@@ -9,25 +9,14 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="styles/general.css" type="text/css" rel="stylesheet">
+    <link href="styles/general2.css" type="text/css" rel="stylesheet">
     <link href="styles/login.css" type="text/css" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" rel="stylesheet" >
     <link href="pics/logo_white.png" rel="icon">
     <title>Login</title>
 </head>
 <body class="bg">
-    <div class="top-header">
-        <div id = "header-left">
-            <img src = "pics/logo_white.png" height="65" style="margin: 0px 20px 0px 0px;">
-            <h1 style="font-size:35px;">UP Xchange</h1>
-        </div>
-        <div id = "header-right">
-            <a><img src = "pics/magnifying glass.png" height="35" style="margin: 0px 20px 0px 0px;"></a>
-            <a><img src = "pics/plus.png" height="35" style="margin: 0px 20px 0px 0px;"></a>
-            <a><img src = "pics/categories.png" height="35"style="margin: 0px 20px 0px 0px;"></a>
-            <a><img src = "pics/bell.png" height="35"style="margin: 0px 20px 0px 0px;"></a>
-            <a><img src = "pics/user.png" height="35"style="margin: 0px 20px 0px 0px;"></a>
-        </div>
-    </div>
+    <?php include "header.php" ; ?>
 
     <div class="container">
         <div id="login">   
