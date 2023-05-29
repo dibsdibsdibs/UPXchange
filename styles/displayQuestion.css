@@ -28,7 +28,7 @@ body {
     font-size: 25px;
 }
 
-#question-time{
+#question-info{
     margin-top: 1%;
     font-family: Montesserat;
     font-size: 10px;
@@ -149,7 +149,7 @@ div.question-options:hover{
     width: 95%;
 }
 
-.reply-time{
+.reply-info{
     margin-top: 0.5%;
     font-family: Montesserat;
     font-size: 10px;

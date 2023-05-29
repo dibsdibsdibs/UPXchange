@@ -13,6 +13,5 @@
         header("Location: logout.php");
         exit();
     }
-    $_SESSION['lastactivity'] = time();
-    
+    $_SESSION['lastactivity'] = time();  
 ?>

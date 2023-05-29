@@ -1,6 +1,5 @@
 <?php
     include 'dbconnector.php';
-    session_start();
 
     if(isset($_POST['listtags'])){
         function validate($data){

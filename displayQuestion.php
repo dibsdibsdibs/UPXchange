@@ -1,4 +1,7 @@
-<?php include 'retrieveQuestion.php' ?>
+<?php
+    include 'session.php';
+    include 'retrieveQuestion.php';
+?>
 
 <!DOCTYPE html>
 <html>
@@ -43,11 +46,13 @@
                 echo "<span>$question</span>";
             ?>
         </div>
-        <div id="question-time">
+        <div id="question-info">
             <?php
                 $post_date = $_SESSION['post_date'];
                 $post_time = $_SESSION['post_time'];
-                echo "<span>$post_date $post_time</p>";
+                $post_by_firstname = $_SESSION['post_by_firstname'];
+                $post_by_lastname = $_SESSION['post_by_lastname'];
+                echo "<span>$post_by_firstname $post_by_lastname on $post_date $post_time</span>";
             ?>
         </div>
         <br>

@@ -1,6 +1,5 @@
 <?php
     include 'dbconnector.php';
-    session_start();
     $error = "";
 
     if(isset($_POST['upmail']) && isset($_POST['password'])){
