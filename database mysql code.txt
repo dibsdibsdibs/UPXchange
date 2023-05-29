@@ -45,3 +45,12 @@ CREATE TABLE uservotes(
     vote INT NOT NULL,
     PRIMARY KEY (vote_id)
 )
+
+CREATE TABLE reports(
+    report_id INT NOT NULL AUTO_INCREMENT,
+    title TEXT NOT NULL,
+    details TEXT,
+    time_posted TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    user_id INT NOT NULL,
+    PRIMARY KEY (report_id)
+)

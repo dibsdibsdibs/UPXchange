@@ -46,7 +46,7 @@
     background-color: #10292E;
     width: 100%;
     margin-top: 25px;
-    position: fixed;
+    position: absolute;
     bottom: 0;
     height: 80px;
 }

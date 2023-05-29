@@ -56,12 +56,6 @@ function remove(element, tag){
 input.addEventListener("keydown", addTag);
 
 $('#storeQuestion').on('submit', function() {
-    var inputQuestion = document.getElementById("question").value;
-    if(inputQuestion == null || inputQuestion == ""){
-        alert("Please enter a question.");
-        return false;
-    }else{
-        sendTags();
-        return true;
-    }
+    sendTags();
+    return true;
 });
