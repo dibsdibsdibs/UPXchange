@@ -1,9 +1,11 @@
 displayTags();
-hideComments();
+hideElements();
 
-function hideComments(){
+function hideElements(){
     let comments = document.getElementById("showreplies");
     comments.style.display = "none";
+    let report = document.getElementById("bg-report");
+    report.style.display = "none";
 }
 
 function displayTags(){
@@ -52,3 +54,23 @@ function downVote(){
         })
     }
 }
+
+function submitReport(){
+    let report = document.getElementById("bg-report");
+    if(report.style.display === "none"){
+        report.style.display = "block";
+        report.style.height = "100%";
+        report.style.overflow = "hidden";
+    }else{
+        report.style.display = "none";
+    }
+}
+
+function exitReport(){
+    let report = document.getElementById("bg-report");
+    report.style.display = "none";
+}
+
+$('#storeReport').on('submit', function() {
+    return true;
+});

@@ -47,6 +47,7 @@ CREATE TABLE uservotes(
 CREATE TABLE reports(
     report_id INT NOT NULL AUTO_INCREMENT,
     title TEXT NOT NULL,
+    username TEXT,
     details TEXT,
     time_posted TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
     user_id INT NOT NULL,

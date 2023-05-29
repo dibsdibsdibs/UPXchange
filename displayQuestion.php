@@ -36,7 +36,6 @@
     <link href="styles/general.css" type="text/css" rel="stylesheet">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
 </head>
-
 <body class="bgDisplay">
     <!--Header bar section-->
     <div class="top-header">
@@ -61,6 +60,20 @@
                 }
             ?>
         </div>
+    </div>
+    <div id="bg-report">
+        <form id="storeReport" action="storeReport.php" method="post">
+        <div>
+            <div id="report-header">
+                <h2>Add a Report</h2>
+                <img src="pics/close.png" height="20" onclick="exitReport()">
+            </div>
+            <textarea id="title" name="title" maxlength="150" placeholder= "Add the main concern here."></textarea>
+            <textarea id="username" name="username" maxlength="150" placeholder= "Add the username/s you want to report."></textarea>
+            <textarea id="details" name="details" maxlength="500" placeholder= "Add the details of your concern here."></textarea>
+        </div>
+        <button type="submit" id="report">REPORT</button>
+        </form>
     </div>
     <div id="bg-question">
         <div id="question-title">
@@ -98,7 +111,7 @@
                 <img src = "pics/bookmark.png" height="15">
                 <p>Bookmark</p>
             </div>
-            <div class="question-options">
+            <div class="question-options" onclick="submitReport()">
                 <img src = "pics/report.png" height="15">
                 <p>Report</p>
             </div>
