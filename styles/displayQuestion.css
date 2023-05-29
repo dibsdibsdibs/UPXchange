@@ -120,12 +120,29 @@ div.question-options:hover{
     font-size: 20px;
 }
 
+.reply-content{
+    display: flex;
+}
+
+.vote-count{
+    font-family: Montesserat-Medium;
+    align-items: center;
+    justify-content: center;
+}
+
+.vote-count p{
+    margin-top: 0.5%;
+    margin-bottom: 0.5%;
+    padding-left: 5px;
+}
+
 .display-reply{
     border: 3px solid #149F98;
     border-radius: 5px;
     padding: 1%;
     margin-bottom: 3%;
-    width: 95.5%;
+    margin-left: 2%;
+    width: 90%;
 }
 
 .reply-time{

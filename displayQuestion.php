@@ -23,6 +23,8 @@
 
     $replycount = $conn -> query("SELECT reply_id FROM replies WHERE question_id = '$id'");
     $_SESSION['replycount'] = mysqli_num_rows($replycount);
+
+    $replies = $conn -> query("SELECT reply, DATE_FORMAT(time_posted, '%M %d, %Y') AS reply_date, DATE_FORMAT(time_posted, '%h:%i %p') AS reply_time, vote FROM replies WHERE question_id = '$id'");
 ?>
 
 <!DOCTYPE html>
@@ -116,7 +118,7 @@
                 ?>
             </div>
             <div>
-                <?php include 'displayReplies.php'; ?>
+                <?php include 'displayReplies.php' ?>
             </div>
         </div>
     </div>

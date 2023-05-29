@@ -24,3 +24,31 @@ function showComments(){
         comments.style.display = "none";
     }
 }
+
+function upVote(){
+    let upvotes = document.getElementsByClassName("upvote");
+
+    for (const upvote of upvotes) {
+        upvote.addEventListener("click", e => {
+            if(upvote.src.match("pics/upvote.png")){
+                upvote.src = "pics/upvoted.png";
+            }else{
+                upvote.src = "pics/upvote.png";
+            }
+        })
+    }
+}
+
+function downVote(){
+    let downvotes = document.getElementsByClassName("downvote");
+
+    for (const downvote of downvotes) {
+        downvote.addEventListener("click", e => {
+            if(downvote.src.match("pics/downvote.png")){
+                downvote.src = "pics/downvoted.png";
+            }else{
+                downvote.src = "pics/downvote.png";
+            }
+        })
+    }
+}
