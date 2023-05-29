@@ -1,8 +1,6 @@
-CREATE DATABASE xchange;
-
 CREATE TABLE users(
     user_id INT NOT NULL AUTO_INCREMENT,
-    email VARCHAR(64) NOT NULL,
+    upmail VARCHAR(64) NOT NULL,
     password VARCHAR(64) NOT NULL,
     PRIMARY KEY (user_id)
 );

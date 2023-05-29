@@ -31,10 +31,10 @@
                     header("Location:home2.php");
                     exit();
                 } else {
-                    $error = "Login failed. Incorrect password.";
+                    $error = 'Login failed. Incorrect password.';
                 }
             } else {
-                $error = "Oops! The email you provided doesn't match any existing accounts. Sign up today and join the UPxchange community!";
+                $error = 'Oops! The email you provided does not match any existing accounts. Sign up today and join the UPxchange community!';
             }
         }
     }
@@ -52,9 +52,6 @@
         echo "<p align='center'>Your session has expired due to inactivity.</p>";
        }
 
-    else {
-        $error = "Please fill up the necessary fields";
-    }
 
     $_SESSION["error"] = $error;
     header("Location: login.php");
