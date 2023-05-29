@@ -28,7 +28,7 @@
                 $hashedPassword = $row['password'];
 
                 if(password_verify($password, $hashedPassword)){
-                    header("Location:home2.php");
+                    header("Location:home.php");
                     exit();
                 } else {
                     $error = 'Login failed. Incorrect password.';
