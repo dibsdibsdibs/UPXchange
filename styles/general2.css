@@ -56,10 +56,13 @@ body {
 }
 
 #footer {
-    display: flex;
-    height: 110px;
-    background-color: #10292E;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
     font-family: Montesserat-Bold;
+    background-color: #10292E;
+    color: #CCCCCC;
     align-items: center;
     justify-content: center;
 }
