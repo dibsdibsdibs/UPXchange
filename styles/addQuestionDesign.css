@@ -4,8 +4,8 @@
     background-color: #50203A;
     background-repeat: no-repeat;
     background-attachment: fixed;
-    margin: 0px;
-    padding: 0px;
+    position: relative;
+    min-height: 100vh;
 }
 
 #bg-question{
