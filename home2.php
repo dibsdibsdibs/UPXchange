@@ -9,6 +9,8 @@
         <link href="pics/logo_white.png" rel="icon">
         <link href="styles/general2.css" type="text/css" rel="stylesheet">
         <link href="styles/home2.css" type="text/css" rel="stylesheet">
+        <meta charset="utf-8">
+        <meta http-equiv="refresh" content="10; url = session.php" stats = "out">
     </head>
     
     <body>
