@@ -47,7 +47,7 @@ a:hover {
     padding: 0 10px;
     width: 940px;
 }
-header {
+#header {
     position: sticky;
     top: 0;
     height: 100px;
@@ -55,13 +55,13 @@ header {
     background-color: #10292E;
 }
 
-header h1, img {
+#header h1, img {
     float: left;
     margin-top: 20px;
     color: #CCCC;
 }
 
-header h1 {
+#header h1 {
     font-family: Brooklyn-Heavy;
     font-size: 45px;
     font-weight: bold;
@@ -69,19 +69,19 @@ header h1 {
     margin-bottom: 20px;
 }
 
-header img {
+#header img {
     padding-right: 10px;
 }
 
-header nav {
+#header nav {
     float: right;
 }
 
-header nav ul li{
+#header nav ul li{
     display: inline-block;
 }
 
-footer {
+#footer {
     display: flex;
     height: 110px;
     background-color: #10292E;
@@ -105,13 +105,13 @@ footer {
         
 }
 
-footer h1, img {
+#footer h1, img {
     float: left;
     margin-bottom: 15px;
     color: #CCCCCC;
 }
 
-footer h1 {
+#footer h1 {
     font-family: Brooklyn-Heavy;
     font-size: 45px;
     font-weight: bold;
@@ -120,7 +120,7 @@ footer h1 {
     padding-bottom: 5px;
 }
 
-footer img {
+#footer img {
     padding-right: 10px;
 }
 
