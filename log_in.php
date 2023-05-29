@@ -28,9 +28,10 @@
                 $hashedPassword = $row['password'];
 
                 if(password_verify($password, $hashedPassword)){
+                    $_SESSION['user_id'] = $row['user_id'];
                     header("Location:home.php");
                     exit();
-                } else {
+                }else {
                     $error = 'Login failed. Incorrect password.';
                 }
             } else {
