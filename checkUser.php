@@ -17,7 +17,7 @@
 
         if(empty($upmail) || empty($password)){
             $error = 'Please fill up the necessary fields';
-        } else {
+        }else{
             $stmt = $conn->prepare("SELECT * FROM users WHERE upmail = ?");
             $stmt->bind_param("s", $upmail);
             $stmt->execute();

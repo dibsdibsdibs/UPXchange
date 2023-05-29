@@ -33,7 +33,7 @@
         <div id="login">   
             <br>
             <h1 style="font-size:40px;">LOG IN</h1>
-            <form action="log_in.php" method="post">
+            <form action="checkUser.php" method="post">
                 <div id="error">
                 <?php
                     if(isset($_SESSION["error"])){
