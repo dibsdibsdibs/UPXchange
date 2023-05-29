@@ -1,5 +1,7 @@
 .body {
-    padding-bottom: 60px;
+    padding-bottom: 65rem;
+    position: relative;
+    min-height: 100vh;
 }
 
 #login h1{
@@ -16,6 +18,7 @@
     flex-direction: column;
     color: #CCCCCC;
     font-family: Brooklyn-Semibold;
+    padding-bottom: 4.4rem;
 }
 
 
