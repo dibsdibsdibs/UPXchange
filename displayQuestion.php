@@ -75,6 +75,11 @@
                 <img src = "pics/report.png" height="15">
                 <p>Report</p>
             </div>
+            <div class="question-options" onclick="editQuestion()" id="editQuestionOption">
+                <img src = "pics/edit.png" height="15">
+                <p>Edit Question</p>
+                
+            </div>
         </div>
         <div class="replies" id="showreplies">
             <form id="storeReply" action="storeReply.php" method="post">
@@ -97,7 +102,10 @@
     </div>
     <?php include "footer.php" ; ?>
     <script type="text/javascript">
-        let tags=<?= $_SESSION['tags']?>
+        let tags=<?= $_SESSION['tags']; ?>
+    </script>
+    <script type="text/javascript"> 
+        let posted= <?php echo $_SESSION['posted_by_user']; ?>
     </script>
     <script src="scripts/displayQuestionJS.js" type="text/javascript"></script>
 </body>

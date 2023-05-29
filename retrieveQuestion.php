@@ -3,18 +3,23 @@
     
     session_start();
 
-    $_SESSION['question_id'] = '1';
-    $_SESSION['user_id'] = '1';
+    $_SESSION['question_id'] = '7';
     $id = $_SESSION['question_id'];
-    $user_id = $_SESSION['user_id'];
+    $user_id = '1';
 
-    $question = $conn -> query("SELECT question, details, DATE_FORMAT(time_posted, '%M %d, %Y') AS post_date, DATE_FORMAT(time_posted, '%h:%i %p') AS post_time FROM questions WHERE question_id = '$id'");
+    $question = $conn -> query("SELECT question, details, DATE_FORMAT(time_posted, '%M %d, %Y') AS post_date, DATE_FORMAT(time_posted, '%h:%i %p') AS post_time, user_id FROM questions WHERE question_id = '$id'");
     while ($row = $question -> fetch_assoc()) 
     {
         $_SESSION['question'] = $row['question'];
         $_SESSION['details'] = $row['details'];
         $_SESSION['post_date'] = $row['post_date'];
         $_SESSION['post_time'] = $row['post_time'];
+
+        if($row['user_id'] == $user_id){
+            $_SESSION['posted_by_user'] = '0';
+        }else{
+            $_SESSION['posted_by_user'] = '1';
+        }
     }
 
     $tags = $conn -> query("SELECT tags FROM tags WHERE tag_id = '$id'");

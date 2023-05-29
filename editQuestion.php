@@ -1,5 +1,6 @@
 <?php
-session_start();
+    include 'session.php';
+    include 'accessQuestion.php';
 ?>
 
 <!DOCTYPE html>
@@ -7,7 +8,7 @@ session_start();
 <head>
     <title>Edit Question</title>
     <link rel="icon" href="pics/logo_white.png">
-    <link href="styles/addQuestionDesign.css" type="text/css" rel="stylesheet"/>
+    <link href="styles/editQuestionDesign.css" type="text/css" rel="stylesheet"/>
     <link href="styles/general.css" type="text/css" rel="stylesheet">
     <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/thinline.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
@@ -41,8 +42,8 @@ session_start();
     <form id="storeQuestion" action="storeQuestion.php" method="post">
     <div id="bg-question">
         <h2>Edit Question</h2>
-        <textarea id="question" name="question" maxlength="150" placeholder= "Add your question here." required></textarea>
-        <textarea id="details" name="details" maxlength="500" placeholder= "Add your question details here."></textarea>
+        <textarea id="question" name="question" maxlength="150" placeholder= "Add your question here." required><?php echo $_SESSION['question']; ?></textarea>
+        <textarea id="details" name="details" maxlength="500" placeholder= "Add your question details here."><?php echo $_SESSION['details']; ?></textarea>
         <hr>
         <div id="tags">
             <div class="tag-container">
@@ -53,7 +54,7 @@ session_start();
             </div>
         </div>
     </div>
-    <button type="submit" id="post">POST</button>
+    <button type="submit" id="post">UPDATE</button>
     </form>
     <!-- Footer bar section -->
     <div class="bottom-footer">
@@ -65,7 +66,10 @@ session_start();
             <p>© 2023 UP Xchange. Up Xchange is a trademark brand owned by UP Xchange. A Philippine-registered company. All other trademarks are owned by their respective owners.</p>
         </div>
     </div>
-    <script src="scripts/addQuestionJS.js" type="text/javascript"></script>
+    <script type="text/javascript">
+        let tags=<?= $_SESSION['tags']; ?>
+    </script>
+    <script src="scripts/editQuestionJS.js" type="text/javascript"></script>
 </body>
 </html>
 
