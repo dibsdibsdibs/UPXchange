@@ -37,14 +37,6 @@ CREATE TABLE replies(
     PRIMARY KEY (reply_id)
 );
 
-CREATE TABLE uservotes(
-    vote_id INT NOT NULL AUTO_INCREMENT,
-    reply_id INT NOT NULL,
-    user_id INT NOT NULL,
-    vote INT NOT NULL,
-    PRIMARY KEY (vote_id)
-);
-
 CREATE TABLE reports(
     report_id INT NOT NULL AUTO_INCREMENT,
     title TEXT NOT NULL,
