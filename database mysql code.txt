@@ -16,6 +16,7 @@ CREATE TABLE questions (
     question TEXT NOT NULL,
     details TEXT,
     time_posted TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    user_id INT NOT NULL,
     PRIMARY KEY (question_id)
 );
 

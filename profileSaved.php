@@ -13,13 +13,6 @@
     $year = $_POST['year'];
     $about = $_POST['about'];
 
-    // Create a database connection
-    $conn = mysqli_connect($hostname, $username, $password, $database);
-    if (!$conn) {
-        // Handle connection error
-        die("Connection failed: " . mysqli_connect_error());
-    }
-
     // Prepare the SQL statement
     $sql = "INSERT INTO user_profiles (first_name, last_name, course, membership, year, about) VALUES (?, ?, ?, ?, ?, ?)";
     $stmt = mysqli_prepare($conn, $sql);
