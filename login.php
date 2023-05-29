@@ -51,10 +51,6 @@
         </div>
     </div>
 
-
-
-
-
     <?php include "footer.php" ; ?>
     <script src="scripts/genJS.js" type="text/javascript"></script>
 </body>
