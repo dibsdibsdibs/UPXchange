@@ -1,13 +1,5 @@
 <?php
-   session_start();
-
-   if (isset($_SESSION['last_activity']) && time() - $_SESSION['last_activity'] > 900) {
-      session_unset();
-      session_destroy();
-      header("Location: login.php");
-   }
-
-   $_SESSION['last_activity'] = time();
+    include 'session.php';
 ?>
 
 <!DOCTYPE html>
@@ -22,7 +14,6 @@
     
    <body>
       <?php include "header.php"  ; ?>
-
         <div id="top">
             <div class="wrapper">
                 <h2>UP XChange</h2>

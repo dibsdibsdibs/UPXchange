@@ -1,4 +1,4 @@
-<header>
+<div id="header">
     <div class="wrapper">
         <a href="#">
             <img src="pics/logo_white.png" height="50">
@@ -14,4 +14,4 @@
             </ul>
         </nav>
     </div>
-</header>
+</div>
