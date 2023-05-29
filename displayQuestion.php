@@ -76,14 +76,12 @@
                 <img src = "pics/comment.png" height="15">
                 <p>Comments</p>
             </div>
-            <div class="question-options">
-                <img src = "pics/share.png" height="15">
-                <p>Share</p>
-            </div>
             <div class="question-options" onclick="bookmarkQuestion()">
                 <img src = "pics/bookmark.png" id='bookmark-icon' height="15">
                 <p id='bookmark-label'>Bookmark</p>
-                <script type="text/javascript"> let bookmarked=<?php echo $_SESSION['bookmarked']?></script>
+                <script type="text/javascript"> 
+                    let bookmarked= <?php echo $_SESSION['bookmarked']; ?>
+                </script>
             </div>
             <div class="question-options" onclick="submitReport()">
                 <img src = "pics/report.png" height="15">
@@ -118,7 +116,9 @@
             <p>© 2023 UP Xchange. Up Xchange is a trademark brand owned by UP Xchange. A Philippine-registered company. All other trademarks are owned by their respective owners.</p>
         </div>
     </div> -->
-    <script type="text/javascript"> let tags=<?= $_SESSION['tags']?></script>
+    <script type="text/javascript">
+        let tags=<?= $_SESSION['tags']?>
+    </script>
     <script src="scripts/displayQuestionJS.js" type="text/javascript"></script>
 </body>
 </html>
