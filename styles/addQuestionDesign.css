@@ -1,13 +1,5 @@
 /*Add a Question Design*/
 
-.bg-addQuestion{
-    background-color: #50203A;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    position: relative;
-    min-height: 100vh;
-}
-
 #bg-question{
     background-color: rgba(16, 41, 46, 0.25);
     border-radius: 10px;
