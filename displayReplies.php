@@ -1,7 +1,7 @@
 <?php
     include 'dbconnector.php';
 
-    $id = $_SESSION['question_id'];
+    $id = '1';
 
     $replies = $conn -> query("SELECT reply, DATE_FORMAT(time_posted, '%M %d, %Y') AS reply_date, DATE_FORMAT(time_posted, '%h:%i %p') AS reply_time, user_id FROM replies WHERE question_id = '$id'");
 
