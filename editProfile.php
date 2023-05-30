@@ -1,5 +1,15 @@
 <?php
+    include 'dbconnector.php';
     include 'session.php';
+    include 'edit.php';
+
+    $firstName = isset($_SESSION['firstName']) ? $_SESSION['firstName'] : '';
+    $lastName = isset($_SESSION['lastName']) ? $_SESSION['lastName'] : '';
+    $course = isset($_SESSION['course']) ? $_SESSION['course'] : '';
+    $membership = isset($_SESSION['membership']) ? $_SESSION['membership'] : '';
+    $yearLevel = isset($_SESSION['yearLevel']) ? $_SESSION['yearLevel'] : '';
+    $about = isset($_SESSION['about']) ? $_SESSION['about'] : '';
+    $pp = isset($_SESSION['pp']) ? $_SESSION['pp'] : '';
 ?>
 
 <!DOCTYPE html>
@@ -24,10 +34,10 @@
             <a><img src = "pics\user 1.png" height="25"></a>
         </div>
     </div>
-    <div class = "profile">
-        <a><img id = "myImg" src = "pics\profile.png" height="300" width = "300" class="img"></a>
-        <h2>Name of User</h2>
-        <a href = "editProfileFR.php"><button class="edit">Edit Profile</button></a>
+    <div class="profile">
+        <a><img id="myImg" src="pics\profile.png" height="300" width="300" class="img"></a>
+        <h2><?php echo $firstName . " " . $lastName;?></h2>
+        <a href="editProfileFR.php"><button class="edit">Edit Profile</button></a>
     </div>
     <div class="tab">
         <button class="tablinks" onclick="openProfile(event, 'About')"><img src = "pics\info 1.png" height="25">  About</button>
