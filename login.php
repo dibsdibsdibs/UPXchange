@@ -14,7 +14,7 @@
     <link href="pics/logo_white.png" rel="icon">
     <title>Login</title>
 </head>
-<body class="bg">
+<body class="body-gradient">
     <?php include "header.php" ; ?>
 
     <div class="container">

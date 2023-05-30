@@ -1,5 +1,6 @@
 <?php
     include 'dbconnector.php';
+    session_start();
     $error = "";
 
     if(isset($_POST['question']) && isset($_POST['details'])){
