@@ -1,3 +1,11 @@
+.bghome{
+    background-color: #50203A;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    position: relative;
+    min-height: 100vh;
+}
+
 p {
     line-height: 20px;
     margin-bottom: 20px;
