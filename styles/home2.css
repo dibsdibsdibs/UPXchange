@@ -49,6 +49,7 @@ h3 {
 
 #top h2 {
     font-size: 70px;
+    padding-top: 100px;
     background-image: linear-gradient(90deg, #CCCC, #CC2D6F);
     background-size: 100%;
     -webkit-background-clip: text;
