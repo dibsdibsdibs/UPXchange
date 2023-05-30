@@ -1,9 +1,9 @@
-.bghome{
-    background-color: #50203A;
+.body-home {
+    background-color: #10292E;
     background-repeat: no-repeat;
     background-attachment: fixed;
-    position: relative;
-    min-height: 100vh;
+    margin: 0;
+    padding: 0;
 }
 
 p {
@@ -39,7 +39,7 @@ h3 {
 }
 
 #top {
-    height: 570px;
+    height: 80vh;
     width: 100%;
     font-family: Montesserat-Bold;
     background-color: #10292E;
@@ -99,7 +99,7 @@ h3 {
 }
 
 #middle {
-    height: 570px;
+    height: 60vh;
     width: 100%;
     padding: 150px 0;
     font-family: Montesserat;
@@ -131,7 +131,7 @@ article h4 {
 }
 
 #bottom {
-    height: 570px;
+    height: 60vh;
     width: 100%;
     padding-top: 150px;
     font-family: Brooklyn-Heavy;
