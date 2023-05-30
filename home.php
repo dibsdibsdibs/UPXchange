@@ -12,7 +12,7 @@
       <meta charset="utf-8">
    </head>
     
-   <body class="body-gradient">
+   <body class="body-home">
       <?php include "header.php"  ; ?>
         <div id="top">
             <div class="wrapper">
