@@ -17,6 +17,8 @@
     <title>User Profile</title>
     <link rel="icon" href="pics\logo_white.png">
     <link href="styles\editProfileStyle.css" type="text/css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
 </head>
 
 <body class="bg">
@@ -36,23 +38,17 @@
     <div class="center">
         <h2 style="font-size:40px;">EDIT PROFILE</h2>
         <form method="POST" action="edit.php">
-            <h4 style="margin-right: 190px;margin-bottom: 10px;">First Name:</h4>
+
+            <h4 style="margin-right: 190px;margin-bottom: 10px; margin-top: 0px;">First Name:</h4>
             <div class="row mt-5">
                 <div class="wrapper">
-                    <input type="text" maxlength="30" class="form-control" placeholder="First Name" name="firstName" action = "
-                    <?php     if(!empty($firstName) && !ctype_alpha($firstName)) {
-            return "You typed $firstName: please use only alphanumeric characters";
-    } 
-                ?>">
+                    <input type="text" maxlength="30" class="form-control" placeholder="First Name" name="firstName">
                 </div>
             </div>
             <h4 style="margin-right: 190px;margin-bottom: 10px;">Last Name:</h4>
             <div class="row mt-3">
-                <div class="wrapper"><input type="text" maxlength = "30" class="form-control" placeholder="Last Name"  name="lastName" action = "
-                    <?php     if(!empty($firstName) && !ctype_alpha($firstName)) {
-            return "You typed $firstName: please use only alphanumeric characters";
-    } 
-                ?>"></div>
+                <div class="wrapper"><input type="text" maxlength = "30" class="form-control" placeholder="Last Name"  name="lastName">
+                </div>
             </div>
             <h4 style="margin-right: 220px;margin-bottom: 10px;">Course:</h4>
             <div class="row mt-3">
@@ -109,6 +105,13 @@
             <div class="row mt-3">
                 <div class="wrapper">
                     <input type="text" maxlength = "150"  name="about" class="form-control-about" placeholder="Tell us about yourself...">
+                </div>
+            </div>
+            <h4 style="margin-right: 160px;margin-bottom: 10px;">Profile Picture:</h4>
+            <div class="row mt-3">
+                <div class="wrapper">
+                    <input type="file" style="margin-left: 20px; " name="image" id = "image" accept=".jpg, .jpeg, .png">
+                    
                 </div>
             </div>  
             <div class="row mt-3">
