@@ -1,8 +1,6 @@
 <?php 
     include 'dbconnector.php';
     
-    session_start();
-
     $question_id = $_SESSION['question_id'];
     $user_id = $_SESSION['user_id'];
 

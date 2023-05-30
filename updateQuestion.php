@@ -1,6 +1,5 @@
 <?php
     include 'dbconnector.php';
-
     $error = "";
 
     if(isset($_POST['question']) && isset($_POST['details'])){
@@ -13,17 +12,14 @@
 
     $question = $_POST['question'];
     $details = $_POST['details'];
-    $user_id = $_SESSION['user_id'];
+    $question_id = $_SESSION['question_id'];
 
-    $sql = "INSERT INTO questions (question, details, user_id) VALUES ('$question', '$details', '$user_id')";
+    $sql = "UPDATE questions SET question = '$question', details = '$details' WHERE question_id = '$question_id'";
 
     if($conn -> query($sql) == TRUE){
-        $error = "Successfully uploaded question!";
+        $error = "Successfully updated question!";
         $_SESSION["error"] = $error;
-        header("Location: addQuestion.php");
+        header("Location: displayQuestion.php");
         exit();
     }
-
-    $_SESSION["error"] = $error;
-    header("Location: addQuestion.php");
 ?>

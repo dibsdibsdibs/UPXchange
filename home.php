@@ -12,7 +12,7 @@
       <meta charset="utf-8">
    </head>
     
-   <body>
+   <body class="bghome">
       <?php include "header.php"  ; ?>
         <div id="top">
             <div class="wrapper">

@@ -17,10 +17,11 @@ function retrieveTags(){
 
 function sendTags(){
     sentTags = JSON.stringify(tags);
+    console.log(tags);
 
     $.ajax({
         type: "POST",
-        url: "storeTags.php",
+        url: "updateTags.php",
         data: {listtags: sentTags},
     });
 }
@@ -64,7 +65,7 @@ function remove(element, tag){
 
 input.addEventListener("keydown", addTag);
 
-$('#storeQuestion').on('submit', function() {
+$('#editQuestion').on('submit', function() {
     sendTags();
     return true;
 });

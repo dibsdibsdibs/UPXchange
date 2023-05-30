@@ -39,7 +39,7 @@
             ?>
         </div>
     </div>
-    <form id="storeQuestion" action="storeQuestion.php" method="post">
+    <form id="editQuestion" action="updateQuestion.php" method="post">
     <div id="bg-question">
         <h2>Edit Question</h2>
         <textarea id="question" name="question" maxlength="150" placeholder= "Add your question here." required><?php echo $_SESSION['question']; ?></textarea>

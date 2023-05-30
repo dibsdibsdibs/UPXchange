@@ -2,6 +2,11 @@ CREATE TABLE users(
     user_id INT NOT NULL AUTO_INCREMENT,
     upmail VARCHAR(64) NOT NULL,
     password VARCHAR(64) NOT NULL,
+    firstName VARCHAR(64),
+    lastName VARCHAR(64),
+    course VARCHAR(64) NOT NULL,
+    membership VARCHAR(64) NOT NULL,
+    about TEXT,
     PRIMARY KEY (user_id)
 );
 
@@ -35,14 +40,6 @@ CREATE TABLE replies(
     user_id INT,
     time_posted TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
     PRIMARY KEY (reply_id)
-);
-
-CREATE TABLE uservotes(
-    vote_id INT NOT NULL AUTO_INCREMENT,
-    reply_id INT NOT NULL,
-    user_id INT NOT NULL,
-    vote INT NOT NULL,
-    PRIMARY KEY (vote_id)
 );
 
 CREATE TABLE reports(
