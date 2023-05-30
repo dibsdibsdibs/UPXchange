@@ -12,7 +12,7 @@
     <link href="styles/general.css" type="text/css" rel="stylesheet">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
 </head>
-<body class="bgDisplay">
+<body class="body-plain">
     <!--Header bar section-->
     <?php include "header.php" ; ?>
     <div id="error-display">

@@ -12,7 +12,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
 </head>
 
-<body class="bg">
+<body class="body-gradient">
     <!--Header bar section-->
     <div class="top-header">
         <div id = "header-left">
