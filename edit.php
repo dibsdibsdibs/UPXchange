@@ -3,7 +3,7 @@
     session_start();
     $error = "";
 
-    if (isset($_POST['firstName']) && isset($_POST['lastName']) && isset($_POST['course']) && isset($_POST['membership']) && isset($_POST['yearLevel']) && isset($_POST['about'])) {
+    if (isset($_POST['firstName']) && isset($_POST['lastName']) && isset($_POST['course']) && isset($_POST['membership']) && isset($_POST['yearLevel']) && isset($_POST['about']) && isset($_POST['pp'])) {
         function validate($data) {
             $data = trim($data);
             $data = stripslashes($data);
@@ -15,16 +15,17 @@
         $course = validate($_POST['course']);
         $membership = validate($_POST['membership']);
         $yearLevel = validate($_POST['yearLevel']);
-        $about = validate($_POST['about']);
+        $about = !empty($_POST['about']) ? validate($_POST['about']) : null; // Set to NULL if empty
+        $pp = !empty($_POST['pp']) ? validate($_POST['pp']) : null; // Set to NULL if empty
         $user_id = $_SESSION['user_id'];
 
-        if (empty($firstName) || empty($lastName) || empty($course) || empty($membership) || empty($yearLevel) || empty($about)) {
+        if (empty($firstName) || empty($lastName) || empty($course) || empty($membership) || empty($yearLevel)) {
             $error = 'Please fill up the necessary fields';
         } else {
 
-            $sql = "UPDATE users SET firstName = ?, lastName = ?, course = ?, membership = ?, yearLevel = ?, about = ? WHERE user_id = $user_id";
+            $sql = "UPDATE users SET firstName = ?, lastName = ?, course = ?, membership = ?, yearLevel = ?, about = ?, pp = ? WHERE user_id = $user_id";
             $stmt = $conn->prepare($sql);
-            $stmt->bind_param("ssssss", $firstName, $lastName, $course, $membership, $yearLevel, $about);
+            $stmt->bind_param("sssssss", $firstName, $lastName, $course, $membership, $yearLevel, $about, $pp);
 
 
             if ($stmt->execute()) {

@@ -110,7 +110,7 @@
             <h4 style="margin-right: 160px;margin-bottom: 10px;">Profile Picture:</h4>
             <div class="row mt-3">
                 <div class="wrapper">
-                    <input type="file" style="margin-left: 20px; " name="image" id = "image" accept=".jpg, .jpeg, .png">
+                    <input type="file" style="margin-left: 20px; " name="pp" id = "image" accept=".jpg, .jpeg, .png">
                     
                 </div>
             </div>  
