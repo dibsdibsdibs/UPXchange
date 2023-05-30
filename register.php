@@ -14,6 +14,14 @@
     $upmail = validate($_POST['upmail']);
     $password = validate($_POST['password']);
     $repassword = validate($_POST['repassword']);
+    $pp = "profile.png";
+    $firstName = "<First Name>";
+    $lastName = "<Last Name>";
+    $course = "<Course>";
+    $membership = "<Student/Faculty>";
+    $yearLevel = "<Year Level>";
+    $about = "<Who are you?>";
+
 
     $error = '';
 
@@ -48,8 +56,8 @@
             if($result->num_rows >= 1){
                 $error = "Email is already used!";
             } else {
-                $stmt = $conn->prepare("INSERT INTO users (upmail, password) VALUES (?, ?)");
-                $stmt->bind_param("ss", $upmail, $hashedPassword);
+                $stmt = $conn->prepare("INSERT INTO users (upmail, password, firstName, lastName, course, membership, yearLevel, about, pp) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)");
+                $stmt->bind_param("sssssssss", $upmail, $hashedPassword, $firstName, $lastName, $course, $membership, $yearLevel, $about, $pp);
                 if ($stmt->execute()) {
                     $error = "Log in to your new account.";
                     $_SESSION["error"] = $error;

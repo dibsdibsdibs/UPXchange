@@ -1,37 +1,26 @@
 <?php
-    // Start the session
-    session_start();
-
-    // Include the database connection file
     include 'dbconnector.php';
 
-    // Retrieve the submitted form data
-    $firstName = $_POST['firstName'];
-    $lastName = $_POST['lastName'];
-    $course = $_POST['course'];
-    $membership = $_POST['membership'];
-    $year = $_POST['year'];
-    $about = $_POST['about'];
+    $user_id = $_SESSION['user_id'];
 
-    // Prepare the SQL statement
-    $sql = "INSERT INTO user_profiles (first_name, last_name, course, membership, year, about) VALUES (?, ?, ?, ?, ?, ?)";
-    $stmt = mysqli_prepare($conn, $sql);
-    mysqli_stmt_bind_param($stmt, "ssssss", $firstName, $lastName, $course, $membership, $year, $about);
+    $question = $conn -> query("SELECT firstName, lastName, course, membership, yearLevel, about, pp FROM users WHERE user_id = '$user_id'");
 
-    // Execute the statement
-    if (mysqli_stmt_execute($stmt)) {
-        // Profile saved successfully
-        $_SESSION['success_message'] = "Your profile has been saved successfully.";
-    } else {
-        // Profile saving failed
-        $_SESSION['error_message'] = "An error occurred while saving your profile. Please try again.";
-    }
+    while ($row = $question -> fetch_assoc()) 
+    {
+        $_SESSION['firstName'] = $row['firstName'];
+        $_SESSION['lastName'] = $row['lastName'];
+        $_SESSION['course'] = $row['course'];
+        $_SESSION['membership'] = $row['membership'];
+        $_SESSION['yearLevel'] = $row['yearLevel'];
+        $_SESSION['about'] = $row['about'];
+        $_SESSION['pp'] = $row['pp'];
 
-    // Close the statement and database connection
-    mysqli_stmt_close($stmt);
-    mysqli_close($conn);
-
-    // Redirect the user back to the profile editing page
-    header("Location: editProfileFR.php");
-    exit;
+        $firstName = $_SESSION['firstName'];
+        $lastName = $_SESSION['lastName'];
+        $course = $_SESSION['course'];
+        $membership = $_SESSION['membership'];
+        $yearLevel = $_SESSION['yearLevel'];
+        $about = $_SESSION['about'];
+        $pp = $_SESSION['pp'];
+        }
 ?>

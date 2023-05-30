@@ -1,15 +1,6 @@
 <?php
-    include 'dbconnector.php';
     include 'session.php';
-    include 'edit.php';
-
-    $firstName = isset($_SESSION['firstName']) ? $_SESSION['firstName'] : '';
-    $lastName = isset($_SESSION['lastName']) ? $_SESSION['lastName'] : '';
-    $course = isset($_SESSION['course']) ? $_SESSION['course'] : '';
-    $membership = isset($_SESSION['membership']) ? $_SESSION['membership'] : '';
-    $yearLevel = isset($_SESSION['yearLevel']) ? $_SESSION['yearLevel'] : '';
-    $about = isset($_SESSION['about']) ? $_SESSION['about'] : '';
-    $pp = isset($_SESSION['pp']) ? $_SESSION['pp'] : '';
+    include 'profileSaved.php';
 ?>
 
 <!DOCTYPE html>
@@ -35,7 +26,7 @@
         </div>
     </div>
     <div class="profile">
-        <a><img id="myImg" src="pics\profile.png" height="300" width="300" class="img"></a>
+        <a><img id="myImg" src="pics/<?php echo $pp; ?>" height="300" width="300" class="img"></a>
         <h2><?php echo $firstName . " " . $lastName;?></h2>
         <a href="editProfileFR.php"><button class="edit">Edit Profile</button></a>
     </div>
@@ -47,11 +38,11 @@
     </div>
 
     <div id="About" class="tabcontent">
-      <h3>User Name</h3>    
-      <p>Student/Faculty<span class = "spacing"></span>Course and Year</p>
+      <h3><?php echo $firstName . " " . $lastName;?></h3>    
+      <p><?php echo $membership;?><span class = "spacing"></span><?php echo $course . " - " . $yearLevel;?></p>
       <br>
         <a>    
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam non tortor vitae nulla tempus luctus. Pellentesque imperdiet hendrerit luctus. Etiam dictum cursus lectus, sit amet elementum dolor ultrices non.
+            <?php echo $about;?>
         </a> 
     </div>
 

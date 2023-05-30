@@ -241,3 +241,11 @@ input[type=file]::-webkit-file-upload-button{
     border-radius: 10px;
     border-width: 3px;
     color: #CCCCCC;}
+
+#error{
+    font-family: Brooklyn-Bold;
+    font-size: 15px;
+    color: #CCCCCC;
+    text-align: center;
+}
+

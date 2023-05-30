@@ -1,14 +1,5 @@
 <?php
-    session_start();
-    $error = isset($_SESSION["error"]) ? $_SESSION["error"] : "";
-    $fields = ['firstName', 'lastName', 'course', 'membership', 'year'];
-    $optionalFields = ['about'];
-    $values = [];
-    if ($_SERVER["REQUEST_METHOD"] === "POST") {
-
-    header("Location: profile_saved.php");
-    exit;
-}
+    include 'session.php';
 ?>
 
 <!DOCTYPE html>
@@ -37,8 +28,16 @@
     </div>
     <div class="center">
         <h2 style="font-size:40px;">EDIT PROFILE</h2>
-        <form method="POST" action="edit.php">
-
+        <form action="edit.php" method="post">
+                <div id="error">
+                <?php
+                    if (isset($_SESSION["error"])) {
+                    $error = $_SESSION["error"];
+                    echo "<span>$error</span>";
+                    }
+                ?>
+                </div>
+                <br>
             <h4 style="margin-right: 190px;margin-bottom: 10px; margin-top: 0px;">First Name:</h4>
             <div class="row mt-5">
                 <div class="wrapper">
@@ -93,10 +92,10 @@
                 <div class="wrapper">
                     <select class = "form-control" name="yearLevel" id="membership" value="Year">
                         <option value="select">--select--</option>
-                        <option value="1st">First Year</option>
-                        <option value="2nd">Second Year</option>
-                        <option value="3rd">Third Year</option>
-                        <option value="4th">Fourth Year</option>
+                        <option value="I">First Year</option>
+                        <option value="II">Second Year</option>
+                        <option value="III">Third Year</option>
+                        <option value="IV">Fourth Year</option>
                         <option value="Nth">nth Year</option>
                     </select>
                 </div>
