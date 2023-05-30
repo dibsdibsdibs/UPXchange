@@ -1,4 +1,5 @@
-<?php
+<?php 
+    include 'session.php';
     include 'dbconnector.php';
 
     $user_id = $_SESSION['user_id'];

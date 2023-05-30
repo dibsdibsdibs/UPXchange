@@ -1,5 +1,5 @@
 <?php
-    include 'session.php';
+    include 'dbconnector.php';
     include 'profileSaved.php';
 ?>
 
@@ -25,6 +25,7 @@
             <a><img src = "pics\user 1.png" height="25"></a>
         </div>
     </div>
+
     <div class="profile">
         <a><img id="myImg" src="pics/<?php echo $pp; ?>" height="300" width="300" class="img"></a>
         <h2><?php echo $firstName . " " . $lastName;?></h2>
@@ -38,7 +39,7 @@
     </div>
 
     <div id="About" class="tabcontent">
-      <h3><?php echo $firstName . " " . $lastName;?></h3>    
+      <h3><?php echo $firstName . " " . $lastName;?></h3>   
       <p><?php echo $membership;?><span class = "spacing"></span><?php echo $course . " - " . $yearLevel;?></p>
       <br>
         <a>    
@@ -90,6 +91,7 @@
       evt.currentTarget.className += " active";
     }
     </script>
+
 </body>
 </html>
 

@@ -15,12 +15,12 @@
     $password = validate($_POST['password']);
     $repassword = validate($_POST['repassword']);
     $pp = "profile.png";
-    $firstName = "<First Name>";
-    $lastName = "<Last Name>";
-    $course = "<Course>";
-    $membership = "<Student/Faculty>";
-    $yearLevel = "<Year Level>";
-    $about = "<Who are you?>";
+    $firstName = "Your";
+    $lastName = "Name";
+    $course = "Course";
+    $membership = "Student/Faculty";
+    $yearLevel = "Year Level";
+    $about = "Who are you?";
 
 
     $error = '';

@@ -1,7 +1,7 @@
 /*General Design Elements*/
 a {
     text-decoration: none;
-    font-family: Montesserat;
+    font-family: Arial;
     color: #CCCCCC;
 }
 .bg{
@@ -118,7 +118,7 @@ a {
 .tabcontent {
     display: none;
     justify-content: center;
-    font-family: Arial;
+    font-family: Montesserat;
     font-size: 25px;
     /*padding: 6px 12px;*/
     margin-top: 50px;
@@ -178,7 +178,7 @@ li:hover {
     margin-left: 8px;
     margin-right: 8px;
     background-color: transparent;
-    font-family: Brooklyn-Semibold;
+    font-family: Arial;
     font-size: 16px;
     color: #CCCCCC;
 }
