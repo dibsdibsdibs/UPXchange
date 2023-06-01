@@ -11,19 +11,18 @@
       <link href="styles/home2.css" type="text/css" rel="stylesheet">
       <meta charset="utf-8">
    </head>
-     <form action="edit.php" method="post">
    <body class="body-home">
       <?php include "header.php"  ; ?>
         <div id="top">
             <div class="wrapper">
                 <h2>UP XChange</h2>
                 <h3>Find the best answer to your question.</h3>
-            </div>
-            <div class="container">
-                    <form action="" class="search-bar">
-                        <input type="text" name = "q" placeholder="Searching something?">
-                        <button type="submit"><img src = "pics\magnifying glass.png" ></button>
+                <div class="search-box">
+                    <form action="search.php" method = "post" class="search-bar">
+                        <input type="text" name = "search" placeholder="Searching something?">
+                        <button type="submit" name="submit"><img src = "pics\magnifying glass.png"></button>
                     </form>
+                </div>
             </div>
         </div>
 
