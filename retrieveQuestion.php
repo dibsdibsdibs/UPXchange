@@ -3,6 +3,7 @@
     session_start();
 
     $question_id = $_GET['question_id'];
+    $_SESSION['question_id'] = $question_id;
     $user_id = $_SESSION['user_id'];
     $postBy = 0;
 
