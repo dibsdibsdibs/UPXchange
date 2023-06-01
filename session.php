@@ -1,8 +1,8 @@
 <?php
     session_start();
-    if(!$_SESSION["user_id"]){  
+    if(!$_SESSION['user_id']){  
         $error = "Please log in!";
-        $_SESSION["error"] = $error; 
+        $_SESSION['error'] = $error; 
         header("Location: login.php");
     }
 
