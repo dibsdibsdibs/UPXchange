@@ -1,6 +1,5 @@
 <?php
     include 'session.php';
-    include 'retrieveQuestion.php';
 ?>
 
 <!DOCTYPE html>

@@ -1,0 +1,52 @@
+.question-content{
+    background-color: rgba(16, 41, 46, 0.25);
+    border-radius: 10px;
+    margin-left: 5%;
+    margin-right: 5%;
+    margin-bottom: 2.5%;
+    color: #CCCCCC;
+}
+
+.question-poster{
+    text-align: left;
+    padding: 1%;
+    font-family: Montesserat;
+    font-size: 10px;
+}
+
+.question{
+    padding-right: 3%;
+    padding-left: 3%;
+}
+
+.question-title{
+    font-family: Montesserat-Bold;
+    font-size: 20px;
+}
+
+.question-details{
+    font-family: Montesserat-Medium;
+    font-size: 15px;
+}
+
+.question-time{
+    text-align: right;
+    padding: 1%;
+    font-family: Montesserat;
+    font-size: 10px;
+}
+
+.index-page{
+    font-family: Montesserat-Bold;
+    font-size: 15px;
+    padding: 0.5%;
+    margin-left: 1%;
+    background-color: #CCCCCC;
+    color: #50203A;
+    border-radius: 5px;
+    text-align: center;;
+}
+
+a{
+    text-decoration: none;
+}

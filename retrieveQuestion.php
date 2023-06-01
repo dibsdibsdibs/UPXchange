@@ -1,8 +1,10 @@
 <?php 
     include 'dbconnector.php';
+    session_start();
 
-    $question_id = $_SESSION['question_id'];
+    $question_id = $_GET['question_id'];
     $user_id = $_SESSION['user_id'];
+    $postBy = 0;
 
     $question = $conn -> query("SELECT question, details, DATE_FORMAT(time_posted, '%M %d, %Y') AS post_date, DATE_FORMAT(time_posted, '%h:%i %p') AS post_time, user_id FROM questions WHERE question_id = '$question_id'");
     while ($row = $question -> fetch_assoc()) 
@@ -45,4 +47,6 @@
     }else{
         $_SESSION['bookmarked'] = '1';
     }
+
+    header("Location: displayQuestion.php");
 ?>
