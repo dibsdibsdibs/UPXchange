@@ -13,19 +13,7 @@
 </head>
 
 <body class="bg">
-    <div class="top-header">
-        <div class = "header-left">
-            <img src = "pics\logo_white.png" height="75">
-            <h1>UP Xchange</h1>
-        </div>
-        <div class = "header-right">
-            <a><img src = "pics\magnifying glass.png" height="25"></a>
-            <a><img src = "pics\plus.png" height="25"></a>
-            <a><img src = "pics\categories.png" height="25"></a>
-            <a><img src = "pics\bell.png" height="25"></a>
-            <a><img src = "pics\user 1.png" height="25"></a>
-        </div>
-    </div>
+    <?php include "header.php"  ; ?>
     <div class="center">
         <h2 style="font-size:40px;">EDIT PROFILE</h2>
         <form action="edit.php" method="post">

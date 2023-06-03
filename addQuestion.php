@@ -41,7 +41,10 @@
             </div>
         </div>
     </div>
-    <button type="submit" id="post">POST</button>
+    <div class="b">
+        <button type="submit" id="post">POST</button>
+    </div>
+    
     </form>
     <!-- Footer bar section -->
     <?php include "footer.php" ; ?>
