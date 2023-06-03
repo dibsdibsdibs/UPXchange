@@ -1,6 +1,5 @@
 <?php
-    include 'dbconnector.php';
-    include 'profileSaved.php';
+    include 'session.php';
 ?>
 
 <!DOCTYPE html>
@@ -9,78 +8,106 @@
     <title>User Profile</title>
     <link rel="icon" href="pics\logo_white.png">
     <link href="styles\editProfileStyle.css" type="text/css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
 </head>
 
 <body class="bg">
     <?php include "header.php"  ; ?>
-
-    <div class="profile">
-        <a><img id="myImg" src="pics/<?php echo $pp; ?>" height="300" width="300" class="img"></a>
-        <h2><?php echo $firstName . " " . $lastName;?></h2>
-        <a href="editProfileFR.php"><button class="edit">Edit Profile</button></a>
-    </div>
-    <div class="tab">
-        <button class="tablinks" onclick="openProfile(event, 'About')"><img src = "pics\info 1.png" height="25">  About</button>
-        <button class="tablinks" onclick="openProfile(event, 'Asked')"><img src = "pics\question 1.png" height="25">  Asked</button>
-        <button class="tablinks" onclick="openProfile(event, 'Answered')"><img src = "pics\answers 1.png" height="25">  Answered</button>
-        <button class="tablinks" onclick="openProfile(event, 'Bookmarked')"><img src = "pics\bookmark-white 1.png" height="25">  Bookmarked</button>
-    </div>
-
-    <div id="About" class="tabcontent">
-      <h3><?php echo $firstName . " " . $lastName;?></h3>   
-      <p><?php echo $membership;?><span class = "spacing"></span><?php echo $course . " - " . $yearLevel;?></p>
-      <br>
-        <a>    
-            <?php echo $about;?>
-        </a> 
-    </div>
-
-    <div id="Asked" class="tabcontent">    
-        <div>
-            <ul style="list-style: none;"> 
-            <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam non tortor vitae nulla tempus luctus. Pellentesque imperdiet hendrerit luctus. Etiam dictum cursus lectus, sit amet elementum dolor ultrices non.</li>
-            <br>
-            <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam non tortor vitae nulla tempus luctus. Pellentesque imperdiet hendrerit luctus. Etiam dictum cursus lectus, sit amet elementum dolor ultrices non.</li>
-            </ul>
-        </div>
-    </div>
-
-    <div id="Answered" class="tabcontent">   
-        <div class="wrapper">
-            <ul style="list-style: none;"> 
-                <li><h3>Question 1</h3>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam non tortor vitae nulla tempus luctus. Pellentesque imperdiet hendrerit luctus. Etiam dictum cursus lectus, sit amet elementum dolor ultrices non.</li>
+    <div class="center">
+        <h2 style="font-size:40px;">EDIT PROFILE</h2>
+        <form action="edit.php" method="post">
+                <div id="error">
+                <?php
+                    if (isset($_SESSION["error"])) {
+                    $error = $_SESSION["error"];
+                    echo "<span>$error</span>";
+                    }
+                ?>
+                </div>
                 <br>
-                <li><h3>Question 2</h3>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam non tortor vitae nulla tempus luctus. Pellentesque imperdiet hendrerit luctus. Etiam dictum cursus lectus, sit amet elementum dolor ultrices non.</li>
-            </ul>
-        </div>
-    </div>
-    <div id="Bookmarked" class="tabcontent">
-        <div class="wrapper">       
-            <ul style="list-style: none;"> 
-                <li><h3>Question 1</h3>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam non tortor vitae nulla tempus luctus. Pellentesque imperdiet hendrerit luctus. Etiam dictum cursus lectus, sit amet elementum dolor ultrices non.</li>
-                <br>
-                <li><h3>Question 2</h3>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam non tortor vitae nulla tempus luctus. Pellentesque imperdiet hendrerit luctus. Etiam dictum cursus lectus, sit amet elementum dolor ultrices non.</li>
-            </ul>
-        </div>
-    </div>
+            <h4 style="margin-right: 190px;margin-bottom: 10px; margin-top: 0px;">First Name:</h4>
+            <div class="row mt-5">
+                <div class="wrapper">
+                    <input type="text" maxlength="30" class="form-control" placeholder="First Name" name="firstName">
+                </div>
+            </div>
+            <h4 style="margin-right: 190px;margin-bottom: 10px;">Last Name:</h4>
+            <div class="row mt-3">
+                <div class="wrapper"><input type="text" maxlength = "30" class="form-control" placeholder="Last Name"  name="lastName">
+                </div>
+            </div>
+            <h4 style="margin-right: 220px;margin-bottom: 10px;">Course:</h4>
+            <div class="row mt-3">
+                <div class="wrapper">                    
+                    <select class = "form-control" name="course" id="membership">
+                    <option value="select">--select--</option>
+                    <option value="BA in Communication and Media Studies">BA in Communication and Media Studies</option>
+                    <option value="BA Community Development">BA Community Development</option>
+                    <option value="BA History">BA History</option>
+                    <option value="BA Sociology">BA Sociology</option>
+                    <option value="BA in Literature">BA in Literature</option>
+                    <option value="BA in Psychology">BA in Psychology</option>
+                    <option value="BS Biology">BS Biology</option>
+                    <option value="BS Accountancy">BS Accountancy</option>
+                    <option value="BS Applied Mathematics">BS Applied Mathematics</option>
+                    <option value="BS Business Administration (Marketing)">BS Business Administration (Marketing)</option>
+                    <option value="BS Chemical Engineering">BS Chemical Engineering</option>
+                    <option value="BS Chemistry">BS Chemistry</option>
+                    <option value="BS Computer Science">BS Computer Science</option>
+                    <option value="BS Economics
+">BS Economics</option>
+                    <option value="BS Fisheries">BS Fisheries</option>
+                    <option value="BS Food Technology">BS Food Technology</option>
+                    <option value="BS Management">BS Management</option>
+                    <option value="BS Public Health">BS Public Health</option>
+                    <option value="BS Statistics">BS Statistics</option>
+                    </select>
+                </div>
+            </div>
+            <h4 style="margin-right: 120px;margin-bottom: 10px;">Student or Faculty?</h4>
+            <div class="row mt-3">
+                <div class="wrapper">
+                    <select class = "form-control" name="membership" id="membership">
+                    <option value="select">--select--</option>
+                    <option value="Faculty">Faculty</option>
+                    <option value="Student">Student</option>
+                    </select>
+                </div>
+            </div>
+            <h4 style="margin-right: 195px;margin-bottom: 10px;">Year Level:</h4>
+            <div class="row mt-3">
+                <div class="wrapper">
+                    <select class = "form-control" name="yearLevel" id="membership" value="Year">
+                        <option value="select">--select--</option>
+                        <option value="I">First Year</option>
+                        <option value="II">Second Year</option>
+                        <option value="III">Third Year</option>
+                        <option value="IV">Fourth Year</option>
+                        <option value="Nth">nth Year</option>
+                    </select>
+                </div>
+            </div>
+            <h4 style="margin-right: 230px;margin-bottom: 10px;">About:</h4>
+            <div class="row mt-3">
+                <div class="wrapper">
+                    <input type="text" maxlength = "150"  name="about" class="form-control-about" placeholder="Tell us about yourself...">
+                </div>
+            </div>
+            <h4 style="margin-right: 160px;margin-bottom: 10px;">Profile Picture:</h4>
+            <div class="row mt-3">
+                <div class="wrapper">
+                    <input type="file" style="margin-left: 20px; " name="pp" id = "image" accept=".jpg, .jpeg, .png">
+                    
+                </div>
+            </div>  
+            <div class="row mt-3">
+                <div class="wrapper">
+                    <button class="btn btn-primary profile-button" type="submit">Save Profile</button>
+                </div>
+            </div>      
+    </div>  
 
-    <script>
-    function openProfile(evt, profilePart) {
-      var i, tabcontent, tablinks;
-      tabcontent = document.getElementsByClassName("tabcontent");
-      for (i = 0; i < tabcontent.length; i++) {
-        tabcontent[i].style.display = "none";
-      }
-      tablinks = document.getElementsByClassName("tablinks");
-      for (i = 0; i < tablinks.length; i++) {
-        tablinks[i].className = tablinks[i].className.replace(" active", "");
-      }
-      document.getElementById(profilePart).style.display = "block";
-      evt.currentTarget.className += " active";
-    }
-    </script>
-
-</body>
 </html>
 
 <?php

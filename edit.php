@@ -52,7 +52,7 @@
             if ($conn->query($sql)) {
                 $error = "Profile updated successfully!";
                 $_SESSION["error"] = $error;
-                header("Location: editProfile.php");
+                header("Location: viewProfile.php");
                 exit();
             } else {
                 $error = "Profile update failed. Please try again.";
@@ -63,6 +63,6 @@
     }
 
     $_SESSION["error"] = $error;
-    header("Location: editProfileFR.php");
+    header("Location: editProfile.php");
     exit();
 ?>
