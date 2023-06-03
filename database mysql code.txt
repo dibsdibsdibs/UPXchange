@@ -10,12 +10,6 @@ CREATE TABLE users(
     PRIMARY KEY (user_id)
 );
 
-CREATE TABLE profiles(
-    profile_id INT NOT NULL AUTO_INCREMENT,
-    user INT NOT NULL,
-    PRIMARY KEY (profile_id)
-);
-
 CREATE TABLE questions (
     question_id INT NOT NULL AUTO_INCREMENT,
     question TEXT NOT NULL,

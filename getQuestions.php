@@ -1,7 +1,7 @@
 <?php 
     include 'dbconnector.php';
 
-    $results_per_page = 5;
+    $results_per_page = 10;
 
     $query = "SELECT * FROM questions";  
     $result = mysqli_query($conn, $query);  
@@ -40,8 +40,10 @@
 
             if($row['lastName'] != NULL){
                 $lastName = $row['lastName'];
-            }else{
+            }else if($firstName == ''){
                 $lastName = 'ANONYMOUS';
+            }else{
+                $lastName = '';
             }
         }
 

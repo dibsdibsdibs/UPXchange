@@ -1,3 +1,15 @@
+.question-header{
+    display: flex;
+    align-items: center;
+    color: #CCCCCC;
+    font-family: Montesserat-Bold;
+    font-size: 30px;
+}
+
+.question-header p{
+    margin: 0% 1% 0% 2%;
+}
+
 .question-content{
     background-color: rgba(16, 41, 46, 0.25);
     border-radius: 10px;

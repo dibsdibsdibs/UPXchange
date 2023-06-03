@@ -1,3 +1,6 @@
+let basis;
+let order;
+
 const questions = document.querySelectorAll('.question-content');
 
 $(function(){

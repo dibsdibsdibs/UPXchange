@@ -24,6 +24,9 @@
             ?>
         </div>
     </div>
+    <div class="question-header">
+        <p>QUESTIONS</p>
+    </div>
     <div id="display-question">
         <?php include "getQuestions.php"?>
     </div>
