@@ -5,8 +5,10 @@ CREATE TABLE users(
     firstName VARCHAR(64),
     lastName VARCHAR(64),
     course VARCHAR(64) NOT NULL,
+    yearLevel INT NOT NUll,
     membership VARCHAR(64) NOT NULL,
     about TEXT,
+    pp TEXT,
     PRIMARY KEY (user_id)
 );
 
