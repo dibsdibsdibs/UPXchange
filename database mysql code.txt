@@ -5,12 +5,14 @@ CREATE TABLE users(
     firstName VARCHAR(64),
     lastName VARCHAR(64),
     course VARCHAR(64) NOT NULL,
-    yearLevel INT NOT NUll,
     membership VARCHAR(64) NOT NULL,
-    about TEXT,
-    pp TEXT,
+    yearLevel VARCHAR(225) NOT NULL,
+    about text DEFAULT NULL,
+    pp varchar(225) NOT NULL
     PRIMARY KEY (user_id)
 );
+
+
 
 CREATE TABLE questions (
     question_id INT NOT NULL AUTO_INCREMENT,
