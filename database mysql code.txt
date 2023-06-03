@@ -1,18 +1,18 @@
+CREATE DATABASE xchange COLLATE utf8_general_ci;
+
 CREATE TABLE users(
     user_id INT NOT NULL AUTO_INCREMENT,
     upmail VARCHAR(64) NOT NULL,
     password VARCHAR(64) NOT NULL,
     firstName VARCHAR(64),
     lastName VARCHAR(64),
-    course VARCHAR(64) NOT NULL,
-    membership VARCHAR(64) NOT NULL,
-    yearLevel VARCHAR(225) NOT NULL,
+    course VARCHAR(64),
+    membership VARCHAR(64),
+    yearLevel VARCHAR(225),
     about text DEFAULT NULL,
-    pp varchar(225) NOT NULL
+    pp varchar(225),
     PRIMARY KEY (user_id)
 );
-
-
 
 CREATE TABLE questions (
     question_id INT NOT NULL AUTO_INCREMENT,
