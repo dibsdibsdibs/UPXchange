@@ -1,7 +1,7 @@
 <?php 
     include 'dbconnector.php';
 
-    $results_per_page = 10;
+    $results_per_page = 5;
 
     $query = "SELECT * FROM questions";  
     $result = mysqli_query($conn, $query);  

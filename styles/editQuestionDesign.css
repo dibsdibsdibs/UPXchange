@@ -107,7 +107,7 @@ hr{
     font-family: Montesserat-Bold;
 }
 
-button{
+#post button{
     margin: 1% 5% 3% 0px;
     float: right;
     padding: 5px 20px;  

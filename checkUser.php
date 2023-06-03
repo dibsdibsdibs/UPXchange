@@ -29,6 +29,14 @@
 
                 if(password_verify($password, $hashedPassword)){
                     $_SESSION['user_id'] = $row['user_id'];
+                    $user_id = $_SESSION['user_id'];
+                    $currentUser = $conn -> query("SELECT firstName, lastName FROM users WHERE user_id='$user_id'");
+                    while ($row = $currentUser -> fetch_assoc()) 
+                    {
+                        $_SESSION['user_firstname'] = $row['firstName'];
+                        $_SESSION['user_lastname'] = $row['lastName'];
+                    }
+                    
                     header("Location:home.php");
                     exit();
                 }else {

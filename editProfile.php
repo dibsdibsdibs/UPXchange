@@ -13,7 +13,7 @@
 </head>
 
 <body class="bg">
-    <?php include "header.php"  ; ?>
+    <?php include 'header.php';?>
     <div class="center">
         <h2 style="font-size:40px;">EDIT PROFILE</h2>
         <form action="edit.php" method="post">

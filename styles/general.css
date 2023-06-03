@@ -43,6 +43,36 @@
     width: 200px;
 }
 
+#profile-options{
+    display: none;
+    position: fixed;
+    right: 6%;
+    color: #50203A;
+    background-color: #CCCCCC;
+    padding: 0.5% 1% 0.5% 1%;
+    border-radius: 5px;
+    height: max-content;
+    width: 150px;
+}
+
+#profile-options p{
+    margin: 1% 0% 1% 0%;
+    font-family: Brooklyn-Heavy;
+    font-size: 20px;
+}
+
+#profile-options p:hover{
+    color: #149F98;
+}
+
+#user-name{
+    font-family: Montesserat-Bold;
+}
+
+.box input{
+    font-family: Montesserat;
+}
+
 .bottom-footer {
     display: flex;
     justify-content: space-between;

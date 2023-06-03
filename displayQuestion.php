@@ -104,7 +104,7 @@
             </div>
         </div>
     </div>
-    <?php include "footer.php" ; ?>
+    <?php include "footer.php"; ?>
     <script type="text/javascript">
         let tags=<?= $_SESSION['tags']; ?>
     </script>
