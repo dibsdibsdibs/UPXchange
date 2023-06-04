@@ -25,7 +25,8 @@
         </div>
     </div>
     <div class="question-header">
-        <p>QUESTIONS</p>
+        <p>ALL QUESTIONS</p>
+        <button onclick="window.location.href='addQuestion.php';">Post a Question</button>
     </div>
     <div id="display-question">
         <?php include "getQuestions.php"?>

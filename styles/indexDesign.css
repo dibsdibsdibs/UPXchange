@@ -1,14 +1,30 @@
 .question-header{
     display: flex;
     align-items: center;
+    justify-content: space-between;
     color: #CCCCCC;
     font-family: Montesserat-Bold;
     font-size: 30px;
+    margin: -2% 5% -2% 5%;
 }
 
-.question-header p{
-    margin: 0% 1% 0% 2%;
+.question-header button{
+    background-color: #CCCCCC;
+    margin: 0%;
+    border: transparent;
+    border-radius: 5px;
+    padding: 0.5% 1%;
+    color: #50203A;
+    font-family: Montesserat-Bold;
+    font-size: 15px;
 }
+
+.question-header button:hover{
+    background-color: #14A098;
+    font-size: 15px;
+    cursor: pointer;
+}
+
 
 .question-content{
     background-color: rgba(16, 41, 46, 0.25);
