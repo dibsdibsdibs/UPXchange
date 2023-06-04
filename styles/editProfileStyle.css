@@ -12,12 +12,6 @@ a {
     padding: 0px;
 }
 
-
-@font-face {
-    font-family: Montesserat;
-    src: url("../fonts/MontserratAlternates-ExtraBold.otf") format("opentype");
-}
-
 .profile{
     float: left;
     padding: 150px;

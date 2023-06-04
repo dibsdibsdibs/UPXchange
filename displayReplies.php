@@ -4,6 +4,7 @@
     $question_id = $_SESSION['question_id'];
 
     $replies = $conn -> query("SELECT reply, DATE_FORMAT(time_posted, '%M %d, %Y') AS reply_date, DATE_FORMAT(time_posted, '%h:%i %p') AS reply_time, user_id FROM replies WHERE question_id = '$question_id'");
+    $_SESSION['replycount'] = mysqli_num_rows($replies);
 
     if($replies -> num_rows > 0){
         while ($row = $replies -> fetch_assoc()){

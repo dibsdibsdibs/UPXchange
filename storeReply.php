@@ -20,10 +20,11 @@
     if($conn -> query($sql) == TRUE){
         $error = "Successfully uploaded reply!";
         $_SESSION["error"] = $error;
+        $_SESSION['replycount'] = $_SESSION['replycount'] + 1;
         header("Location: displayQuestion.php");
         exit();
     }
 
     $_SESSION["error"] = $error;
-    header("Location: addQuestion.php");
+    header("Location: displayQuestion.php");
 ?>

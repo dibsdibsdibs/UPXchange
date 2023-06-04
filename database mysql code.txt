@@ -20,13 +20,13 @@ CREATE TABLE questions (
     details VARCHAR(500),
     time_posted TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
     user_id INT NOT NULL,
+    edited_time TIMESTAMP DEFAULT
     PRIMARY KEY (question_id)
 );
 
 CREATE TABLE tags (
     tag_id INT NOT NULL AUTO_INCREMENT,
     tags VARCHAR(500),
-    question_id INT,
     PRIMARY KEY (tag_id)
 );
 

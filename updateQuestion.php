@@ -14,6 +14,8 @@
     $question = $_POST['question'];
     $details = $_POST['details'];
     $question_id = $_SESSION['question_id'];
+    $_SESSION['question'] = $question;
+    $_SESSION['details'] = $details;
 
     $sql = "UPDATE questions SET question = '$question', details = '$details' WHERE question_id = '$question_id'";
 

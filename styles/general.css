@@ -130,6 +130,11 @@
 }
 
 @font-face {
+    font-family: Bebas;
+    src: url("../fonts/Bebas-Regular.otf") format("opentype");
+}
+
+@font-face {
     font-family: Brooklyn-Bold;
     src: url("../fonts/Brooklyn Bold 1.otf") format("opentype");
 }
