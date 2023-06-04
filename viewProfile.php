@@ -97,7 +97,7 @@
                     }
                 }
         ?>
-                <li style="width: 200%";>
+                <li style="width: 170%";>
                     <div class='question-content' id='<?php echo $question_id; ?>'>
                         <p class='question-poster'>Posted by <?php echo $firstName . ' ' . $lastName; ?></p>
                         <div class='question'>

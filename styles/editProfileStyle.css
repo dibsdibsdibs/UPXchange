@@ -10,6 +10,8 @@ a {
     background-attachment: fixed;
     margin: 0;
     padding: 0;
+    width: 100%;
+    position: fixed;
 }
 
 .profile {
