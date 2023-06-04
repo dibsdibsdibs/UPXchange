@@ -224,6 +224,11 @@ input[type=file]::-webkit-file-upload-button{
     overflow-y: scroll;
     color: #149F98;
 }
+.scroll {
+    height: 100%; /* Adjust the height as needed */
+    overflow-y: scroll;
+    color: #149F98;
+}
 
 
 #question-title{

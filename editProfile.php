@@ -16,6 +16,7 @@
 <body class="bg">
     <?php include 'header.php';?>
     <div class="center">
+        <div class="scroll">
         <h2 style="font-size:40px;">EDIT PROFILE</h2>
         <form action="edit.php" method="post">
                 <div id="error">
@@ -105,7 +106,8 @@
                 <div class="wrapper">
                     <button class="btn btn-primary profile-button" type="submit">Save Profile</button>
                 </div>
-            </div>      
+            </div>    
+        </div>    
     </div>  
 
 </html>
