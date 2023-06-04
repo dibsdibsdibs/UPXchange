@@ -1,6 +1,7 @@
 <?php
     include 'dbconnector.php';
     include 'profileSaved.php';
+    include 'asked.php'
 ?>
 
 <!DOCTYPE html>
@@ -8,7 +9,9 @@
 <head>
     <title>User Profile</title>
     <link rel="icon" href="pics\logo_white.png">
+    <link href="styles/general.css" type="text/css" rel="stylesheet">
     <link href="styles\editProfileStyle.css" type="text/css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 
 <body class="bg">
@@ -37,10 +40,11 @@
 
     <div id="Asked" class="tabcontent">    
         <div>
-            <ul style="list-style: none;"> 
-            <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam non tortor vitae nulla tempus luctus. Pellentesque imperdiet hendrerit luctus. Etiam dictum cursus lectus, sit amet elementum dolor ultrices non.</li>
-            <br>
-            <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam non tortor vitae nulla tempus luctus. Pellentesque imperdiet hendrerit luctus. Etiam dictum cursus lectus, sit amet elementum dolor ultrices non.</li>
+            <ul style="list-style: none;">
+                <?php foreach ($askedQuestions as $question): ?>
+                    <li><a href="displayQuestion.php?question=<?php echo urlencode($question['question']); ?>"><?php echo $question['question']; ?></a></li>
+                    <br>
+                <?php endforeach; ?>
             </ul>
         </div>
     </div>

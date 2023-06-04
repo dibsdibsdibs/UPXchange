@@ -7,6 +7,7 @@
 <head>
     <title>User Profile</title>
     <link rel="icon" href="pics\logo_white.png">
+    <link href="styles/general.css" type="text/css" rel="stylesheet">
     <link href="styles\editProfileStyle.css" type="text/css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 

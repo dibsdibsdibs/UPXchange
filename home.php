@@ -9,6 +9,7 @@
       <link href="pics/logo_white.png" rel="icon">
       <link href="styles/general.css" type="text/css" rel="stylesheet">
       <link href="styles/home2.css" type="text/css" rel="stylesheet">
+      <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" rel="stylesheet" >
       <meta charset="utf-8">
    </head>
    <body class="body-home">
