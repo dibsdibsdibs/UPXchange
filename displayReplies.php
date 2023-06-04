@@ -10,7 +10,7 @@
             $reply = $row['reply'];
             $reply_date = $row['reply_date'];
             $reply_time = $row['reply_time'];
-            $user_id = $row['user_id'];
+            $postBy = $row['user_id'];
 
             $postedBy = $conn -> query("SELECT firstName, lastName FROM users WHERE user_id='$postBy'");
             while ($name = $postedBy -> fetch_assoc()) 
@@ -22,7 +22,7 @@
             echo
             "<div class='reply-content'>
                 <div class='display-reply'>
-                    <p class='reply-poster'>$firstName $lastName on $reply_date $reply_time</p>
+                    <p class='reply-info'>$firstName $lastName on $reply_date $reply_time</p>
                     <p class='list-reply'>$reply</p>
                 </div>
             </div>";
