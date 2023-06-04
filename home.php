@@ -13,7 +13,7 @@
       <meta charset="utf-8">
    </head>
    <body class="body-home">
-      <?php include "header.php"  ; ?>
+      <?php include "headerHome.php"  ; ?>
         <div id="top">
             <div class="wrapper">
                 <h2>UP XChange</h2>
