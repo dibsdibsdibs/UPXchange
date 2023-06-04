@@ -17,7 +17,7 @@
     <?php include 'header.php';?>
     <div class="center">
         <div class="scroll">
-        <h2 style="font-size:40px;">EDIT PROFILE</h2>
+        <h2 style="font-size:40px; color: #CCCCCC; font-family: Montesserat-Bold">EDIT PROFILE</h2>
         <form action="edit.php" method="post">
                 <div id="error">
                 <?php

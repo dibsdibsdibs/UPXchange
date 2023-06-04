@@ -32,15 +32,15 @@
         $user = mysqli_query($conn, $getuser);
 
         while ($row = mysqli_fetch_array($user)){
-            if($row['firstName'] != NULL){
+            if($row['firstName'] != NULL && $row['firstName'] != 'Your'){
                 $firstName = $row['firstName'];
             }else{
                 $firstName = '';
             }
 
-            if($row['lastName'] != NULL){
+            if($row['lastName'] != NULL && $row['lastName'] != 'Name'){
                 $lastName = $row['lastName'];
-            }else if($firstName == ''){
+            }else if($firstName == '' || $row['firstName'] == 'Name'){
                 $lastName = 'ANONYMOUS';
             }else if($firstName != NULL){
                 $lastName = '';

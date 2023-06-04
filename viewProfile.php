@@ -66,7 +66,7 @@
         $user_id = $_SESSION['user_id'];
 
         // Prepare the query using prepared statements to prevent SQL injection
-        $query = "SELECT question_id, question, details, DATE_FORMAT(time_posted, '%M %d, %Y') AS post_date, DATE_FORMAT(time_posted, '%h:%i %p') AS post_time, user_id FROM questions ORDER BY time_posted DESC"; 
+        $query = "SELECT question_id, question, details, DATE_FORMAT(time_posted, '%M %d, %Y') AS post_date, DATE_FORMAT(time_posted, '%h:%i %p') AS post_time, user_id FROM questions WHERE user_id = '$user_id' ORDER BY time_posted DESC"; 
         $result = mysqli_query($conn, $query);
 
         if ($result) {
@@ -97,7 +97,7 @@
                     }
                 }
         ?>
-                <li style="width: 170%";>
+                <li style="width: 100%";>
                     <div class='question-content' id='<?php echo $question_id; ?>'>
                         <p class='question-poster'>Posted by <?php echo $firstName . ' ' . $lastName; ?></p>
                         <div class='question'>
@@ -126,7 +126,7 @@
             $user_id = $_SESSION['user_id'];
 
             // Prepare the query using prepared statements to prevent SQL injection
-            $query = "SELECT question_id, reply, DATE_FORMAT(time_posted, '%M %d, %Y') AS reply_date, DATE_FORMAT(time_posted, '%h:%i %p') AS reply_time, user_id FROM replies ORDER BY time_posted DESC"; 
+            $query = "SELECT question_id, reply, DATE_FORMAT(time_posted, '%M %d, %Y') AS reply_date, DATE_FORMAT(time_posted, '%h:%i %p') AS reply_time, user_id FROM replies  WHERE user_id = '$user_id' ORDER BY time_posted DESC"; 
             $result = mysqli_query($conn, $query);
 
             if ($result) {
@@ -216,7 +216,7 @@
             $user_id = $_SESSION['user_id'];
 
             // Prepare the query using prepared statements to prevent SQL injection
-            $query = "SELECT question_id, DATE_FORMAT(time_bookmarked, '%M %d, %Y') AS book_date, DATE_FORMAT(time_bookmarked, '%h:%i %p') AS book_time, user_id FROM bookmarks ORDER BY time_bookmarked DESC"; 
+            $query = "SELECT question_id, DATE_FORMAT(time_bookmarked, '%M %d, %Y') AS book_date, DATE_FORMAT(time_bookmarked, '%h:%i %p') AS book_time, user_id FROM bookmarks WHERE user_id = '$user_id' ORDER BY time_bookmarked DESC"; 
             $result = mysqli_query($conn, $query);
 
             if ($result) {
