@@ -56,8 +56,7 @@
                     <option value="BS Chemical Engineering">BS Chemical Engineering</option>
                     <option value="BS Chemistry">BS Chemistry</option>
                     <option value="BS Computer Science">BS Computer Science</option>
-                    <option value="BS Economics
-">BS Economics</option>
+                    <option value="BS Economics">BS Economics</option>
                     <option value="BS Fisheries">BS Fisheries</option>
                     <option value="BS Food Technology">BS Food Technology</option>
                     <option value="BS Management">BS Management</option>

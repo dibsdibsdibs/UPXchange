@@ -1,31 +1,57 @@
 <?php
 include 'dbconnector.php';
 
-// Check if the user is logged in and get the user ID from the session variable
-if (!isset($_SESSION['user_id'])) {
-    // Handle the case when the user is not logged in
-    echo "User is not logged in.";
-    exit;
-}
 
 $user_id = $_SESSION['user_id'];
 
 // Prepare the query using prepared statements to prevent SQL injection
-$query = "SELECT question FROM questions WHERE user_id = ?";
-$stmt = mysqli_prepare($conn, $query);
+$query = "SELECT question_id, question, details, DATE_FORMAT(time_posted, '%M %d, %Y') AS post_date, DATE_FORMAT(time_posted, '%h:%i %p') AS post_time, user_id FROM questions ORDER BY time_posted DESC"; 
+$result = mysqli_query($conn, $query);
 
-if ($stmt) {
-    // Bind the user ID parameter to the prepared statement
-    mysqli_stmt_bind_param($stmt, "i", $user_id);
+if ($result) {
 
-    // Execute the prepared statement
-    mysqli_stmt_execute($stmt);
+    while ($row = mysqli_fetch_array($result)){
+        $question_id = $row['question_id'];
+        $question = $row['question'];
+        $details = $row['details'];
+        $date_posted = $row['post_date'];
+        $time_posted = $row['post_time'];
+        $poster_id = $row['user_id'];
 
-    // Get the result set
-    $result = mysqli_stmt_get_result($stmt);
+        $getuser = "SELECT firstName, lastName FROM users WHERE user_id = '$poster_id'";  
+        $user = mysqli_query($conn, $getuser);
 
-    // Fetch the rows from the result set
-    $askedQuestions = mysqli_fetch_all($result, MYSQLI_ASSOC);
+        while ($row = mysqli_fetch_array($user)){
+            if($row['firstName'] != NULL){
+                $firstName = $row['firstName'];
+            }else{
+                $firstName = '';
+            }
+
+            if($row['lastName'] != NULL){
+                $lastName = $row['lastName'];
+            }else if($firstName == ''){
+                $lastName = 'ANONYMOUS';
+            }else if($firstName != NULL){
+                $lastName = '';
+            }
+        }
+
+        echo
+
+        "<li>
+            <div class='question-content' id='$question_id'>
+                <p class='question-poster'>Posted by $firstName $lastName</p>
+                <div class='question'>
+                    <p class='question-title'>$question</p>
+                    <p class='question-details'>$details</p>
+                </div>
+                <p class='question-time'>Posted on $date_posted $time_posted</p>
+            </div>
+        </li>
+        <br>";
+    }
+                
 
     // Free the result set
     mysqli_free_result($result);
@@ -33,9 +59,6 @@ if ($stmt) {
     // Handle the query error
     echo "Error preparing statement: " . mysqli_error($conn);
 }
-
-// Close the prepared statement
-mysqli_stmt_close($stmt);
 
 // Close the database connection
 mysqli_close($conn);
