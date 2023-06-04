@@ -51,8 +51,7 @@
 
     <div id="About" class="tabcontent">
       <h3><?php echo $firstName . " " . $lastName;?></h3>   
-      <p><?php echo $membership;?><span class = "spacing"></span><?php echo $course . " - " . $yearLevel;?></p>
-      <br>
+      <p><?php echo $membership;?><br><br><?php echo $course . " - " . $yearLevel;?></p>
         <a>    
             <?php echo $about;?>
         </a> 
@@ -98,7 +97,7 @@
                     }
                 }
         ?>
-                <li style="width: 450%";>
+                <li style="width: 200%";>
                     <div class='question-content' id='<?php echo $question_id; ?>'>
                         <p class='question-poster'>Posted by <?php echo $firstName . ' ' . $lastName; ?></p>
                         <div class='question'>
@@ -188,7 +187,7 @@
                         }
                     }
         ?>
-                <li style="width: 340%";>
+                <li style="width: 200%";>
                     <div class='question-content' id='<?php echo $question_id; ?>'>
                         <p class='question-poster'>Posted by <?php echo $pfirstName . ' ' . $plastName . ' on ' . $postDate . ' ' . $postTime; ?></p>
                         <div class='question'>
@@ -217,7 +216,7 @@
             $user_id = $_SESSION['user_id'];
 
             // Prepare the query using prepared statements to prevent SQL injection
-            $query = "SELECT question_id, DATE_FORMAT(time_posted, '%M %d, %Y') AS book_date, DATE_FORMAT(time_posted, '%h:%i %p') AS book_time, user_id FROM bookmarks ORDER BY time_posted DESC"; 
+            $query = "SELECT question_id, DATE_FORMAT(time_bookmarked, '%M %d, %Y') AS book_date, DATE_FORMAT(time_bookmarked, '%h:%i %p') AS book_time, user_id FROM bookmarks ORDER BY time_bookmarked DESC"; 
             $result = mysqli_query($conn, $query);
 
             if ($result) {
@@ -277,7 +276,7 @@
                         }
                     }
         ?>
-                <li style="width: 325%";>
+                <li style="width: 234%";>
                     <div class='question-content' id='<?php echo $question_id; ?>'>
                         <p class='question-poster'>Posted by <?php echo $pfirstName . ' ' . $plastName . ' on ' . $postDate . ' ' . $postTime; ?></p>
                         <div class='question'>
