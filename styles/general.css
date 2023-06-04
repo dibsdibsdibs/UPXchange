@@ -43,6 +43,14 @@
     width: 200px;
 }
 
+#header-right img{
+    cursor: pointer;
+}
+
+#home-link{
+    cursor: pointer;
+}
+
 #profile-options{
     display: none;
     position: fixed;
@@ -59,10 +67,12 @@
     margin: 1% 0% 1% 0%;
     font-family: Brooklyn-Heavy;
     font-size: 20px;
+    cursor: default;
 }
 
 #profile-options p:hover{
     color: #149F98;
+    cursor: pointer;
 }
 
 #user-name{

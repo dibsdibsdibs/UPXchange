@@ -42,7 +42,7 @@
                 $lastName = $row['lastName'];
             }else if($firstName == ''){
                 $lastName = 'ANONYMOUS';
-            }else{
+            }else if($firstName != NULL){
                 $lastName = '';
             }
         }

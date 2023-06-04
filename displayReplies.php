@@ -12,11 +12,23 @@
             $reply_time = $row['reply_time'];
             $postBy = $row['user_id'];
 
-            $postedBy = $conn -> query("SELECT firstName, lastName FROM users WHERE user_id='$postBy'");
-            while ($name = $postedBy -> fetch_assoc()) 
-            {
-                $firstName = $name['firstName'];
-                $lastName = $name['lastName'];
+            $getuser = "SELECT firstName, lastName FROM users WHERE user_id = '$poster_id'";  
+            $user = mysqli_query($conn, $getuser);
+
+            while ($row = mysqli_fetch_array($user)){
+                if($row['firstName'] != NULL){
+                    $firstName = $row['firstName'];
+                }else{
+                    $firstName = '';
+                }
+
+                if($row['lastName'] != NULL){
+                    $lastName = $row['lastName'];
+                }else if($firstName == ''){
+                    $lastName = 'ANONYMOUS';
+                }else if($firstName != NULL){
+                    $lastName = '';
+                }
             }
             
             echo

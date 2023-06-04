@@ -18,3 +18,7 @@ function toViewProfile(){
 function toEditProfile(){
     location.href = "editProfile.php";
 }
+
+function toLogOut(){
+    location.href = "logout.php";
+}

@@ -9,12 +9,12 @@
     <div id = "header-right">
         <a href="addQuestion.php"><img src="pics/plus.png" height="25"></a>
         <a href="index.php"><img src="pics/categories.png" height="25"></a>
-        <a href="#"><img src="pics/bell.png" height="25"></a>
         <div class="profile-menu">
             <img src="pics/user.png" onclick="showProfileMenu()" height="25">
             <div id="profile-options">
                 <p onclick="toViewProfile()">View Profile</p>
                 <p onclick="toEditProfile()">Edit Profile</p>
+                <p onclick="toLogOut()">Log Out</p>
             </div>
         </div>
     </div>
