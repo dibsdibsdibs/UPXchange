@@ -9,15 +9,15 @@ CREATE TABLE users(
     course VARCHAR(64),
     membership VARCHAR(64),
     yearLevel VARCHAR(225),
-    about text DEFAULT NULL,
+    about VARCHAR(500) DEFAULT NULL,
     pp varchar(225),
     PRIMARY KEY (user_id)
 );
 
 CREATE TABLE questions (
     question_id INT NOT NULL AUTO_INCREMENT,
-    question TEXT NOT NULL,
-    details TEXT,
+    question VARCHAR(150) NOT NULL,
+    details VARCHAR(500),
     time_posted TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
     user_id INT NOT NULL,
     PRIMARY KEY (question_id)
@@ -25,14 +25,14 @@ CREATE TABLE questions (
 
 CREATE TABLE tags (
     tag_id INT NOT NULL AUTO_INCREMENT,
-    tags TEXT,
+    tags VARCHAR(500),
     question_id INT,
     PRIMARY KEY (tag_id)
 );
 
 CREATE TABLE replies(
     reply_id INT NOT NULL AUTO_INCREMENT,
-    reply TEXT,
+    reply VARCHAR(500),
     vote INT NOT NULL,
     question_id INT,
     user_id INT,
@@ -42,9 +42,9 @@ CREATE TABLE replies(
 
 CREATE TABLE reports(
     report_id INT NOT NULL AUTO_INCREMENT,
-    title TEXT NOT NULL,
-    users_involved TEXT,
-    details TEXT,
+    title VARCHAR(150) NOT NULL,
+    users_involved VARCHAR(150),
+    details VARCHAR(500),
     time_posted TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
     user_id INT NOT NULL,
     PRIMARY KEY (report_id)
