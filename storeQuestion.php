@@ -20,7 +20,7 @@
     if($conn -> query($sql) == TRUE){
         $error = "Successfully uploaded question!";
         $_SESSION["error"] = $error;
-        header("Location: addQuestion.php");
+        header("Location: index.php");
         exit();
     }
 
