@@ -1,11 +1,8 @@
-let basis;
-let order;
+function addQuestion(){
+    location.href = "addQuestion.php";
+}
 
-const questions = document.querySelectorAll('.question-content');
-
-$(function(){
-    $(".question-content").click(function(){
-        let qid = this.id;
-        location.href = "retrieveQuestion.php" + "?question_id=" + qid;
-    });
+$(".question-content").click(function(){
+    let qid = this.id;
+    location.href = "retrieveQuestion.php" + "?question_id=" + qid;
 });
