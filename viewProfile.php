@@ -1,7 +1,6 @@
 <?php
     include 'dbconnector.php';
     include 'profileSaved.php';
-    include 'asked.php'
 ?>
 
 <!DOCTYPE html>
@@ -11,6 +10,7 @@
     <link rel="icon" href="pics\logo_white.png">
     <link href="styles/general.css" type="text/css" rel="stylesheet">
     <link href="styles\editProfileStyle.css" type="text/css" rel="stylesheet">
+    <link href="styles/indexDesign.css" type="text/css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 
@@ -39,15 +39,73 @@
     </div>
 
     <div id="Asked" class="tabcontent">    
-        <div>
-            <ul style="list-style: none;">
-                <?php foreach ($askedQuestions as $question): ?>
-                    <li><a href="displayQuestion.php?question=<?php echo urlencode($question['question']); ?>"><?php echo $question['question']; ?></a></li>
-                    <br>
-                <?php endforeach; ?>
-            </ul>
-        </div>
+    <div>
+        <div class="scrollable-list">
+        <ul style="list-style: none;"> 
+        <?php
+
+        $user_id = $_SESSION['user_id'];
+
+        // Prepare the query using prepared statements to prevent SQL injection
+        $query = "SELECT question_id, question, details, DATE_FORMAT(time_posted, '%M %d, %Y') AS post_date, DATE_FORMAT(time_posted, '%h:%i %p') AS post_time, user_id FROM questions ORDER BY time_posted DESC"; 
+        $result = mysqli_query($conn, $query);
+
+        if ($result) {
+            while ($row = mysqli_fetch_array($result)){
+                $question_id = $row['question_id'];
+                $question = $row['question'];
+                $details = $row['details'];
+                $date_posted = $row['post_date'];
+                $time_posted = $row['post_time'];
+                $poster_id = $row['user_id'];
+
+                $getuser = "SELECT firstName, lastName FROM users WHERE user_id = '$poster_id'";  
+                $user = mysqli_query($conn, $getuser);
+
+                while ($row = mysqli_fetch_array($user)){
+                    if($row['firstName'] != NULL){
+                        $firstName = $row['firstName'];
+                    }else{
+                        $firstName = '';
+                    }
+
+                    if($row['lastName'] != NULL){
+                        $lastName = $row['lastName'];
+                    }else if($firstName == ''){
+                        $lastName = 'ANONYMOUS';
+                    }else if($firstName != NULL){
+                        $lastName = '';
+                    }
+                }
+        ?>
+                <li>
+                    <div class='question-content' id='<?php echo $question_id; ?>'>
+                        <p class='question-poster'>Posted by <?php echo $firstName . ' ' . $lastName; ?></p>
+                        <div class='question'>
+                            <p class='question-title'><?php echo $question; ?></p>
+                            <p class='question-details'><?php echo $details; ?></p>
+                        </div>
+                        <p class='question-time'>Posted on <?php echo $date_posted . ' ' . $time_posted; ?></p>
+                    </div>
+                </li>
+                <br>
+        <?php
+            }
+
+            // Free the result set
+            mysqli_free_result($result);
+        } else {
+            // Handle the query error
+            echo "Error executing query: " . mysqli_error($conn);
+        }
+
+        // Close the database connection
+        mysqli_close($conn);
+        ?>
+        </ul>
     </div>
+    </div>
+</div>
 
     <div id="Answered" class="tabcontent">   
         <div class="wrapper">
@@ -83,6 +141,8 @@
       evt.currentTarget.className += " active";
     }
     </script>
+
+    <script src="scripts/indexJS.js" type="text/javascript"></script>
 
 </body>
 </html>

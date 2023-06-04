@@ -12,7 +12,7 @@
             $reply_time = $row['reply_time'];
             $postBy = $row['user_id'];
 
-            $getuser = "SELECT firstName, lastName FROM users WHERE user_id = '$poster_id'";  
+            $getuser = "SELECT firstName, lastName FROM users WHERE user_id = '$postBy'";  
             $user = mysqli_query($conn, $getuser);
 
             while ($row = mysqli_fetch_array($user)){
