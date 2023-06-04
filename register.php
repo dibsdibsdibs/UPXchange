@@ -15,8 +15,8 @@
     $password = validate($_POST['password']);
     $repassword = validate($_POST['repassword']);
     $pp = "profile.png";
-    $firstName = "Your";
-    $lastName = "Name";
+    $firstName = "";
+    $lastName = "";
     $course = "Course";
     $membership = "Student/Faculty";
     $yearLevel = "Year Level";

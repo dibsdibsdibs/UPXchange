@@ -30,9 +30,11 @@
     function openProfile(evt, profilePart) {
       var i, tabcontent, tablinks;
       tabcontent = document.getElementsByClassName("tabcontent");
+      aboutcontent = document.getElementById("About");
       for (i = 0; i < tabcontent.length; i++) {
         tabcontent[i].style.display = "none";
       }
+      aboutcontent.style.display = "block";
       tablinks = document.getElementsByClassName("tablinks");
       for (i = 0; i < tablinks.length; i++) {
         tablinks[i].className = tablinks[i].className.replace(" active", "");
