@@ -4,8 +4,6 @@ checkBookmark();
 checkQuestionPoster();
 
 function hideElements(){
-    let comments = document.getElementById("showreplies");
-    comments.style.display = "none";
     let report = document.getElementById("bg-report");
     report.style.display = "none";
 }
