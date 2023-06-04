@@ -147,6 +147,10 @@ article h4 {
     background-color: #10292E;
 }
 
+#bottom .img2 {
+    margin-left: 160px;
+}
+
 #bottom h2 {
     font-size: 65px;
     text-align: left;
@@ -161,6 +165,8 @@ article h4 {
 }
 
 #bottom p {
+    font-size: 20px;
+    text-transform: uppercase;
     text-align: left;
     color: #CCCCCC;
 }
