@@ -50,11 +50,14 @@
                 <h2>What is <span class="grad">UP XChange?</span></h2>
                 <div class="row">
                     <div class="column">
-                        <img src="pics/questions (1) 1.png" height="200">
+                        <img class="img1" src="pics/questions (1) 1.png" height="200">
+                        <img class="img2" src="pics/Vector 5.png" height="200">
                     </div>
                     <div class="column">
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                        <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                        <br>
+                        <p>Platform building the definitive collection of questions and answers.</p>
+                        <br>
+                        <p>Private collaboration & knowledge sharing SAAS platform for students.</p>
                     </div>
                 </div>
             </div>
