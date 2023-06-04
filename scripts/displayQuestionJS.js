@@ -91,3 +91,13 @@ $('#storeReport').on('submit', function() {
         return true;
     }
 });
+
+$('#storeReply').on('submit', function() {
+    var inputReply = document.getElementById("compose-reply").value;
+    if(inputReply == null || inputReply == ""){
+        alert("Reply submission empty.");
+        return false;
+    }else{
+        return true;
+    }
+});
