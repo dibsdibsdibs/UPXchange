@@ -36,9 +36,6 @@
         $_SESSION['tags'] = $row['tags'];
     }
 
-    $replycount = $conn -> query("SELECT reply_id FROM replies WHERE question_id = '$question_id'");
-    $_SESSION['replycount'] = mysqli_num_rows($replycount);
-
     $replies = $conn -> query("SELECT reply, DATE_FORMAT(time_posted, '%M %d, %Y') AS reply_date, DATE_FORMAT(time_posted, '%h:%i %p') AS reply_time FROM replies WHERE question_id = '$question_id'");
 
     $bookmark = $conn -> query("SELECT bookmark_id FROM bookmarks WHERE user_id = '$user_id' AND question_id = '$question_id'");
