@@ -95,3 +95,19 @@ a{
 .bottom-footer {
     position: absolute;
 }
+
+#error-display{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 1%;
+}
+
+#error{
+    width: fit-content;
+    font-family: Brooklyn-Bold;
+    font-size: 25px;
+    color: #CCCCCC;
+    text-align: center;
+    border-radius: 5px;
+}
