@@ -43,8 +43,7 @@
             <div class="row mt-3">
                 <div class="wrapper">                    
                     <select class = "form-control" name="course" id="membership">
-                    <option value="select">--select--</option>
-                    <option value="BA in Communication and Media Studies">BA in Communication and Media Studies</option>
+                    <option value="BA in Communication and Media Studies" selected>BA in Communication and Media Studies</option>
                     <option value="BA Community Development">BA Community Development</option>
                     <option value="BA History">BA History</option>
                     <option value="BA Sociology">BA Sociology</option>
@@ -70,9 +69,8 @@
             <div class="row mt-3">
                 <div class="wrapper">
                     <select class = "form-control" name="membership" id="membership">
-                    <option value="select">--select--</option>
                     <option value="Faculty">Faculty</option>
-                    <option value="Student">Student</option>
+                    <option value="Student" selected>Student</option>
                     </select>
                 </div>
             </div>
@@ -80,8 +78,7 @@
             <div class="row mt-3">
                 <div class="wrapper">
                     <select class = "form-control" name="yearLevel" id="membership" value="Year">
-                        <option value="select">--select--</option>
-                        <option value="I">First Year</option>
+                        <option value="I" selected>First Year</option>
                         <option value="II">Second Year</option>
                         <option value="III">Third Year</option>
                         <option value="IV">Fourth Year</option>

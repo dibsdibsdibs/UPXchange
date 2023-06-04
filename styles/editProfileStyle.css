@@ -1,66 +1,64 @@
-/*General Design Elements*/
 a {
     text-decoration: none;
     font-family: Arial;
     color: #CCCCCC;
 }
-.bg{
-    background-image: linear-gradient(135deg,#50203A, #10292E);
+
+.bg {
+    background-image: linear-gradient(135deg, #50203A, #10292E);
     background-repeat: no-repeat;
     background-attachment: fixed;
-    margin: 0px;
-    padding: 0px;
+    margin: 0;
+    padding: 0;
 }
 
-.profile{
+.profile {
     float: left;
-    padding: 150px;
-    margin-top: -50px;
-    margin-bottom: 50px;
-    margin-left: 50px;
+    padding: 100px;
+    margin: -100px -100px 0 -50px;
     font-family: Montesserat;
     color: #CCCCCC;
     text-align: center;
 }
-.img{
+
+.img {
     border-radius: 50%;
 }
+
 .spacing {
     display: inline-block;
     margin-left: 300px;
 }
+
 .edit {
     background-color: inherit;
     border: 2px solid;
     border-radius: 10px;
     border-color: #CB2D6F;
-    padding: 5px 60px;
     text-align: center;
     display: inline-block;
     font-family: Montesserat;
     color: #CCCCCC;
     font-size: 16px;
 }
+
 .edit:hover {
-  background: #CB2D6F;
+    background: #CB2D6F;
 }
 
 .edit:focus {
-  background: #CB2D6F;
-  box-shadow: none;
+    background: #CB2D6F;
+    box-shadow: none;
 }
 
-/* Style the tab */
 .tab {
     overflow: visible;
     display: flex;
     justify-content: space-evenly;
-    margin-top: 150px;
-    margin-left: 700px;
-    width: 800px;
+    margin: 100px 0 0 600px;
+    width: 700px;
 }
 
-/* Style the buttons inside the tab */
 .tab button {
     background-color: inherit;
     float: left;
@@ -91,8 +89,7 @@ a {
     font-family: Montesserat;
     font-size: 25px;
     /*padding: 6px 12px;*/
-    margin-top: 50px;
-    margin-left: 750px;
+    margin: 50px 0 0 600px;
     color: #CCCCCC;
 }
 
@@ -110,12 +107,13 @@ ul {
 }
 
 li {
-    border: 1px solid lightblue;
+    border: none;
     color: #CCCCCC;
     flex:1;
     text-align:center;
     padding:10px 10px;
     cursor: pointer;
+    background-color: rgba(16, 41, 46, 0.25);
 }
 
 li:hover {
@@ -132,7 +130,7 @@ li:hover {
     background-color: transparent;
     font-family: Montesserat;
     font-size: 16px;
-    color: #CCCCCC;
+    color: #CB2D6F;
 }
 .form-control:focus {
   box-shadow: none;
