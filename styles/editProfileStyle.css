@@ -116,7 +116,6 @@ li {
     text-align:center;
     padding:10px 10px;
     cursor: pointer;
-    width: 400%;
 }
 
 li:hover {
@@ -224,4 +223,36 @@ input[type=file]::-webkit-file-upload-button{
     height: 585px; /* Adjust the height as needed */
     overflow-y: scroll;
     color: #149F98;
+}
+
+
+#question-title{
+    font-family: Montesserat-Bold;
+    font-size: 25px;
+}
+
+
+#question-details{
+    font-family: Montesserat-Medium;
+    font-size: 15px;
+}
+
+
+.display-reply{
+    border: 3px solid #149F98;
+    border-radius: 5px;
+    padding: 1%;
+    margin-bottom: 3%;
+    width: 95%;
+}
+
+.reply-info{
+    margin-top: 0.5%;
+    font-family: Montesserat;
+    font-size: 10px;
+}
+
+.list-reply{
+    font-family: Montesserat-Medium;
+    font-size: 15px;
 }
